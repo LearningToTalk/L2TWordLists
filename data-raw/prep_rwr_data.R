@@ -15,7 +15,7 @@ rwr_tp1 <- readr::read_tsv("./data-raw/RealWordRepItems.txt")
 rwr_tp2 <- readr::read_tsv("./data-raw/RealWordRepItems_TP2list.txt")
 rwr_tp3 <- readr::read_tsv("./data-raw/RealWordRepItems_TP3.txt") %>%
   rename(Word = Orthography, TargetC = Target1,
-         TargetV = Target2, Frame = Frame)
+         TargetV = Target2, Frame = Frame2)
 
 l2t_wordlists <- list(
   RWR = list(
