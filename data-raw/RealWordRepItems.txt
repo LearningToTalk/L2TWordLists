@@ -1,0 +1,57 @@
+Abbreviation	Word	WorldBet	TargetC	TargetV	Frame
+CAKE	cake	kek	k	e	k
+CANN	can	kaen	k	ae	n
+CARR	car	kar	k	ar	
+CATT	cat	kaet	k	ae	t
+CKIE	cookie	kUki	k	U	ki
+CMRA	camera	kaemr6	k	ae	mr6
+CNDY	candy	kaendi	k	ae	ndi
+COAT	coat	kot	k	o	t
+COCH	couch	kaUtS	k	aU	tS
+COLD	cold	kold	k	o	ld
+COWW	cow	kaU	k	aU	
+CRRT	carrot	kErIt	k	Er	It
+CUPP	cup	kvp	k	v	p
+DDDY	daddy	daedi	d	ae	di
+DISH	dish	dIS	d	I	S
+DNCE	dance	daens	d	ae	ns
+DNNR	dinner	dIn3r	d	I	n3r
+DOGG	dog	dag	d	a	g
+DOOO	do	du	d	u	
+DOOR	door	dor	d	or	
+DUCK	duck	dvk	d	v	k
+GETT	get	gEt	g	E	t
+GIRL	girl	g3rl	g	3r	l
+GIVE	give	gIv	g	I	v
+GOOD	good	gUd	g	U	d
+GOOO	go	go	g	o	
+GRBG	garbage	garbIdZ	g	ar	bIdZ
+GUMM	gum	gvm	g	v	m
+KCHN	kitchen	kItS6n	k	I	tS6n
+KEYY	key	ki	k	i	
+KTTY	kitty	kIti	k	I	ti
+SADD	sad	saed	s	ae	d
+SHEP	sheep	Sip	S	i	p
+SHOE	shoe	Su	S	u	
+SHRE	share	Ser	S	er	
+SHRT	shorts	Sorts	S	or	ts
+SHVL	shovel	S6vl	S	6	vl
+SHWR	shower	SaU3r	S	aU	3r
+SICK	sick	sIk	s	I	k
+SOAP	soap	sop	s	o	p
+SOCK	sock	sak	s	a	k
+SOUP	soup	sup	s	u	p
+SSRS	scissors	sIz3rz	s	I	z3rz
+SUNN	sun	svn	s	v	n
+SWCH	sandwich	saendwItS	s	ae	ndwItS
+TABL	table	tebl	t	e	bl
+TAPE	tape	tep	t	e	p
+TCKL	tickle	tIkl	t	I	kl
+TEDY	teddy bear	tEdibEr	t	E	dibEr
+TLPH	telephone	tEl6fon	t	E	l6fon
+TMMY	tummy	tvmi	t	v	mi
+TNGE	tongue	tvN	t	v	N
+TOEE	toe	to	t	o	
+TOST	toast	tost	t	o	st
+TOTH	tooth	tuth	t	u	th
+TOYY	toy	toI	t	oI	
