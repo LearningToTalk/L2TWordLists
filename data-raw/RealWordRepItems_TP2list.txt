@@ -65,7 +65,7 @@ TIGR	tiger	taIg6r	t	aI	g6r
 TMMY	tummy	tVmi	t	V	mi
 TNGE	tongue	tVN	t	V	N
 TOST	toast	tost	t	o	st
-TOTH	tooth	tuT	t	u	T	
+TOTH	tooth	tuT	t	u	T
 TSTR	toaster	tost6r	t	o	st6r
 WACH	watch	watS	w	a	tS
 WALK	walk	wak	w	a	k
