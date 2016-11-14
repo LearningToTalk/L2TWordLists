@@ -60,18 +60,67 @@ l2t_wordlists
 #> 
 #> $RWR$TimePoint3
 #> # A tibble: 121 × 10
-#>    Abbreviation Orthography WorldBet Target1 Target2 Frame2 ComparisonPair
-#>           <chr>       <chr>    <chr>   <chr>   <chr>  <chr>          <chr>
-#> 1          SHRT      shorts    Sorts       S      or     ts           <NA>
-#> 2          GIRL        girl     g3rl       g      3r      l           <NA>
-#> 3          COLD        cold     kold       k       o     ld           <NA>
-#> 4          COWW         cow      kaU       k      aU   <NA>           <NA>
-#> 5          Cake        cake      kek       k       e      k           <NA>
-#> 6          CATT         cat     kaet       k      ae      t           <NA>
-#> 7          CFEE      coffee     kafi       k       a     fi           <NA>
-#> 8         Chair       chair     tSEr      tS      Er   <NA>           <NA>
-#> 9        Cheese      cheese     tSiz      tS       i      z           <NA>
-#> 10      Chicken     chicken   tSIkIn      tS       I    kIn        chimmig
+#>    Abbreviation    Word WorldBet TargetC TargetV Frame ComparisonPair
+#>           <chr>   <chr>    <chr>   <chr>   <chr> <chr>          <chr>
+#> 1          SHRT  shorts    Sorts       S      or    ts           <NA>
+#> 2          GIRL    girl     g3rl       g      3r     l           <NA>
+#> 3          COLD    cold     kold       k       o    ld           <NA>
+#> 4          COWW     cow      kaU       k      aU  <NA>           <NA>
+#> 5          Cake    cake      kek       k       e     k           <NA>
+#> 6          CATT     cat     kaet       k      ae     t           <NA>
+#> 7          CFEE  coffee     kafi       k       a    fi           <NA>
+#> 8         Chair   chair     tSEr      tS      Er  <NA>           <NA>
+#> 9        Cheese  cheese     tSiz      tS       i     z           <NA>
+#> 10      Chicken chicken   tSIkIn      tS       I   kIn        chimmig
 #> # ... with 111 more rows, and 3 more variables: Block <chr>,
 #> #   AAEsoundFile <chr>, Abbreviation120 <chr>
+```
+
+Usage
+-----
+
+``` r
+test_file <- "./tests/testthat/test-files/RealWordRep_008L54MS5.txt"
+
+# Parse Eprime file
+df_trials <- test_file %>% 
+  get_rwr_trial_info()
+df_trials
+#> # A tibble: 119 × 17
+#>    TimePoint Dialect                       Experiment
+#>        <dbl>   <chr>                            <chr>
+#> 1          3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
+#> 2          3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
+#> 3          3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
+#> 4          3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
+#> 5          3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
+#> 6          3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
+#> 7          3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
+#> 8          3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
+#> 9          3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
+#> 10         3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
+#> # ... with 109 more rows, and 14 more variables: Eprime.Basename <chr>,
+#> #   Block <chr>, TrialNumber <chr>, TrialType <chr>, Abbreviation <chr>,
+#> #   Procedure <chr>, Running <chr>, AudioPrompt <chr>,
+#> #   PicturePrompt <chr>, Cycle <chr>, Sample <chr>, UserOrth <chr>,
+#> #   Reinforcer <chr>, reinforceImage <chr>
+
+# Create WordList
+df_trials %>% 
+  get_wordlist_info()
+#> # A tibble: 119 × 12
+#>    TrialNumber Abbreviation   Word WorldBet TargetC TargetV Frame
+#>          <chr>        <chr>  <chr>    <chr>   <chr>   <chr> <chr>
+#> 1         Fam1         SHRT shorts    Sorts       S      or    ts
+#> 2         Fam2         GIRL   girl     g3rl       g      3r     l
+#> 3         Fam3         COLD   cold     kold       k       o    ld
+#> 4         Fam4         COWW    cow      kaU       k      aU  <NA>
+#> 5        Test1        SHEEP  sheep      Sip       S       i     p
+#> 6        Test2         ROCK   rock      rak       r       a     k
+#> 7        Test3         Roof   roof      rUf       r       U     f
+#> 8        Test4       Crying crying   kraIIN       k       r  aIIN
+#> 9        Test5       Shadow shadow    Saedo       S      ae    do
+#> 10       Test6         SHVL shovel    SVv6l       S       V   v6l
+#> # ... with 109 more rows, and 5 more variables: ComparisonPair <chr>,
+#> #   Block <chr>, TrialType <chr>, AudioPrompt <chr>, PicturePrompt <chr>
 ```

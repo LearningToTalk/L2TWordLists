@@ -36,3 +36,20 @@ library(L2TWordLists)
 l2t_wordlists
 ```
 
+
+## Usage
+
+```{r}
+test_file <- "./tests/testthat/test-files/RealWordRep_008L54MS5.txt"
+
+# Parse Eprime file
+df_trials <- test_file %>% 
+  get_rwr_trial_info()
+df_trials
+
+# Create WordList
+df_trials %>% 
+  get_wordlist_info()
+```
+
+
