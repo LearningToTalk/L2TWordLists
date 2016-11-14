@@ -1,4 +1,8 @@
 
+`%>%` <- dplyr::`%>%`
+
+
+
 #' @export
 l2t_wordlists_data <- list()
 
@@ -16,6 +20,9 @@ l2t_wordlists_data$id_parts <- list(
 l2t_wordlists_data$id_pattern <- l2t_wordlists_data$id_parts %>%
   unlist %>%
   paste0(collapse = "")
+
+#' Stimulus descriptions for L2T repetition experiments
+"l2t_wordlists"
 
 
 
@@ -43,3 +50,4 @@ parse_l2t_id <- function(x) {
   results$original <- x
   results
 }
+

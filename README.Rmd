@@ -25,10 +25,14 @@ You can install L2TWordLists from github with:
 devtools::install_github("LearningToTalk/L2TWordLists")
 ```
 
-## Example
+## Packaged data
 
-This is a basic example which shows you how to solve a common problem:
+### Item level information for RWR tasks
 
-```{r example}
-## basic example code
+```{r}
+library(dplyr, warn.conflicts = FALSE)
+library(L2TWordLists)
+
+l2t_wordlists
 ```
+
