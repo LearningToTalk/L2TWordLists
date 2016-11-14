@@ -1,8 +1,21 @@
-# library(dplyr)
+library(dplyr)
+
+
+# sae_experiments <- data_frame(
+#   Experiment = c(
+#     "SAE_RealWordRep_BLOCKED_TP3.beta",
+#     "SAE_RealWordRep_BLOCKED_TP3.epsilon",
+#     "SAE_RealWordRep_BLOCKED_TP3.gamma",
+#     "SAE_RealWordRep_BLOCKED_TP3.zeta"),
+#   Dialect = "SAE"
+# )
+
 
 rwr_tp1 <- readr::read_tsv("./data-raw/RealWordRepItems.txt")
 rwr_tp2 <- readr::read_tsv("./data-raw/RealWordRepItems_TP2list.txt")
-rwr_tp3 <- readr::read_tsv("./data-raw/RealWordRepItems_TP3.txt")
+rwr_tp3 <- readr::read_tsv("./data-raw/RealWordRepItems_TP3.txt") %>%
+  rename(Word = Orthography, TargetC = Target1,
+         TargetV = Target2, Frame = Frame)
 
 l2t_wordlists <- list(
   RWR = list(
