@@ -1,6 +1,31 @@
 
 `%>%` <- dplyr::`%>%`
 
+abbreviation_corrections <- tibble::tribble(
+  ~TimePoint, ~wordAbbrs, ~correctAbbr,
+  2,          "SHEEP",    "SHEP",
+  2,          "SEDR",     "SHDR",
+  2,          "TDBR",     "TEDY",
+  2,          "RCKN",     "RCKG",
+  2,          "SRNG",     "SHRG",
+  2,          "SSSR",     "SSRS",
+  3,          "SSSR",     "SSRS"
+)
+
+correct_abbreviations <- function(xs, tp) {
+  # Create a look-up vector. Name will be a raw abbreviation. Value will be the
+  # (possibly) corrected abbreviation.
+  item_lookup <- setNames(unique(xs), unique(xs))
+
+  # Find abbreviations to correct
+  corrections <- L2TWordLists:::abbreviation_corrections %>%
+    filter(TimePoint == tp)
+
+  # Update the look-up vector
+  item_lookup[corrections$wordAbbrs] <- corrections$correctAbbr
+
+  item_lookup[xs]
+}
 
 
 #' @export
