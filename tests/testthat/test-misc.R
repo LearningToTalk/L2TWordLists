@@ -1,6 +1,7 @@
 context("Helper functions")
 
 test_that("We can save WordLists to read-only files", {
+  testthat::skip_on_travis()
 
   outpath <- tempfile("my_wordlist", fileext = ".txt")
 
