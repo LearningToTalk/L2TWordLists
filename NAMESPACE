@@ -2,4 +2,5 @@
 
 export(get_rwr_trial_info)
 export(lookup_rwr_wordlist)
+export(write_protected_tsv)
 import(dplyr)
