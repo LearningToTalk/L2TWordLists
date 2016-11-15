@@ -1,0 +1,121 @@
+TrialNumber	Abbreviation	Word	WorldBet	TargetC	TargetV	Frame	ComparisonPair	Block	TrialType	AudioPrompt	PicturePrompt
+Fam1	SHRT	shorts	Sorts	S	or	ts		Familiarization	Familiarization	SHRT_H_01_TP2	SHRT_01
+Fam2	GIRL	girl	g3rl	g	3r	l		Familiarization	Familiarization	GIRL_H_01_TP2	GIRL_01
+Fam3	COLD	cold	kold	k	o	ld		Familiarization	Familiarization	COLD_H_01_TP2	COLD_01
+Fam4	COWW	cow	kaU	k	aU			Familiarization	Familiarization	COWW_H_01_TP2	COWW_01
+Test1	Shell	shell	SEl	S	E	l		block1	Test	Shell_TP3	shell1
+Test2	Soup	soup	sup	s	u	p		block1	Test	Soup_TP3	SOUP_03
+Test3	Chicken	chicken	tSIkIn	tS	I	kIn	chimmig	block1	Test	Chicken_TP3	Chicken1
+Test4	Shoulder	shoulder	Sold3r	S	o	ld3r		block1	Test	Shoulder_TP3	shoulder2
+Test5	Coat	coat	kot	k	o	t		block1	Test	Coat_TP3	coat_01
+Test6	Shadow	shadow	Saedo	S	ae	do		block1	Test	Shadow_TP3	Shadow1
+Test7	Rainbow	rainbow	renbo	r	e	nbo	regip	block1	Test	Rainbow_TP3	Rainbow1
+Test8	Tummy	tummy	tVmi	t	V	mi		block1	Test	Tummy_TP3	TMMY_01
+Test9	Running	running	rvnIN	r	V	nIN		block1	Test	Running_TP3	running1
+Test10	Sandwich	sandwich	saendwItS	s	ae	ndwItS		block1	Test	Sandwich_TP3	SWCH_01
+Test11	Rabbit	rabbit	raebIt	r	ae	bIt	raenol	block1	Test	Rabbit_TP3	rabbit1
+Test12	Teddybear	teddybear	tEdibEr	t	E	dibEr		block1	Test	Teddybear_TP3	TEDY_03
+Test13	Ship	ship	SIp	S	I	p		block1	Test	Ship_TP3	ship1
+Test14	Quiet	quiet	kwaI6t	k	w	aI6t	kwalaid	block1	Test	Quiet_TP3	Quiet4
+Test15	Cracker	cracker	kraek6r	k	r	ae k6r	kraenap	block1	Test	Cracker_TP3	Cracker2
+Test16	Train	train	tren	t	r	en		block1	Test	Train_TP3	Train1
+Test17	Cake	cake	kek	k	e	k		block1	Test	Cake_TP3	CAKE_01
+Test18	Toaster	toaster	tost6r	t	o	st6r		block1	Test	Toaster_TP3	toaster1
+Test19	Sheep	sheep	Sip	S	i	p		block1	Test	Sheep_TP3	SHEP_03
+Test20	Roof	roof	rUf	r	U	f		block1	Test	Roof_TP3	Roof2
+Test21	Shovel	shovel	SVv6l	S	V	v6l		block1	Test	Shovel_TP3	SHVL_01
+Test22	Cookie	cookie	kUki	k	U	ki		block1	Test	Cookie_TP3	CKIE_02
+Test23	Window	window	wIndo	w	I	ndo		block1	Test	Window_TP3	window2
+Test24	Candy	candy	kaendi	k	ae	ndi		block1	Test	Candy_TP3	CNDY_02
+Test25	Sidewalk	sidewalk	saIdwak	s	aI	dwak	saiprote	block1	Test	Sidewalk_TP3	sidewalk3
+Test26	Woman	woman	wUm6n	w	U	m6n		block1	Test	Woman_TP3	Woman4
+Test27	Queen	queen	kwin	k	w	in		block1	Test	Queen_TP3	Queen1
+Test28	Trash	trash	traeS	t	r	aeS		block1	Test	Trash_TP3	Trash2
+Test29	Wagon	wagon	waeg6n	w	ae	g6n		block1	Test	Wagon_TP3	Wagon2
+Test30	Rock	rock	rak	r	a	k		block1	Test	Rock_TP3	rock3
+Test31	Red	red	rEd	r	E	d		block1	Test	Red_TP3	red3
+Test32	Suitcase	suitcase	sutkes	s	u	tkes	soodross	block1	Test	Suitcase_TP3	suitcase1
+Test33	Shower	shower	SaU6r	S	aU	6r		block1	Test	Shower_TP3	SHWR_01
+Test34	Cutting	cutting	kVtIN	k	V	tIN		block2	Test	Cutting_TP3	cutting2
+Test35	Kitchen	kitchen	kItSIn	k	I	tSIn		block2	Test	Kitchen_TP3	KCHN_01
+Test36	Teacher	teacher	titS6r	t	i	tS6r		block2	Test	Teacher_TP3	Teacher2
+Test37	Cup	cup	kVp	k	V	p		block2	Test	Cup_TP3	CUPP_01
+Test38	Crawl	crawl	cral	k	r	al		block2	Test	Crawl_TP3	Crawl1
+Test39	Waiting	waiting	wetIN	w	e	tIN		block2	Test	Waiting_TP3	waiting1
+Test40	Toast	tiger	taIg6r	t	aI	g6r		block2	Test	Toast_TP3	TOST_01
+Test41	Kitten	kitten	kIt6n	k	I	t6n		block2	Test	Kitten_TP3	kitty1
+Test42	Sad	sad	saed	s	ae	d		block2	Test	Sad_TP3	SADD_02
+Test43	Crying	crying	kraIIN	k	r	aIIN	kradaek	block2	Test	Crying_TP3	Crying1
+Test44	Washcloth	washcloth	waSklaT	w	a	SklaT		block2	Test	Washcloth_TP3	walk2
+Test45	Table	table	tebl	t	e	b6l		block2	Test	Table_TP3	TABL_01
+Test46	Take	take	tek	t	e	k		block2	Test	Take_TP3	take
+Test47	Scissors	scissors	sIz6rz	s	I	z6rz		block2	Test	Scissors_TP3	SSRS_01
+Test48	Towel	towel	taU6l	t	aU	6l		block2	Test	Towel_TP3	Towel1
+Test49	Truck	truck	trVk	t	r	Vk		block2	Test	Truck_TP3	Truck2
+Test50	Wolf	wolf	wUlf	w	U	lf		block2	Test	Wolf_TP3	Wolf3
+Test51	Water	water	wat6r	w	a	t6r		block2	Test	Water_TP3	water1
+Test52	Coffee	coffee	kafi	k	a	fi		block2	Test	Coffee_TP3	coffee2
+Test53	Tent	tent	tEnt	t	E	nt		block2	Test	Tent_TP3	tent1
+Test54	Toothbrush	toothbrush	tuTbrVS	t	u	TbrVS		block2	Test	Toothbrush_TP3	TOTH_01
+Test55	Sister	sister	sIst6r	s	I	st6r		block2	Test	Sister_TP3	sister3
+Test56	Tickle	tickle	tIkl	t	I	k6l		block2	Test	Tickle_TP3	TCKL_01
+Test57	Washer	washer	waS6r	w	a	S6r		block2	Test	Washer_TP3	washer
+Test58	Sun	sun	sVn	s	V	n		block2	Test	Sun_TP3	SUNN_02
+Test59	Wheel	wheel	wil	w	i	l		block2	Test	Wheel_TP3	wheel4
+Test60	Cat	cat	kaet	k	ae	t		block2	Test	Cat_TP3	CATT_02
+Test61	Reading	reading	ridIN	r	i	dIN	reefross	block2	Test	Reading_TP3	reading1
+Test62	Trouble	trouble	trVb6l	t	r	Vb6l	truhglap	block2	Test	Trouble_TP3	Trouble2
+Test63	Cousin	cousin	kVzIn	k	V	zIn		block2	Test	Cousin_TP3	cousin1
+Test64	Sink	sink	sINk	s	I	Nk		block2	Test	Sink_TP3	sink2
+Test65	Rain	rain	ren	r	e	n	refim	block2	Test	Rain_TP3	rain5
+Test66	Sugar	sugar	SUg6r	S	U	g6r		block2	Test	Sugar_TP3	Sugar2
+Test67	Chair	chair	tSEr	tS	Er			block2	Test	Chair_TP3	chair2
+Test68	Room	room	rum	r	u	m		block2	Test	Room_TP3	Room4
+Test69	Cheese	cheese	tSiz	tS	i	z		block2	Test	Cheese_TP3	cheese1
+Test70	Cereal	cereal	sIri6l	s	I	ri6l		block2	Test	Cereal_TP3	Cereal2
+Test71	Twelve	twelve	twElv	t	w	Elv		block2	Test	Twelve_TP3	Twelve3
+Test72	Roll	roll	rol	r	o	l		block2	Test	Roll_TP3	Roll5
+Test73	Shoes	shoes	Suz	S	u	z		block2	Test	Shoes_TP3	shoes4
+Test74	Web	web	wEb	w	E	b		block2	Test	Web_TP3	web2
+Test75	Telephone	telephone	tEl6fon	t	E	l6fon		block2	Test	Telephone_TP3	Telephone1
+Test76	Seven	seven	sEvIn	s	E	vIn		block2	Test	Seven_TP3	seven1
+Test77	Tongue	tongue	tVN	t	V	N		block2	Test	Tongue_TP3	TNGE_02
+Test78	Candle	candle	kaend6l	k	ae	nd6l		block2	Test	Candle_TP3	candle1
+Test79	Wet	wet	wEt	w	E	t		block2	Test	Wet_TP3	wet4
+Test80	Walk	walk	wak	w	a	k		block2	Test	Walk_TP3	walk2
+Test81	Wood	wood	wUd	w	U	d		block2	Test	Wood_TP3	Wood3
+Test82	Twenty	twenty	twEnti	t	w	Enti	twefrap	block2	Test	Twenty_TP3	Twenty1
+Test83	Summer	summer	sVm6r	s	V	m6r	subbith	block2	Test	Summer_TP3	Summer2
+Test84	Roof	roof	rUf	r	U	f		block3	Test	Roof_TP3	Roof2
+Test85	Sandwich	sandwich	saendwItS	s	ae	ndwItS		block3	Test	Sandwich_TP3	SWCH_01
+Test86	Cracker	cracker	kraek6r	k	r	ae k6r	kraesem	block3	Test	Cracker_TP3	Cracker2
+Test87	Cake	cake	kek	k	e	k		block3	Test	Cake_TP3	CAKE_01
+Test88	Suitcase	suitcase	sutkes	s	u	tkes		block3	Test	Suitcase_TP3	suitcase2
+Test89	Shower	shower	SaU6r	S	aU	6r		block3	Test	Shower_TP3	SHWR_01
+Test90	Trash	trash	traeS	t	r	aeS		block3	Test	Trash_TP3	Trash2
+Test91	Cookie	cookie	kUki	k	U	ki		block3	Test	Cookie_TP3	CKIE_03
+Test92	Train	train	tren	t	r	en		block3	Test	Train_TP3	Train1
+Test93	Tummy	tummy	tVmi	t	V	mi		block3	Test	Tummy_TP3	TMMY_01
+Test94	Window	window	wIndo	w	I	ndo		block3	Test	Window_TP3	window2
+Test95	Shadow	shadow	Saedo	S	ae	do		block3	Test	Shadow_TP3	Shadow1
+Test96	Soup	soup	sup	s	u	p		block3	Test	Soup_TP3	SOUP_03
+Test97	Quiet	quiet	kwaI6t	k	w	aI6t	kwameg	block3	Test	Quiet_TP3	Quiet4
+Test98	Shell	shell	SEl	S	E	l		block3	Test	Shell_TP3	shell1
+Test99	Toaster	toaster	tost6r	t	o	st6r		block3	Test	Toaster_TP3	toaster1
+Test100	Running	running	rvnIN	r	V	nIN	ruhmaid	block3	Test	Running_TP3	running1
+Test101	Sheep	sheep	Sip	S	i	p		block3	Test	Sheep_TP3	SHEP_04
+Test102	Sidewalk	sidewalk	saIdwak	s	aI	dwak		block3	Test	Sidewalk_TP3	sidewalk3
+Test103	Teddybear	teddybear	tEdibEr	t	E	dibEr		block3	Test	Teddybear_TP3	TEDY_02
+Test104	Rabbit	rabbit	raebIt	r	ae	bIt		block3	Test	Rabbit_TP3	rabbit3
+Test105	Chicken	chicken	tSIkIn	tS	I	kIn	chisem	block3	Test	Chicken_TP3	chicken2
+Test106	Queen	queen	kwin	k	w	in		block3	Test	Queen_TP3	Queen1
+Test107	Wagon	wagon	waeg6n	w	ae	g6n		block3	Test	Wagon_TP3	Wagon2
+Test108	Woman	woman	wUm6n	w	U	m6n		block3	Test	Woman_TP3	Woman4
+Test109	Rainbow	rainbow	renbo	r	e	nbo	regip	block3	Test	Rainbow_TP3	Rainbow1
+Test110	Candy	candy	kaendi	k	ae	ndi		block3	Test	Candy_TP3	CNDY_02
+Test111	Shoulder	shoulder	Sold3r	S	o	ld3r		block3	Test	Shoulder_TP3	shoulder3
+Test112	Shovel	shovel	SVv6l	S	V	v6l		block3	Test	Shovel_TP3	SHVL_01
+Test113	Red	red	rEd	r	E	d		block3	Test	Red_TP3	red2withborder
+Test114	Ship	ship	SIp	S	I	p		block3	Test	Ship_TP3	ship5
+Test115	Rock	rock	rak	r	a	k		block3	Test	Rock_TP3	rock3
+Test116	Coat	coat	kot	k	o	t		block3	Test	Coat_TP3	coat_01

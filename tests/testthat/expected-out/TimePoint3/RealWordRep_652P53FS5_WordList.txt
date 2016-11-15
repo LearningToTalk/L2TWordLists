@@ -1,0 +1,6 @@
+TrialNumber	Abbreviation	Word	WorldBet	TargetC	TargetV	Frame	ComparisonPair	Block	TrialType	AudioPrompt	PicturePrompt
+Fam1	SHRT	shorts	Sorts	S	or	ts		Familiarization	Familiarization	SHRT_H_01_TP2	SHRT_01
+Fam2	GIRL	girl	g3rl	g	3r	l		Familiarization	Familiarization	GIRL_H_01_TP2	GIRL_01
+Fam3	COLD	cold	kold	k	o	ld		Familiarization	Familiarization	COLD_H_01_TP2	COLD_01
+Fam4	COWW	cow	kaU	k	aU			Familiarization	Familiarization	COWW_H_01_TP2	COWW_01
+Test1	Roof	roof	rUf	r	U	f		block1	Test	Roof_TP3	roof1
