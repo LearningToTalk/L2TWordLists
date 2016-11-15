@@ -5,14 +5,14 @@ library("purrr")
 # Path to the drive. Depends on the user's machine
 data_drive <- "SET THIS"
 
-# Locate every eprime file for RWR for a given timepoint
-study <- "TimePoint3"
+# Locate every eprime file for RWR for a given study
+study <- "TimePoint2"
 stim_dir <- sprintf("DataAnalysis/RealWordRep/%s/Recordings/", study)
 stim_dir_path <- file.path(data_drive, stim_dir)
 stim_files <- list.files(stim_dir_path, "*.txt", full.names = TRUE)
 
 # Locate WordList files
-wl_dir <- sprintf("DataAnalysis/RealWordRep/TimePoint%s/WordLists/", timepoint)
+wl_dir <- sprintf("DataAnalysis/RealWordRep/%s/WordLists/", study)
 wl_dir_path <- file.path(data_drive, wl_dir)
 wl_files <- list.files(wl_dir_path, "*.txt", full.names = TRUE)
 
