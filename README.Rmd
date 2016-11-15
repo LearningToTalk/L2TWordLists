@@ -16,21 +16,26 @@ knitr::opts_chunk$set(
 
 [![Travis-CI Build Status](https://travis-ci.org/LearningToTalk/L2TWordLists.svg?branch=master)](https://travis-ci.org/LearningToTalk/L2TWordLists)
 
-
-The goal of L2TWordLists is to ...
+The goal of L2TWordLists is to provide some convenient high-level functions for
+working with Eprime files produced by our real-word repetition and non-word
+repetition experiments.
 
 ## Installation
 
-You can install L2TWordLists from GitHub with:
+Install L2TWordLists from GitHub with:
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
 devtools::install_github("LearningToTalk/L2TWordLists")
 ```
 
-## Packaged data
+## Packaged stimulus information
 
-### Item level information for RWR tasks
+Tables of stimulus information about the items in our word-repetition
+experiments are bundled with the package and accessible with `l2t_wordlists`.
+
+Default forms of the list are stored by Task and TimePoint, and custom one-off
+lists are stored in a separate list.
 
 ```{r}
 library(dplyr, warn.conflicts = FALSE)
@@ -45,7 +50,7 @@ l2t_wordlists
 Parse an Eprime file to get trial-level information:
 
 ```{r}
-test_file <- "./tests/testthat/test-files/RealWordRep_008L54MS5.txt"
+test_file <- "./tests/testthat/test-files/TimePoint3/RealWordRep_008L54MS5.txt"
 
 # Parse Eprime file
 df_trials <- get_rwr_trial_info(test_file)
@@ -57,4 +62,3 @@ Create a WordList table using that trial-level information:
 ```{r}
 lookup_rwr_wordlist(df_trials)
 ```
-

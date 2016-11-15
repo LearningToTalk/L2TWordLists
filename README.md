@@ -5,22 +5,24 @@ L2TWordLists
 
 [![Travis-CI Build Status](https://travis-ci.org/LearningToTalk/L2TWordLists.svg?branch=master)](https://travis-ci.org/LearningToTalk/L2TWordLists)
 
-The goal of L2TWordLists is to ...
+The goal of L2TWordLists is to provide some convenient high-level functions for working with Eprime files produced by our real-word repetition and non-word repetition experiments.
 
 Installation
 ------------
 
-You can install L2TWordLists from GitHub with:
+Install L2TWordLists from GitHub with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("LearningToTalk/L2TWordLists")
 ```
 
-Packaged data
--------------
+Packaged stimulus information
+-----------------------------
 
-### Item level information for RWR tasks
+Tables of stimulus information about the items in our word-repetition experiments are bundled with the package and accessible with `l2t_wordlists`.
+
+Default forms of the list are stored by Task and TimePoint, and custom one-off lists are stored in a separate list.
 
 ``` r
 library(dplyr, warn.conflicts = FALSE)
@@ -76,6 +78,25 @@ l2t_wordlists
 #> 10      Chicken chicken   tSIkIn      tS       I   kIn        chimmig
 #> # ... with 111 more rows, and 3 more variables: Block <chr>,
 #> #   AAEsoundFile <chr>, Abbreviation120 <chr>
+#> 
+#> 
+#> $CustomLists
+#> $CustomLists$RealWordRep_003L53FS5
+#> # A tibble: 132 × 9
+#>      Word WorldBet TargetC TargetV Frame ComparisonPair           Block
+#>     <chr>    <chr>   <chr>   <chr> <chr>          <chr>           <chr>
+#> 1  shorts    Sorts       S      or    ts           <NA> Familiarization
+#> 2    girl     g3rl       g      3r     l           <NA> Familiarization
+#> 3    cold     kold       k       o    ld           <NA> Familiarization
+#> 4     cow      kaU       k      aU  <NA>           <NA> Familiarization
+#> 5    cake      kek       k       e     k           <NA>          block1
+#> 6    cake      kek       k       e     k           <NA>          block3
+#> 7     cat     kaet       k      ae     t           <NA>          block2
+#> 8  coffee     kafi       k       a    fi           <NA>          block2
+#> 9   chair     tSEr      tS      Er  <NA>           <NA>          block2
+#> 10 cheese     tSiz      tS       i     z           <NA>          block2
+#> # ... with 122 more rows, and 2 more variables: AAEsoundFile <chr>,
+#> #   Abbreviation <chr>
 ```
 
 Usage
@@ -84,7 +105,7 @@ Usage
 Parse an Eprime file to get trial-level information:
 
 ``` r
-test_file <- "./tests/testthat/test-files/RealWordRep_008L54MS5.txt"
+test_file <- "./tests/testthat/test-files/TimePoint3/RealWordRep_008L54MS5.txt"
 
 # Parse Eprime file
 df_trials <- get_rwr_trial_info(test_file)
