@@ -158,22 +158,6 @@ extract_timepoint <- function(x) {
 }
 
 
-# GetTrial_Abbreviations <- function(audioPrompt) {
-#   # Description:
-#   #   Extract the abbreviation of target words from names of audio prompts.
-#   # Arguments:
-#   #   audioPrompt: A character vector, each of whose elements is the name of
-#   #                an audio prompt used in the Real Word Repetition task.
-#   #                Typically, the result of a call to GetAudioPrompts().
-#   # Value:
-#   #   A character vector, the n-th element of which is the abbreviation of
-#   #   the target word associated with the audio prompt of the n-th trial
-#   #   of a Real Word Repetition task.
-#
-#   word.abbrs <- ExtractRegExpr(x = audioPrompt, pattern = '^[^_]+')
-#   return(word.abbrs)
-# }
-
 get_word_abbreviations <- function(audio_prompts) {
   stringr::str_extract(audio_prompts, pattern = '^[^_]+')
 }
@@ -215,14 +199,6 @@ create_trial_numbers <- function(trial_types) {
 
   trial_numbers
 }
-
-
-# GetDialect <- function(eprime_path){
-#   dialect <- grep(pattern = 'Experiment:', x = eprime_path, value = TRUE)
-#   # Extract the name of the picture prompt from the grep'ed lines of text.
-#   dialect <- substr(dialect, 13, 15)
-#   return(dialect[1])
-# }
 
 extract_dialect <- function(xs) {
   stringr::str_extract(xs, "AAE|SAE")
