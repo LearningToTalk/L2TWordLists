@@ -143,11 +143,18 @@ lookup_rwr_wordlist <- function(df_trials) {
 
 
 
-extract_timepoint <- function(xs) {
-  xs %>%
+extract_timepoint <- function(x) {
+  parsed_timepoint <- x %>%
     stringr::str_extract("TP\\d") %>%
     stringr::str_extract("\\d") %>%
     as.numeric
+
+  # Default to TP1
+  if (is.na(parsed_timepoint)) {
+    parsed_timepoint <- 1
+  }
+
+  parsed_timepoint
 }
 
 

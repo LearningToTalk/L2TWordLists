@@ -30,7 +30,7 @@ test_that("RWR TimePoint1 WordLists match original ones", {
 
   create_wordlist <- . %>%
     get_rwr_trial_info() %>%
-    lookup_rwr_wordlist
+    lookup_rwr_wordlist()
 
   load_reference_wordlist <- . %>%
     readr::read_tsv(col_types = "cccccccccc")
@@ -64,7 +64,7 @@ test_that("RWR TimePoint2 WordLists match original ones", {
 
   create_wordlist <- . %>%
     get_rwr_trial_info() %>%
-    lookup_rwr_wordlist
+    lookup_rwr_wordlist()
 
   load_reference_wordlist <- . %>%
     readr::read_tsv(col_types = "cccccccccc")
@@ -98,7 +98,7 @@ test_that("RWR TimePoint3 WordLists match original ones", {
 
   create_wordlist <- . %>%
     get_rwr_trial_info() %>%
-    lookup_rwr_wordlist
+    lookup_rwr_wordlist()
 
   load_reference_wordlist <- . %>%
     readr::read_tsv(col_types = "cccccccccccc")

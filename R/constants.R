@@ -7,11 +7,13 @@
 
 
 
-
+# Manually import the pipe
 `%>%` <- dplyr::`%>%`
 
+# These are manual abbreviation corrections. They were adapted from the series
+# of ifelse statements in the original scripts.
 abbreviation_corrections <- tibble::tribble(
-  ~TimePoint, ~wordAbbrs, ~correctAbbr,
+  ~TimePoint, ~RawAbbr, ~CorrectAbbr,
   2,          "SHEEP",    "SHEP",
   2,          "SEDR",     "SHDR",
   2,          "TDBR",     "TEDY",
@@ -21,22 +23,25 @@ abbreviation_corrections <- tibble::tribble(
   3,          "SSSR",     "SSRS"
 )
 
+# Helper function that replaces uses abbreviation correction list to
 correct_abbreviations <- function(xs, tp) {
-  # Create a look-up vector. Name will be a raw abbreviation. Value will be the
-  # (possibly) corrected abbreviation.
+  # Basically, we perform character subsetting
+  # http://adv-r.had.co.nz/Subsetting.html#applications
+
+  # Create a look-up vector. Names and values are raw abbreviations at first,
+  # but we update the values to be the corrected abbreviations. The vector then
+  # is a mapping from raw abbreviations to corrected abbreviations.
   item_lookup <- stats::setNames(unique(xs), unique(xs))
 
-  # Find abbreviations to correct
-  corrections <- abbreviation_corrections %>%
-    filter_(~ TimePoint == tp)
+  # Get corrections for this timepoint
+  corrections <- abbreviation_corrections %>% filter_(~ TimePoint == tp)
 
   # Update the look-up vector
-  item_lookup[corrections$wordAbbrs] <- corrections$correctAbbr
-
+  item_lookup[corrections$RawAbbr] <- corrections$CorrectAbbr
   item_lookup[xs]
 }
 
-
+# Other constants that might be useful
 l2t_wordlists_data <- list()
 
 # Capturing groups of an L2T participant ID
