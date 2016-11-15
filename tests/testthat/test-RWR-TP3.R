@@ -8,7 +8,7 @@ test_that("Same output as original wordlist scripts", {
     get_rwr_trial_info()
 
   df_trials <- df_trials %>%
-    get_wordlist_info() %>%
+    lookup_rwr_wordlist() %>%
     select(-Frame)
 
   ref_version <- "expected-out/RealWordRep_008L54MS5_WordList.txt" %>%
@@ -24,7 +24,7 @@ test_that("Same output as original wordlist scripts", {
   t2 <- testthat::test_path("test-files/RealWordRep_035L57FA5.txt")
   df_trials <- t2 %>%
     get_rwr_trial_info() %>%
-    get_wordlist_info() %>%
+    lookup_rwr_wordlist() %>%
     select(-Frame)
 
   ref_version <- "expected-out/RealWordRep_035L57FA5_WordList.txt" %>%

@@ -55,6 +55,6 @@ df_trials
 Create a WordList table using that trial-level information:
 
 ```{r}
-get_wordlist_info(df_trials)
+lookup_rwr_wordlist(df_trials)
 ```
 

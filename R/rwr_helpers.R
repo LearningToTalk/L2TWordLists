@@ -51,7 +51,7 @@ get_rwr_trial_info <- function(eprime_path) {
 #'   repetition experiment
 #' @return a data-frame with the "WordList" for those trials
 #' @export
-get_wordlist_info <- function(df_trials) {
+lookup_rwr_wordlist <- function(df_trials) {
   # Our goal here is to do a single table join to combine the trial information
   # with the word list information. We have to use the timepoint, dialect, and
   # number of trials in order to figure out how to join the tables. So most of

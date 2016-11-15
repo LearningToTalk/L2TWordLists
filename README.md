@@ -10,7 +10,7 @@ The goal of L2TWordLists is to ...
 Installation
 ------------
 
-You can install L2TWordLists from github with:
+You can install L2TWordLists from GitHub with:
 
 ``` r
 # install.packages("devtools")
@@ -81,12 +81,13 @@ l2t_wordlists
 Usage
 -----
 
+Parse an Eprime file to get trial-level information:
+
 ``` r
 test_file <- "./tests/testthat/test-files/RealWordRep_008L54MS5.txt"
 
 # Parse Eprime file
-df_trials <- test_file %>% 
-  get_rwr_trial_info()
+df_trials <- get_rwr_trial_info(test_file)
 df_trials
 #> # A tibble: 119 × 17
 #>    TimePoint Dialect                       Experiment
@@ -106,10 +107,12 @@ df_trials
 #> #   Trial_Abbreviation <chr>, Procedure <chr>, Running <chr>,
 #> #   AudioPrompt <chr>, PicturePrompt <chr>, Cycle <chr>, Sample <chr>,
 #> #   UserOrth <chr>, Reinforcer <chr>, reinforceImage <chr>
+```
 
-# Create WordList
-df_trials %>% 
-  get_wordlist_info()
+Create a WordList table using that trial-level information:
+
+``` r
+lookup_rwr_wordlist(df_trials)
 #> # A tibble: 119 × 12
 #>    TrialNumber Abbreviation   Word WorldBet TargetC TargetV Frame
 #>          <chr>        <chr>  <chr>    <chr>   <chr>   <chr> <chr>
