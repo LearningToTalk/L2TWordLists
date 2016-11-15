@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-L2TWordLists
-============
+L2TWordLists [![Travis-CI Build Status](https://travis-ci.org/LearningToTalk/L2TWordLists.svg?branch=master)](https://travis-ci.org/LearningToTalk/L2TWordLists)
+================================================================================================================================================================
 
 The goal of L2TWordLists is to ...
 
@@ -100,10 +100,10 @@ df_trials
 #> 9          3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
 #> 10         3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
 #> # ... with 109 more rows, and 14 more variables: Eprime.Basename <chr>,
-#> #   Block <chr>, TrialNumber <chr>, TrialType <chr>, Abbreviation <chr>,
-#> #   Procedure <chr>, Running <chr>, AudioPrompt <chr>,
-#> #   PicturePrompt <chr>, Cycle <chr>, Sample <chr>, UserOrth <chr>,
-#> #   Reinforcer <chr>, reinforceImage <chr>
+#> #   Block <chr>, TrialNumber <chr>, TrialType <chr>,
+#> #   Trial_Abbreviation <chr>, Procedure <chr>, Running <chr>,
+#> #   AudioPrompt <chr>, PicturePrompt <chr>, Cycle <chr>, Sample <chr>,
+#> #   UserOrth <chr>, Reinforcer <chr>, reinforceImage <chr>
 
 # Create WordList
 df_trials %>% 
