@@ -4,6 +4,11 @@ list_files <- function(...) {
   list.files(..., full.names = TRUE, recursive = TRUE)
 }
 
+load_reference_wordlist <- function(path) {
+  # Don't print parsing information
+  suppressMessages(readr::read_tsv(path))
+}
+
 df_eprime <- data_frame(
  Eprime_Path = list_files(test_path("test-files"), pattern = ".txt"),
  Study = basename(dirname(Eprime_Path)),
@@ -31,9 +36,6 @@ test_that("RWR TimePoint1 WordLists match original ones", {
   create_wordlist <- . %>%
     get_rwr_trial_info() %>%
     lookup_rwr_wordlist()
-
-  load_reference_wordlist <- . %>%
-    readr::read_tsv(col_types = "cccccccccc")
 
   for (file_index in seq_len(nrow(df_test_set))) {
 
@@ -66,9 +68,6 @@ test_that("RWR TimePoint2 WordLists match original ones", {
     get_rwr_trial_info() %>%
     lookup_rwr_wordlist()
 
-  load_reference_wordlist <- . %>%
-    readr::read_tsv(col_types = "cccccccccc")
-
   for (file_index in seq_len(nrow(df_test_set))) {
 
     df_curr_file <- df_test_set[file_index, ]
@@ -99,9 +98,6 @@ test_that("RWR TimePoint3 WordLists match original ones", {
   create_wordlist <- . %>%
     get_rwr_trial_info() %>%
     lookup_rwr_wordlist()
-
-  load_reference_wordlist <- . %>%
-    readr::read_tsv(col_types = "cccccccccccc")
 
   for (file_index in seq_len(nrow(df_test_set))) {
 
@@ -134,5 +130,31 @@ test_that("RWR TimePoint3 WordLists match original ones", {
       info = "All columns test -- ignore `cracker` rows",
       label = df_curr_file$Eprime_Label,
       expected.label = df_curr_file$WordList_Label)
+  }
+})
+
+test_that("RWR CochlearV1/2 WordLists match original ones", {
+  df_test_set <- df_files %>%
+    filter(Task == "RealWordRep", Study %in% c("CochlearV1", "CochlearV2"))
+
+  create_wordlist <- . %>%
+    get_rwr_trial_info() %>%
+    lookup_rwr_wordlist()
+
+  for (file_index in seq_len(nrow(df_test_set))) {
+    df_curr_file <- df_test_set[file_index, ]
+
+    this_wordlist <- df_curr_file$Eprime_Path %>%
+      create_wordlist()
+
+    this_reference <- df_curr_file$WordList_Path %>%
+      load_reference_wordlist()
+
+    expect_equal(
+      object = this_wordlist,
+      expected = this_reference,
+      label = df_curr_file$Eprime_Label,
+      expected.label = df_curr_file$WordList_Label)
+
   }
 })

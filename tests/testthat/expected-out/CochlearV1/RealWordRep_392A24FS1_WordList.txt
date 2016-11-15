@@ -1,0 +1,38 @@
+TrialNumber	Abbreviation	Word	WorldBet	TargetC	TargetV	Frame	TrialType	AudioPrompt	PicturePrompt
+Fam1	SHRT	shorts	Sorts	S	or	ts	Familiarization	SHRT_H_01	SHRT_01
+Fam2	GIRL	girl	g3rl	g	3r	l	Familiarization	GIRL_H_01	GIRL_01
+Fam3	COLD	cold	kold	k	o	ld	Familiarization	COLD_H_01	COLD_01
+Fam4	COWW	cow	kaU	k	aU		Familiarization	COWW_H_01	COWW_01
+Test1	CATT	cat	kaet	k	ae	t	Test	CATT_H_02	CATT_02
+Test2	SOUP	soup	sup	s	u	p	Test	SOUP_H_01	SOUP_01
+Test3	COAT	coat	kot	k	o	t	Test	COAT_H_01	COAT_01
+Test4	SWCH	sandwich	saendwItS	s	ae	ndwItS	Test	SWCH_H_02	SWCH_02
+Test5	TAPE	tape	tep	t	e	p	Test	TAPE_H_01	TAPE_01
+Test6	CARR	car	kar	k	ar		Test	CARR_H_01	CARR_01
+Test7	TNGE	tongue	tvN	t	v	N	Test	TNGE_H_01	TNGE_01
+Test8	TOTH	tooth	tuth	t	u	th	Test	TOTH_H_02	TOTH_02
+Test9	SHRE	share	Ser	S	er		Test	SHRE_H_02	SHRE_02
+Test10	SHRE	share	Ser	S	er		Test	SHRE_H_01	SHRE_01
+Test11	TABL	table	tebl	t	e	bl	Test	TABL_H_02	TABL_02
+Test12	SHOE	shoe	Su	S	u		Test	SHOE_H_03	SHOE_03
+Test13	TOST	toast	tost	t	o	st	Test	TOST_H_01	TOST_01
+Test14	SADD	sad	saed	s	ae	d	Test	SADD_H_01	SADD_01
+Test15	CKIE	cookie	kUki	k	U	ki	Test	CKIE_H_01	CKIE_01
+Test16	TMMY	tummy	tvmi	t	v	mi	Test	TMMY_H_02	TMMY_02
+Test17	SSRS	scissors	sIz3rz	s	I	z3rz	Test	SSRS_H_02	SSRS_02
+Test18	SOCK	sock	sak	s	a	k	Test	SOCK_H_02	SOCK_02_REDO
+Test19	CNDY	candy	kaendi	k	ae	ndi	Test	CNDY_H_02	CNDY_02
+Test20	CAKE	cake	kek	k	e	k	Test	CAKE_H_02	CAKE_02
+Test21	SUNN	sun	svn	s	v	n	Test	SUNN_H_01	SUNN_01
+Test22	KTTY	kitty	kIti	k	I	ti	Test	KTTY_H_02	KTTY_02
+Test23	TCKL	tickle	tIkl	t	I	kl	Test	TCKL_H_02	TCKL_02
+Test24	SOAP	soap	sop	s	o	p	Test	SOAP_H_01	SOAP_02
+Test25	SHVL	shovel	S6vl	S	6	vl	Test	SHVL_H_01	SHVL_01
+Test26	CUPP	cup	kvp	k	v	p	Test	CUPP_H_02	CUPP_02
+Test27	SICK	sick	sIk	s	I	k	Test	SICK_H_01	SICK_01
+Test28	SHEP	sheep	Sip	S	i	p	Test	SHEP_H_01	SHEP_01
+Test29	TEDY	teddy bear	tEdibEr	t	E	dibEr	Test	TEDY_H_01	TEDY_01
+Test30	SHWR	shower	SaU3r	S	aU	3r	Test	SHWR_H_02	SHWR_02
+Test31	KCHN	kitchen	kItS6n	k	I	tS6n	Test	KCHN_H_01	KCHN_01
+Test32	SHEP	sheep	Sip	S	i	p	Test	SHEP_H_04	SHEP_04_ADD
+Test33	SHOE	shoe	Su	S	u		Test	SHOE_H_02	SHOE_02

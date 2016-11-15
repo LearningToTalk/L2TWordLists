@@ -81,6 +81,15 @@ The testing data was selected to use all available combinations of dialect, expe
 
 | Task        | Study      | Dialect | ExperimentName                         |  NumTrials|
 |:------------|:-----------|:--------|:---------------------------------------|----------:|
+| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_3-13-13     |        103|
+| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_3-13-13     |         52|
+| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_PartI       |         37|
+| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP2         |         94|
+| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.epsilon |        118|
+| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.zeta    |        120|
+| RealWordRep | CochlearV2 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP2         |         94|
+| RealWordRep | CochlearV2 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.epsilon |        118|
+| RealWordRep | CochlearV2 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.zeta    |        120|
 | RealWordRep | TimePoint1 | AAE     | AAE\_RealWordRep                       |        103|
 | RealWordRep | TimePoint1 | AAE     | AAE\_RealWordRep\_BLOCKED\_3-13-13     |        103|
 | RealWordRep | TimePoint1 | SAE     | SAE\_RealWordRep                       |        103|

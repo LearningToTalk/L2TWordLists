@@ -1,0 +1,121 @@
+TrialNumber	Abbreviation	Word	WorldBet	TargetC	TargetV	Frame	ComparisonPair	Block	TrialType	AudioPrompt	PicturePrompt
+Fam1	SHRT	shorts	Sorts	S	or	ts		Familiarization	Familiarization	SHRT_H_01_TP2	SHRT_01
+Fam2	GIRL	girl	g3rl	g	3r	l		Familiarization	Familiarization	GIRL_H_01_TP2	GIRL_01
+Fam3	COLD	cold	kold	k	o	ld		Familiarization	Familiarization	COLD_H_01_TP2	COLD_01
+Fam4	COWW	cow	kaU	k	aU			Familiarization	Familiarization	COWW_H_01_TP2	COWW_01
+Test1	rock	rock	rak	r	a	k		block1	Test	rock_TP3b	rock2
+Test2	teddybear	teddybear	tEdibEr	t	E	dibEr		block1	Test	teddybear_TP3b	TEDY_01
+Test3	twenty	twenty	twEnti	t	w	Enti	twefrap	block1	Test	twenty_TP3b	twenty
+Test4	sheep	sheep	Sip	S	i	p		block1	Test	sheep_TP3b	SHEP_02
+Test5	trouble	trouble	trVb6l	t	r	Vb6l	truhglap	block1	Test	trouble_TP3b	Trouble2
+Test6	ship	ship	SIp	S	I	p		block1	Test	ship_TP3b	ship1
+Test7	cracker	cracker	kraek6r	k	r	aek6r	kraenap	block1	Test	cracker_TP3b	cracker
+Test8	running	running	rvnIN	r	V	nIN		block1	Test	running_TP3b	running1
+Test9	cookie	cookie	kUki	k	U	ki		block1	Test	cookie_TP3b	CKIE_02
+Test10	shower	shower	SaU6r	S	aU	6r		block1	Test	shower_TP3b	SHWR_01
+Test11	chicken	chicken	tSIkIn	tS	I	kIn	chimmig	block1	Test	chicken_TP3b	chicken1
+Test12	tummy	tummy	tVmi	t	V	mi		block1	Test	tummy_TP3b	TMMY_01
+Test13	toaster	toaster	tost6r	t	o	st6r		block1	Test	toaster_TP3b	toaster1
+Test14	rabbit	rabbit	raebIt	r	ae	bIt	raenol	block1	Test	rabbit_TP3b	rabbit1
+Test15	shoulder	shoulder	Sold3r	S	o	ld3r		block1	Test	shoulder_TP3b	shoulder2
+Test16	red	red	rEd	r	E	d		block1	Test	red_TP3b	red2
+Test17	soup	soup	sup	s	u	p		block1	Test	soup_TP3b	SOUP_01
+Test18	crying	crying	kraIIN	k	r	aIIN	kradaek	block1	Test	crying_TP3b	Crying1
+Test19	window	window	wIndo	w	I	ndo		block1	Test	window_TP3b	window1
+Test20	woman	woman	wUm6n	w	U	m6n		block1	Test	woman_TP3b	woman2
+Test21	quiet	quiet	kwaI6t	k	w	aI6t	kwalaid	block1	Test	quiet_TP3b	Quiet4
+Test22	candy	candy	kaendi	k	ae	ndi		block1	Test	candy_TP3b	CNDY_01
+Test23	roof	roof	rUf	r	U	f		block1	Test	roof_TP3b	roof1
+Test24	wagon	wagon	waeg6n	w	ae	g6n		block1	Test	wagon_TP3b	wagon1
+Test25	summer	summer	sVm6r	s	V	m6r	subbith	block1	Test	summer_TP3b	summer9
+Test26	sun	sun	sVn	s	V	n		block1	Test	sun_TP3b	SUNN_02
+Test27	shadow	shadow	Saedo	S	ae	do		block1	Test	shadow_TP3b	shadow
+Test28	suitcase	suitcase	sutkes	s	u	tkes	soodross	block1	Test	suitcase_TP3b	suitcase1
+Test29	shovel	shovel	SVv6l	S	V	v6l		block1	Test	shovel_TP3b	SHVL_01
+Test30	seven	seven	sEvIn	s	E	vIn		block2	Test	seven_TP3b	seven
+Test31	shell	shell	SEl	S	E	l		block2	Test	shell_TP3b	shell1
+Test32	kitchen	kitchen	kItSIn	k	I	tSIn		block2	Test	kitchen_TP3b	KCHN_01
+Test33	wet	wet	wEt	w	E	t		block2	Test	wet_TP3b	wet6
+Test34	keys	keys	kiz	k	i	z		block2	Test	keys_TP3b	keys1
+Test35	wolf	wolf	wUlf	w	U	lf		block2	Test	wolf_TP3b	wolf9
+Test36	candle	candle	kaend6l	k	ae	nd6l		block2	Test	candle_TP3b	candle1
+Test37	cereal	cereal	sIri6l	s	I	ri6l		block2	Test	cereal_TP3b	Cereal2
+Test38	sink	sink	sINk	s	I	Nk		block2	Test	sink_TP3b	sink2
+Test39	cat	cat	kaet	k	ae	t		block2	Test	cat_TP3b	CATT_01
+Test40	tickle	tickle	tIkl	t	I	k6l		block2	Test	tickle_TP3b	TCKL_01
+Test41	comb	comb	kom	k	o	m		block2	Test	comb_TP3b	comb2
+Test42	coffee	coffee	kafi	k	a	fi		block2	Test	coffee_TP3b	coffee5
+Test43	scissors	scissors	sIz6rz	s	I	z6rz		block2	Test	scissors_TP3b	SSRS_02
+Test44	roll	roll	rol	r	o	l		block2	Test	roll_TP3b	roll9
+Test45	sandwich	sandwich	saendwItS	s	ae	ndwItS		block2	Test	sandwich_TP3b	SWCH_01
+Test46	sugar	sugar	SUg6r	S	U	g6r		block2	Test	sugar_TP3b	Sugar2
+Test47	queen	queen	kwin	k	w	in		block2	Test	queen_TP3b	queen1
+Test48	train	train	tren	t	r	en		block2	Test	train_TP3b	train
+Test49	web	web	wEb	w	E	b		block2	Test	web_TP3b	web1
+Test50	raisins	raisins	rezInz	r	e	zInz	raybith	block2	Test	raisins_TP3b	raisins2
+Test51	crawl	crawl	cral	k	r	al		block2	Test	crawl_TP3b	Crawl1
+Test52	sister	sister	sIst6r	s	I	st6r		block2	Test	sister_TP3b	sister3
+Test53	sidewalk	sidewalk	saIdwak	s	aI	dwak	saiprote	block2	Test	sidewalk_TP3b	sidewalk2
+Test54	waiting	waiting	wetIN	w	e	tIN		block2	Test	waiting_TP3b	waiting1
+Test55	walk	walk	wak	w	a	k		block2	Test	walk_TP3b	walk2
+Test56	cousin	cousin	kVzIn	k	V	zIn		block2	Test	cousin_TP3b	cousin1
+Test57	cake	cake	kek	k	e	k		block2	Test	cake_TP3b	CAKE_01
+Test58	room	room	rum	r	u	m		block2	Test	room_TP3b	Room4
+Test59	shoes	shoes	Suz	S	u	z		block2	Test	shoes_TP3b	SHOES_01
+Test60	chair	chair	tSEr	tS	Er			block2	Test	chair_TP3b	chair3
+Test61	kitten	kitten	kIt6n	k	I	t6n		block2	Test	kitten_TP3b	Kitten1
+Test62	cutting	cutting	kVtIN	k	V	tIN		block2	Test	cutting_TP3b	cutting2
+Test63	sandbox	sandbox	saendbaks	s	ae	ndbaks		block2	Test	sandbox_TP3b	sandbox1
+Test64	toast	toast	tost	t	o	st		block2	Test	toast_TP3b	TOST_01
+Test65	rainbow	rainbow	renbo	r	e	nbo	regip	block2	Test	rainbow_TP3b	rainbow
+Test66	coat	coat	kot	k	o	t		block2	Test	coat_TP3b	coat1
+Test67	cheese	cheese	tSiz	tS	i	z		block2	Test	cheese_TP3b	cheese1
+Test68	washcloth	washcloth	waSklaT	w	a	SklaT		block2	Test	washcloth_TP3b	Washcloth1
+Test69	wheel	wheel	wil	w	i	l		block2	Test	wheel_TP3b	wheel1
+Test70	tent	tent	tEnt	t	E	nt		block2	Test	tent_TP3b	tent1
+Test71	teacher	teacher	titS6r	t	i	tS6r		block2	Test	teacher_TP3b	teacher9
+Test72	tiger	tiger	taIg6r	t	aI	g6r		block2	Test	tiger_TP3b	tiger2
+Test73	wood	wood	wUd	w	U	d		block2	Test	wood_TP3b	Wood3
+Test74	toothbrush	toothbrush	tuTbrVS	t	u	TbrVS		block2	Test	toothbrush_TP3b	toothbrush2
+Test75	table	table	tebl	t	e	b6l		block2	Test	table_TP3b	TABL_02
+Test76	tongue	tongue	tVN	t	V	N		block2	Test	tongue_TP3b	TNGE_01
+Test77	take	take	tek	t	e	k		block2	Test	take_TP3b	take4
+Test78	trash	trash	traeS	t	r	aeS		block2	Test	trash_TP3b	Trash2
+Test79	cup	cup	kVp	k	V	p		block2	Test	cup_TP3b	CUPP_03
+Test80	reading	reading	ridIN	r	i	dIN	reefross	block2	Test	reading_TP3b	reading1
+Test81	twelve	twelve	twElv	t	w	Elv		block2	Test	twelve_TP3b	twelve9
+Test82	rain	rain	ren	r	e	n	refim	block2	Test	rain_TP3b	rain5
+Test83	water	water	wat6r	w	a	t6r		block2	Test	water_TP3b	water1
+Test84	washer	washer	waS6r	w	a	S6r		block2	Test	washer_TP3b	washer
+Test85	sharing	sharing	SerIN	S	er	IN	shayvoss	block2	Test	sharing_TP3b	sharing5
+Test86	towel	towel	taU6l	t	aU	6l		block2	Test	towel_TP3b	Towel1
+Test87	truck	truck	trVk	t	r	Vk		block2	Test	truck_TP3b	Truck2
+Test88	shower2	shower	SaU6r	S	aU	6r		block3	Test	shower2_TP3b	SHWR_03
+Test89	ship2	ship	SIp	S	I	p		block3	Test	ship2_TP3b	ship5
+Test90	suitcase2	suitcase	sutkes	s	u	tkes		block3	Test	suitcase2_TP3b	suitcase4
+Test91	shovel2	shovel	SVv6l	S	V	v6l		block3	Test	shovel2_TP3b	SHVL_03
+Test92	window2	window	wIndo	w	I	ndo		block3	Test	window2_TP3b	window2
+Test93	cookie2	cookie	kUki	k	U	ki		block3	Test	cookie2_TP3b	CKIE_03
+Test94	toaster2	toaster	tost6r	t	o	st6r		block3	Test	toaster2_TP3b	toaster3
+Test95	summer2	summer	sVm6r	s	V	m6r		block3	Test	summer2_TP3b	summer3
+Test96	quiet2	quiet	kwaI6t	k	w	aI6t	kwameg	block3	Test	quiet2_TP3b	quiet9
+Test97	running2	running	rvnIN	r	V	nIN	ruhmaid	block3	Test	running2_TP3b	running2
+Test98	rabbit2	rabbit	raebIt	r	ae	bIt		block3	Test	rabbit2_TP3b	rabbit3
+Test99	candy2	candy	kaendi	k	ae	ndi		block3	Test	candy2_TP3b	CNDY_02
+Test100	red2	red	rEd	r	E	d		block3	Test	red2_TP3b	red3
+Test101	twenty	twenty	twEnti	t	w	Enti	twemag	block3	Test	twenty_TP3b	twenty
+Test102	roof2	roof	rUf	r	U	f		block3	Test	roof2_TP3b	Roof2
+Test103	crying2	crying	kraIIN	k	r	aIIN	kramel	block3	Test	crying2_TP3b	Crying1
+Test104	trouble2	trouble	trVb6l	t	r	Vb6l	truhtok	block3	Test	trouble2_TP3b	Trouble2
+Test105	wagon2	wagon	waeg6n	w	ae	g6n		block3	Test	wagon2_TP3b	Wagon2
+Test106	sheep2	sheep	Sip	S	i	p		block3	Test	sheep2_TP3b	SHEP_04
+Test107	soup2	soup	sup	s	u	p		block3	Test	soup2_TP3b	SOUP_03
+Test108	chicken2	chicken	tSIkIn	tS	I	kIn	chisem	block3	Test	chicken2_TP3b	chicken2
+Test109	woman2	woman	wUm6n	w	U	m6n		block3	Test	woman2_TP3b	Woman4
+Test110	cracker2	cracker	kraek6r	k	r	aek6r	kraesem	block3	Test	cracker2_TP3b	cracker1
+Test111	shoulder2	shoulder	Sold3r	S	o	ld3r		block3	Test	shoulder2_TP3b	shoulder3
+Test112	rock2	rock	rak	r	a	k		block3	Test	rock2_TP3b	rock3
+Test113	tummy2	tummy	tVmi	t	V	mi		block3	Test	tummy2_TP3b	TMMY_02
+Test114	shadow2	shadow	Saedo	S	ae	do		block3	Test	shadow2_TP3b	shadow1
+Test115	teddybear2	teddybear	tEdibEr	t	E	dibEr		block3	Test	teddybear2_TP3b	TEDY_03
+Test116	sun2	sun	sVn	s	V	n		block3	Test	sun2_TP3b	SUNN_03
