@@ -113,7 +113,7 @@ test_that("RWR TimePoint3 WordLists match original ones", {
     this_reference <- df_curr_file$WordList_Path %>%
       load_reference_wordlist()
 
-    # For one test of test, ignore Frame columns because of a inconsistency with
+    # For one set of tests, ignore Frame columns because of a inconsistency with
     # a space in the Frame for the word "Cracker". The master wordlist has no
     # space. The individual files created by the old script do have a space.
     expect_equal(
@@ -127,7 +127,7 @@ test_that("RWR TimePoint3 WordLists match original ones", {
     # daff::diff_data(this_wordlist, data_ref = this_reference) %>%
     #  daff::render_diff()
 
-
+    # For another set of tests, ignore the "cracker" rows.
     expect_equal(
       object = this_wordlist %>% filter(Word != "cracker"),
       expected = this_reference %>% filter(Word != "cracker"),
