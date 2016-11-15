@@ -6,7 +6,7 @@ library("purrr")
 data_drive <- "SET THIS"
 
 # Locate every eprime file for RWR for a given study
-study <- "TimePoint2"
+study <- "TimePoint1"
 stim_dir <- sprintf("DataAnalysis/RealWordRep/%s/Recordings/", study)
 stim_dir_path <- file.path(data_drive, stim_dir)
 stim_files <- list.files(stim_dir_path, "*.txt", full.names = TRUE)
@@ -50,7 +50,12 @@ files_for_testing <- trial_info %>%
             Eprime_FilePath = first(FilePath),
             Eprime_Basename = basename(Eprime_FilePath)) %>%
   ungroup
-files_for_testing
+
+# TP1 experiments do no include the timepoint name in the filename, so set them
+# from NA to 1.
+if (study == "TimePoint1") {
+  files_for_testing$TimePoint <- 1
+}
 
 
 # Locate the corresponding WordList files for these testing files
@@ -62,7 +67,7 @@ wl_file_df
 
 # Combine the WordList file info with the Eprime info
 files_for_testing <- files_for_testing %>%
-  left_join(wl_file_df) %>%
+  inner_join(wl_file_df) %>%
   select(TimePoint:RWR_Admin, WordList_Basename, everything())
 
 # Copy the files

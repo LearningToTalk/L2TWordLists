@@ -1,0 +1,104 @@
+TrialNumber	Abbreviation	Word	WorldBet	TargetC	TargetV	Frame	TrialType	AudioPrompt	PicturePrompt
+Fam1	SHRT	shorts	Sorts	S	or	ts	Familiarization	SHRT_H_01	SHRT_01
+Fam2	GIRL	girl	g3rl	g	3r	l	Familiarization	GIRL_H_01	GIRL_01
+Fam3	COLD	cold	kold	k	o	ld	Familiarization	COLD_H_01	COLD_01
+Fam4	COWW	cow	kaU	k	aU		Familiarization	COWW_H_01	COWW_01
+Test1	SHWR	shower	SaU3r	S	aU	3r	Test	SHWR_H_01	SHWR_01
+Test2	TOST	toast	tost	t	o	st	Test	TOST_H_01	TOST_02
+Test3	SHVL	shovel	S6vl	S	6	vl	Test	SHVL_H_01	SHVL_01
+Test4	TCKL	tickle	tIkl	t	I	kl	Test	TCKL_H_01	TCKL_01
+Test5	DOGG	dog	dag	d	a	g	Test	DOGG_H_02	DOGG_01
+Test6	TNGE	tongue	tvN	t	v	N	Test	TNGE_H_01	TNGE_01
+Test7	CKIE	cookie	kUki	k	U	ki	Test	CKIE_H_01	CKIE_01
+Test8	DISH	dish	dIS	d	I	S	Test	DISH_H_01	DISH_01
+Test9	SOAP	soap	sop	s	o	p	Test	SOAP_H_01	SOAP_01
+Test10	CARR	car	kar	k	ar		Test	CARR_H_01	CARR_01
+Test11	SHEP	sheep	Sip	S	i	p	Test	SHEP_H_01	SHEP_01
+Test12	CUPP	cup	kvp	k	v	p	Test	CUPP_H_01	CUPP_01
+Test13	GRBG	garbage	garbIdZ	g	ar	bIdZ	Test	GRBG_H_01	GRBG_01
+Test14	SADD	sad	saed	s	ae	d	Test	SADD_H_01	SADD_01
+Test15	SOUP	soup	sup	s	u	p	Test	SOUP_H_01	SOUP_02
+Test16	KTTY	kitty	kIti	k	I	ti	Test	KTTY_H_01	KTTY_01
+Test17	DNNR	dinner	dIn3r	d	I	n3r	Test	DNNR_H_01	DNNR_02
+Test18	SHRE	share	Ser	S	er		Test	SHRE_H_01	SHRE_01
+Test19	SSRS	scissors	sIz3rz	s	I	z3rz	Test	SSRS_H_01	SSRS_01
+Test20	SOCK	sock	sak	s	a	k	Test	SOCK_H_01	SOCK_01
+Test21	CATT	cat	kaet	k	ae	t	Test	CATT_H_01	CATT_02
+Test22	DUCK	duck	dvk	d	v	k	Test	DUCK_H_01	DUCK_01
+Test23	TEDY	teddy bear	tEdibEr	t	E	dibEr	Test	TEDY_H_01	TEDY_01
+Test24	GOOD	good	gUd	g	U	d	Test	GOOD_H_01	GOOD_01
+Test25	SWCH	sandwich	saendwItS	s	ae	ndwItS	Test	SWCH_H_01	SWCH_02
+Test26	CNDY	candy	kaendi	k	ae	ndi	Test	CNDY_H_01	CNDY_01
+Test27	CAKE	cake	kek	k	e	k	Test	CAKE_H_01	CAKE_01
+Test28	SICK	sick	sIk	s	I	k	Test	SICK_H_01	SICK_01
+Test29	KCHN	kitchen	kItS6n	k	I	tS6n	Test	KCHN_H_01	KCHN_01
+Test30	GOOO	go	go	g	o		Test	GOOO_H_01	GOOO_01
+Test31	GUMM	gum	gvm	g	v	m	Test	GUMM_H_01	GUMM_02
+Test32	DNCE	dance	daens	d	ae	ns	Test	DNCE_H_01	DNCE_01
+Test33	TABL	table	tebl	t	e	bl	Test	TABL_H_01	TABL_01
+Test34	DDDY	daddy	daedi	d	ae	di	Test	DDDY_H_01	DDDY_01
+Test35	SUNN	sun	svn	s	v	n	Test	SUNN_H_01	SUNN_01
+Test36	TMMY	tummy	tvmi	t	v	mi	Test	TMMY_H_01	TMMY_02
+Test37	GETT	get	gEt	g	E	t	Test	GETT_H_01	GETT_01
+Test38	COAT	coat	kot	k	o	t	Test	COAT_H_01	COAT_01
+Test39	GIVE	give	gIv	g	I	v	Test	GIVE_H_01	GIVE_01
+Test40	SHOE	shoe	Su	S	u		Test	SHOE_H_01	SHOE_01
+Test41	TAPE	tape	tep	t	e	p	Test	TAPE_H_01	TAPE_01
+Test42	DOOR	door	dor	d	or		Test	DOOR_H_01	DOOR_01
+Test43	TOTH	tooth	tuth	t	u	th	Test	TOTH_H_01	TOTH_01
+Test44	CAKE	cake	kek	k	e	k	Test	CAKE_H_02	CAKE_02
+Test45	DUCK	duck	dvk	d	v	k	Test	DUCK_H_02	DUCK_02
+Test46	DISH	dish	dIS	d	I	S	Test	DISH_H_02	DISH_02
+Test47	DDDY	daddy	daedi	d	ae	di	Test	DDDY_H_02	DDDY_02
+Test48	KCHN	kitchen	kItS6n	k	I	tS6n	Test	KCHN_H_02	KCHN_02
+Test49	CATT	cat	kaet	k	ae	t	Test	CATT_H_02	CATT_03
+Test50	DNNR	dinner	dIn3r	d	I	n3r	Test	DNNR_H_02	DNNR_03
+Test51	GOOD	good	gUd	g	U	d	Test	GOOD_H_02	GOOD_02
+Test52	SSRS	scissors	sIz3rz	s	I	z3rz	Test	SSRS_H_02	SSRS_02
+Test53	SHOE	shoe	Su	S	u		Test	SHOE_H_02	SHOE_02
+Test54	TAPE	tape	tep	t	e	p	Test	TAPE_H_02	TAPE_02
+Test55	SICK	sick	sIk	s	I	k	Test	SICK_H_02	SICK_02
+Test56	SHRE	share	Ser	S	er		Test	SHRE_H_02	SHRE_02
+Test57	TMMY	tummy	tvmi	t	v	mi	Test	TMMY_H_02	TMMY_03
+Test58	GIVE	give	gIv	g	I	v	Test	GIVE_H_02	GIVE_02
+Test59	TABL	table	tebl	t	e	bl	Test	TABL_H_02	TABL_03
+Test60	TOST	toast	tost	t	o	st	Test	TOST_H_02	TOST_03
+Test61	TNGE	tongue	tvN	t	v	N	Test	TNGE_H_02	TNGE_02
+Test62	COAT	coat	kot	k	o	t	Test	COAT_H_02	COAT_02
+Test63	SOAP	soap	sop	s	o	p	Test	SOAP_H_02	SOAP_02
+Test64	SUNN	sun	svn	s	v	n	Test	SUNN_H_02	SUNN_02
+Test65	SADD	sad	saed	s	ae	d	Test	SADD_H_02	SADD_02
+Test66	CARR	car	kar	k	ar		Test	CARR_H_02	CARR_02
+Test67	SHWR	shower	SaU3r	S	aU	3r	Test	SHWR_H_02	SHWR_02
+Test68	CNDY	candy	kaendi	k	ae	ndi	Test	CNDY_H_02	CNDY_02
+Test69	TCKL	tickle	tIkl	t	I	kl	Test	TCKL_H_02	TCKL_02
+Test70	SHEP	sheep	Sip	S	i	p	Test	SHEP_H_02	SHEP_02
+Test71	CKIE	cookie	kUki	k	U	ki	Test	CKIE_H_02	CKIE_02
+Test72	GETT	get	gEt	g	E	t	Test	GETT_H_05	GETT_02
+Test73	GUMM	gum	gvm	g	v	m	Test	GUMM_H_02	GUMM_03
+Test74	SHVL	shovel	S6vl	S	6	vl	Test	SHVL_H_02	SHVL_02
+Test75	KTTY	kitty	kIti	k	I	ti	Test	KTTY_H_02	KTTY_02
+Test76	DOOR	door	dor	d	or		Test	DOOR_H_02	DOOR_02
+Test77	CUPP	cup	kvp	k	v	p	Test	CUPP_H_02	CUPP_02
+Test78	SOUP	soup	sup	s	u	p	Test	SOUP_H_02	SOUP_03
+Test79	SOCK	sock	sak	s	a	k	Test	SOCK_H_02	SOCK_02
+Test80	DOGG	dog	dag	d	a	g	Test	DOGG_H_02	DOGG_02
+Test81	SWCH	sandwich	saendwItS	s	ae	ndwItS	Test	SWCH_H_02	SWCH_03
+Test82	GOOO	go	go	g	o		Test	GOOO_H_02	GOOO_02
+Test83	GRBG	garbage	garbIdZ	g	ar	bIdZ	Test	GRBG_H_02	GRBG_02
+Test84	DNCE	dance	daens	d	ae	ns	Test	DNCE_H_02	DNCE_02
+Test85	TEDY	teddy bear	tEdibEr	t	E	dibEr	Test	TEDY_H_02	TEDY_02
+Test86	TOTH	tooth	tuth	t	u	th	Test	TOTH_H_02	TOTH_02
+Test87	DOGG	dog	dag	d	a	g	Test	DOGG_H_03	DOGG_03
+Test88	GIVE	give	gIv	g	I	v	Test	GIVE_H_03	GIVE_02
+Test89	SHOE	shoe	Su	S	u		Test	SHOE_H_03	SHOE_02
+Test90	DUCK	duck	dvk	d	v	k	Test	DUCK_H_05	DUCK_03
+Test91	SHEP	sheep	Sip	S	i	p	Test	SHEP_H_03	SHEP_03
+Test92	GETT	get	gEt	g	E	t	Test	GETT_H_02	GETT_03
+Test93	SHRE	share	Ser	S	er		Test	SHRE_H_04	SHRE_02
+Test94	DOGG	dog	dag	d	a	g	Test	DOGG_H_05	DOGG_03
+Test95	SHEP	sheep	Sip	S	i	p	Test	SHEP_H_04	SHEP_03
+Test96	SHOE	shoe	Su	S	u		Test	SHOE_H_04	SHOE_03
+Test97	GIVE	give	gIv	g	I	v	Test	GIVE_H_01	GIVE_03
+Test98	SHRE	share	Ser	S	er		Test	SHRE_H_05	SHRE_03
+Test99	GETT	get	gEt	g	E	t	Test	GETT_H_02	GETT_03
