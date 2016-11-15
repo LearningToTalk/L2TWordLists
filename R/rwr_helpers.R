@@ -12,7 +12,7 @@ get_rwr_trial_info <- function(stimulusLog) {
     tibble::as_tibble()
 
   dialect <- extract_dialect(header$Experiment)
-  timepoint <- get_timepoint(header$Experiment)
+  timepoint <- extract_timepoint(header$Experiment)
 
   # Trial level information
   trial_info <- eprime_frames %>%
@@ -24,7 +24,7 @@ get_rwr_trial_info <- function(stimulusLog) {
   # Derived values
   trial_info <- trial_info %>%
     mutate(
-      Abbreviation = get_word_abbreviations(AudioPrompt),
+      Trial_Abbreviation = get_word_abbreviations(AudioPrompt),
       TrialType = ifelse(Running == "Familiarization", "Familiarization", "Test"),
       TrialNumber = create_trial_numbers(TrialType),
       Block = stringr::str_replace(Running, "List", "block"),
@@ -33,10 +33,10 @@ get_rwr_trial_info <- function(stimulusLog) {
       TimePoint = timepoint) %>%
     select(-Eprime.Level, -Eprime.LevelName, -Eprime.FrameNumber) %>%
     select(TimePoint, Dialect, Experiment, Eprime.Basename, Block, TrialNumber,
-           TrialType, Abbreviation, everything())
+           TrialType, Trial_Abbreviation, everything())
 
   # Correct any abbreviations
-  trial_info$Abbreviation <- trial_info$Abbreviation %>%
+  trial_info$Trial_Abbreviation <- trial_info$Trial_Abbreviation %>%
     correct_abbreviations(timepoint)
 
   trial_info
@@ -48,38 +48,55 @@ get_wordlist_info <- function(df_trials) {
   # with the word list information. We have to use the timepoint, dialect, and
   # number of trials in order to figure out how to join the tables. So most of
   # this function is getting the pieces in place for the table join.
+  #
+  # There are two columns with the item abreviations:
+  #
+  # - WL_Abbreviation is the abbreviation in the WordLists
+  # - Trial_Abbreviation is the abbreviation in data-frame of trial information
+  #
+  # For most of the cases, we just join the two tables using these two columns,
+  # but there are cases where we have to join using a different column in the
+  # WordList table.
 
   timepoint <- unique(df_trials$TimePoint)
   dialect <- unique(df_trials$Dialect)
   num_trials <- nrow(df_trials)
 
   # Get the wordlist definition
-  target_info <- l2t_wordlists$RWR[[paste0("TimePoint", timepoint)]]
+  target_info <- l2t_wordlists$RWR[[paste0("TimePoint", timepoint)]] %>%
+    rename(WL_Abbreviation = Abbreviation)
 
-  # The TP3 wordlist has two "abbreviation" columns, depending on the dialect
+  # The TP3 wordlist has two "Abbreviation" columns, depending on the dialect
   # and number of trials. Determine which to use.
   abbreviation_set <- if (num_trials == 120 & dialect == 'SAE') {
     "Abbreviation120"
   } else {
-    "Abbreviation"
+    "WL_Abbreviation"
   }
+
+  # Duplicate the Abbreviation column so there is always a column named
+  # "Abbreviation" after joining. The joining rules will cause WL_Abbreviation
+  # to be renamed to Trial_Abbreviation in most cases, but for the special
+  # cases, this might not be true Having the duplicated "Abbreviation"
+  # column avoids this issue.
+  target_info$Abbreviation <- target_info[[abbreviation_set]]
 
   # These are the rules for combining the trial info and the wordlist. See
   # documentation in ?left_join for the "by" argument to learn how these rules
   # work.
   by_rules <- list(
-    SAE1 = c("Abbreviation"),
-    AAE1 = c("Abbreviation"),
-    SAE2 = c("Abbreviation"),
-    AAE2 = c("Abbreviation"),
-    SAE3 = c("Abbreviation" = abbreviation_set, "Block"),
+    SAE1 = c("Trial_Abbreviation" = "WL_Abbreviation"),
+    AAE1 = c("Trial_Abbreviation" = "WL_Abbreviation"),
+    SAE2 = c("Trial_Abbreviation" = "WL_Abbreviation"),
+    AAE2 = c("Trial_Abbreviation" = "WL_Abbreviation"),
+    SAE3 = c("Trial_Abbreviation" = abbreviation_set, "Block"),
     AAE3 = c("AudioPrompt" = "AAEsoundFile", "Block"))
 
   # Choose the rule
   current_case <- paste0(dialect, timepoint)
   current_rule <- by_rules[[current_case]]
 
-  # These are the columns we need to retain afterwards.
+  # These are the columns we need to retain afterwards
   names_to_keep <- list(
     `1` = c('TrialNumber','Abbreviation', 'Word', 'WorldBet',
             'TargetC', 'TargetV', 'Frame', 'TrialType',
@@ -107,7 +124,7 @@ get_wordlist_info <- function(df_trials) {
 
 
 
-get_timepoint <- function(xs) {
+extract_timepoint <- function(xs) {
   xs %>%
     stringr::str_extract("TP\\d") %>%
     stringr::str_extract("\\d") %>%
@@ -115,7 +132,7 @@ get_timepoint <- function(xs) {
 }
 
 
-# GetWordAbbreviations <- function(audioPrompt) {
+# GetTrial_Abbreviations <- function(audioPrompt) {
 #   # Description:
 #   #   Extract the abbreviation of target words from names of audio prompts.
 #   # Arguments:

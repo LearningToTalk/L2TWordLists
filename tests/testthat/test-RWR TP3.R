@@ -5,7 +5,9 @@ test_that("Same output as before", {
   # but not this one's.
   t1 <- test_path("test-files/RealWordRep_008L54MS5.txt")
   df_trials <- t1 %>%
-    get_rwr_trial_info() %>%
+    get_rwr_trial_info()
+
+  df_trials <- df_trials %>%
     get_wordlist_info() %>%
     select(-Frame)
 
@@ -25,7 +27,7 @@ test_that("Same output as before", {
     get_wordlist_info() %>%
     select(-Frame)
 
-  ref_version <- "expected-out/RealWordRep_008L54MS5_WordList.txt" %>%
+  ref_version <- "expected-out/RealWordRep_035L57FA5_WordList.txt" %>%
     test_path()
 
   df_trials2 <- readr::read_tsv(ref_version) %>%
