@@ -5,7 +5,7 @@
 #' @return invisibly returns the input `x`
 #' @export
 write_protected_tsv <- function(x, path) {
-  readr::write_tsv(x, path)
+  readr::write_tsv(x = x, path = path)
   Sys.chmod(path, mode = "0444")
   invisible(x)
 }

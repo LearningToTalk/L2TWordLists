@@ -47,11 +47,101 @@ df_trials
 Create a WordList table using that trial-level information:
 
 ```{r}
-lookup_rwr_wordlist(df_trials)
+df_wordlist <- lookup_rwr_wordlist(df_trials)
+df_wordlist
 ```
 
-## Test data coverage
+Save a read-only copy of a WordList table:
 
+```{r, eval = TRUE}
+# Save wordlist to a temporary file
+outpath <- tempfile("my-wordlist", fileext = ".txt")
+write_protected_tsv(df_wordlist, outpath)
+
+# mode is `444` when a file is read-only
+file.info(outpath)[["mode"]]
+
+# returns -1 when write permissions are unavailable
+unname(file.access(outpath, 2))
+```
+
+
+### Create a WordList from a Participant ID
+
+```{r, echo = FALSE, message = FALSE}
+# Clean up any leftovers from last time
+"./tests/testthat/mock-analysis/RealWordRep/TimePoint1/WordLists/" %>% 
+  list.files(full.names = TRUE) %>% 
+  unlink(force = TRUE)
+```
+
+The function `create_rwr_wordlist_file()` is a shortcut that will create a 
+WordList for a particular participant. This function replicates the main 
+functionality of our older R scripts. All the user needs to provide is a
+participant ID, a study name, and a task directory.
+
+```{r}
+# Using a mock location for the package documentation...
+task_dir <- "./tests/testthat/mock-analysis/RealWordRep"
+study_name <- "TimePoint1"
+participant_id <- "001L"
+
+create_rwr_wordlist_file(participant_id, study_name, task_dir)
+```
+
+By default, the function will not overwrite a WordList.
+
+```{r, error = TRUE}
+create_rwr_wordlist_file(participant_id, study_name, task_dir)
+```
+
+We can update a WordList with `update = TRUE`, however:
+
+```{r}
+create_rwr_wordlist_file(participant_id, study_name, task_dir, update = TRUE)
+```
+
+If we set the participant ID to a blank `""`, then the function will **create a
+WordList for every participant ID in a study** folder.
+
+```{r}
+create_rwr_wordlist_file("", study_name, task_dir, update = TRUE)
+```
+
+The function invisibly returns a list with the generated WordList and the file 
+location. That is, we can run the function by itself and not see the generated
+WordList printed out --- this prevents the console from being flooded with
+data-frame print-outs. But we can assign the results of the function to a
+variable and see the WordList data and file locations. In this case, two 
+WordsLists have been updated:
+
+```{r}
+results <- create_rwr_wordlist_file("", study_name, task_dir, update = TRUE)
+str(results)
+```
+
+```{r, echo = FALSE, message = FALSE}
+# Clean up
+"./tests/testthat/mock-analysis/RealWordRep/TimePoint1/WordLists/" %>% 
+  list.files(full.names = TRUE) %>% 
+  unlink(force = TRUE)
+```
+
+
+## Packaged stimulus information
+
+Tables of stimulus information about the items in our word-repetition
+experiments are bundled with the package and accessible with `l2t_wordlists`.
+
+Default forms of the list are stored by Task and TimePoint, and custom one-off
+lists are stored in a separate list.
+
+```{r}
+l2t_wordlists
+```
+
+
+## Test data coverage
 
 ```{r, echo = FALSE, message = FALSE}
 list_files <- function(...) {
@@ -100,15 +190,4 @@ The build status badge at the top of this page indicates whether the package
 successfully passed all these tests (and also passed the standard checks for R
 packages).
 
-## Packaged stimulus information
-
-Tables of stimulus information about the items in our word-repetition
-experiments are bundled with the package and accessible with `l2t_wordlists`.
-
-Default forms of the list are stored by Task and TimePoint, and custom one-off
-lists are stored in a separate list.
-
-```{r}
-l2t_wordlists
-```
 
