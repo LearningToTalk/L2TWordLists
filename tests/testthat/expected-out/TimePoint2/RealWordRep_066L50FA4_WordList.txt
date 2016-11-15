@@ -1,0 +1,53 @@
+TrialNumber	Abbreviation	Word	WorldBet	TargetC	TargetV	Frame	TrialType	AudioPrompt	PicturePrompt
+Fam1	SHRT	shorts	Sorts	S	or	ts	Familiarization	SHRT_A_01_TP2	SHRT_01
+Fam2	GIRL	girl	g3rl	g	3r	l	Familiarization	GIRL_A_01	GIRL_01
+Fam3	COLD	cold	kold	k	o	ld	Familiarization	COLD_A_01	COLD_01
+Fam4	COWW	cow	kaU	k	aU		Familiarization	COWW_A_01	COWW_01
+Test1	CKIE	cookie	kUki	k	U	ki	Test	CKIE_A_01_TP2	CKIE_02
+Test2	STCS	suitcase	sutkes	s	u	tkes	Test	STCS_A_04_TP2	suitcase1
+Test3	WALK	walk	wak	w	a	k	Test	WALK_A_01_TP2	walk2
+Test4	TENT	tent	tEnt	t	E	nt	Test	TENT_A_01_TP2	tent1
+Test5	RBBT	rabbit	raebIt	r	ae	bIt	Test	RBBT_A_02_TP2	rabbit1
+Test6	TEDY	teddy bear	tEdibEr	t	E	dibEr	Test	TDBR_A_01_TP2	TEDY_03
+Test7	ROCK	rock	rak	r	a	k	Test	ROCK_A_02_TP2	rock3
+Test8	SADD	sad	saed	s	ae	d	Test	SADD_A_01_TP2	SADD_02
+Test9	SHRG	sharing	SErIN	S	Er	IN	Test	SRNG_A_01_TP2	sharing4
+Test10	WETT	wet	wEt	w	E	t	Test	WETT_A_01_TP2	wet6
+Test11	WACH	watch	watS	w	a	tS	Test	WACH_A_01_TP2	watch5
+Test12	REDD	red	rEd	r	E	d	Test	REDD_A_03_TP2	red2withborder
+Test13	CHKN	chicken	tSIkIn	tS	I	kIn	Test	CHKN_A_01_TP2	chicken2
+Test14	SHDR	shoulder	Sold3r	S	o	ld3r	Test	SHDR_A_01_TP2	shoulder2
+Test15	SHIP	ship	SIp	S	I	p	Test	SHIP_A_01_TP2	ship1
+Test16	TNGE	tongue	tVN	t	V	N	Test	TNGE_A_01_TP2	TNGE_02
+Test17	SHEP	sheep	Sip	S	i	p	Test	SHEEP_A_01_TP2	SHEP_03
+Test18	WEBB	web	wEb	w	E	b	Test	WEBB_A_01_TP2	web2
+Test19	TMMY	tummy	tVmi	t	V	mi	Test	TMMY_A_02_TP2	TMMY_01
+Test20	SHOE	shoe	Su	S	u		Test	SHOE_A_01_TP2	SHOE_02
+Test21	SINK	sink	sINk	s	I	Nk	Test	SINK_A_02_TP2	sink2
+Test22	WNDW	window	wIndo	w	I	ndo	Test	WNDW_A_02_TP2	window2
+Test23	SOCK	sock	sak	s	a	k	Test	SOCK_A_01_TP2	SOCK_01
+Test24	SHWR	shower	SaU6r	S	aU	6r	Test	SHWR_A_01_TP2	SHWR_01
+Test25	KEYS	keys	kiz	k	i	z	Test	KEYS_A_01_TP2	keys1
+Test26	SNBX	sandbox	saendbaks	s	ae	ndbaks	Test	SNBX_A_02_TP2	sandbox4
+Test27	THBR	toothbrush	tuTbrVS	t	u	TbrVS	Test	THBR_A_05_TP2	toothbrush1
+Test28	SHRE	share	SEr	S	Er		Test	SHRE_A_01_TP2	SHRE_02
+Test29	CTNG	cutting	kVtIN	k	V	tIN	Test	CTNG_A_01_TP2	cutting2
+Test30	SSTR	sister	sIst6r	s	I	st6r	Test	SSTR_A_01_TP2	sister3
+Test31	KCHN	kitchen	kItSIn	k	I	tSIn	Test	KCHN_A_02_TP2	KCHN_01
+Test32	TCKL	tickle	tIkl	t	I	k6l	Test	TCKL_A_01_TP2	TCKL_01
+Test33	SHVL	shovel	SVv6l	S	V	v6l	Test	SHVL_A_01_TP2	SHVL_01
+Test34	CTCH	catch	kaetS	k	ae	tS	Test	CTCH_A_02_TP2	catch1
+Test35	TSTR	toaster	tost6r	t	o	st6r	Test	TSTR_A_01_TP2	toaster1
+Test36	CARR	car	kar	k	ar		Test	CARR_A_04_TP2	CARR_03
+Test37	RING	ring	rIN	r	I	N	Test	RING_A_03_TP2	ring12
+Test38	TABL	table	tebl	t	e	b6l	Test	TABL_A_01_TP2	TABL_01
+Test39	TOST	toast	tost	t	o	st	Test	TOST_A_01_TP2	TOST_01
+Test40	RAIN	rain	ren	r	e	n	Test	RAIN_A_02_TP2	rain5
+Test41	CHEE	cheese	tSiz	tS	i	z	Test	CHEE_A_01_TP2	cheese1
+Test42	RCKG	rocking	rakIN	r	a	kIN	Test	RCKN_A_07_TP2	rocking
+Test43	SDWK	sidewalk	saIdwak	s	aI	dwak	Test	SDWK_A_04_TP2	sidewalk3
+Test44	SNNY	sunny	sVni	s	V	ni	Test	SNNY_A_01_TP2	Sunny2
+Test45	KTTY	kitty	kIti	k	I	ti	Test	KTTY_A_03_TP2	kitty1
+Test46	SOUP	soup	sup	s	u	p	Test	SOUP_A_01_TP2	SOUP_03
+Test47	COAT	coat	kot	k	o	t	Test	COAT_A_02_TP2	coat_01
+Test48	RNNG	running	rvnIN	r	v	nIN	Test	RNNG_A_01_TP2	running1

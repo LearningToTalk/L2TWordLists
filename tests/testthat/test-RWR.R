@@ -24,20 +24,16 @@ df_files <- df_eprime %>%
   mutate(Task = stringr::str_extract(Task_Admin, "^.+WordRep"))
 
 
-test_that("RWR TimePoint3 WordLists match original ones", {
+test_that("RWR TimePoint2 WordLists match original ones", {
   df_test_set <- df_files %>%
-    filter(Task == "RealWordRep", Study == "TimePoint3")
+    filter(Task == "RealWordRep", Study == "TimePoint2")
 
-  # For now, ignore Frame columns because inconsistency with a space in the word
-  # "Cracker"
   create_wordlist <- . %>%
     get_rwr_trial_info() %>%
-    lookup_rwr_wordlist %>%
-    select(-Frame)
+    lookup_rwr_wordlist
 
   load_reference_wordlist <- . %>%
-    readr::read_tsv(col_types = "cccccccccccc") %>%
-    select(-Frame)
+    readr::read_tsv(col_types = "cccccccccc")
 
   for (file_index in seq_len(nrow(df_test_set))) {
 
@@ -58,44 +54,51 @@ test_that("RWR TimePoint3 WordLists match original ones", {
     # # diagnostics - to visualize the cell-by-cell differences
     # daff::diff_data(this_wordlist, data_ref = this_reference) %>%
     #  daff::render_diff()
-
   }
-
-  # # Some weirdness with how there is a spcae in the reference version's frame
-  # # but not this one's.
-  # t1 <- test_path("test-files/RealWordRep_008L54MS5.txt")
-  # df_trials <- t1 %>%
-  #   get_rwr_trial_info()
-  #
-  # df_trials <- df_trials %>%
-  #   lookup_rwr_wordlist() %>%
-  #   select(-Frame)
-  #
-  # ref_version <- "expected-out/RealWordRep_008L54MS5_WordList.txt" %>%
-  #   test_path()
-  #
-  # df_trials2 <- %>%
-  #   select(-Frame)
-  #
-  # expect_equal(df_trials, df_trials2)
-  #
-  #
-  #
-  # t2 <- test_path("test-files/RealWordRep_035L57FA5.txt")
-  # df_trials <- t2 %>%
-  #   get_rwr_trial_info() %>%
-  #   lookup_rwr_wordlist() %>%
-  #   select(-Frame)
-  #
-  # ref_version <- "expected-out/RealWordRep_035L57FA5_WordList.txt" %>%
-  #   test_path()
-  #
-  # df_trials2 <- readr::read_tsv(ref_version) %>%
-  #   select(-Frame)
-  #
-  # expect_equal(df_trials, df_trials2)
+})
 
 
+test_that("RWR TimePoint3 WordLists match original ones", {
+  df_test_set <- df_files %>%
+    filter(Task == "RealWordRep", Study == "TimePoint3")
+
+  create_wordlist <- . %>%
+    get_rwr_trial_info() %>%
+    lookup_rwr_wordlist
+
+  load_reference_wordlist <- . %>%
+    readr::read_tsv(col_types = "cccccccccccc")
+
+  for (file_index in seq_len(nrow(df_test_set))) {
+
+    df_curr_file <- df_test_set[file_index, ]
+
+    this_wordlist <- df_curr_file$Eprime_Path %>%
+      create_wordlist()
+
+    this_reference <- df_curr_file$WordList_Path %>%
+      load_reference_wordlist()
+
+    # For one test of test, ignore Frame columns because of a inconsistency with
+    # a space in the Frame for the word "Cracker". The master wordlist has no
+    # space. The individual files created by the old script do have a space.
+    expect_equal(
+      object = this_wordlist %>% select(-Frame),
+      expected = this_reference %>% select(-Frame),
+      info = "All rows test -- ignore `Frame` column",
+      label = df_curr_file$Eprime_Label,
+      expected.label = df_curr_file$WordList_Label)
+
+    # # diagnostics - to visualize the cell-by-cell differences
+    # daff::diff_data(this_wordlist, data_ref = this_reference) %>%
+    #  daff::render_diff()
 
 
+    expect_equal(
+      object = this_wordlist %>% filter(Word != "cracker"),
+      expected = this_reference %>% filter(Word != "cracker"),
+      info = "All columns test -- ignore `cracker` rows",
+      label = df_curr_file$Eprime_Label,
+      expected.label = df_curr_file$WordList_Label)
+  }
 })
