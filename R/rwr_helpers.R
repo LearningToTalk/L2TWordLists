@@ -1,7 +1,10 @@
+#' Extract trial-level data from a RWR Eprime text file
+#' @param eprime_path path to an Eprime text file
+#' @return a data-frame with information about each trial
 #' @export
-get_rwr_trial_info <- function(stimulusLog) {
+get_rwr_trial_info <- function(eprime_path) {
   # Read and parse the stimulus log
-  eprime_frames <- stimulusLog %>%
+  eprime_frames <- eprime_path %>%
     rprime::read_eprime() %>%
     rprime::FrameList()
 
@@ -19,21 +22,22 @@ get_rwr_trial_info <- function(stimulusLog) {
     rprime::keep_levels(2) %>%
     rprime::to_data_frame() %>%
     tibble::as_tibble() %>%
-    rename(AudioPrompt = soundFile, PicturePrompt = picFile)
+    rename_(AudioPrompt = ~ soundFile, PicturePrompt = ~ picFile)
 
   # Derived values
   trial_info <- trial_info %>%
-    mutate(
-      Trial_Abbreviation = get_word_abbreviations(AudioPrompt),
-      TrialType = ifelse(Running == "Familiarization", "Familiarization", "Test"),
-      TrialNumber = create_trial_numbers(TrialType),
-      Block = stringr::str_replace(Running, "List", "block"),
-      Dialect = dialect,
-      Experiment = header$Experiment,
-      TimePoint = timepoint) %>%
-    select(-Eprime.Level, -Eprime.LevelName, -Eprime.FrameNumber) %>%
-    select(TimePoint, Dialect, Experiment, Eprime.Basename, Block, TrialNumber,
-           TrialType, Trial_Abbreviation, everything())
+    mutate_(
+      Trial_Abbreviation = ~ get_word_abbreviations(AudioPrompt),
+      TrialType = ~ ifelse(Running == "Familiarization",
+                           "Familiarization", "Test"),
+      TrialNumber = ~ create_trial_numbers(TrialType),
+      Block = ~ stringr::str_replace(Running, "List", "block"),
+      Dialect = ~ dialect,
+      Experiment = ~ header$Experiment,
+      TimePoint = ~ timepoint) %>%
+    select_(~ -Eprime.Level, ~ -Eprime.LevelName, ~ -Eprime.FrameNumber) %>%
+    select_(~ TimePoint, ~ Dialect, ~ Experiment, ~ Eprime.Basename, ~ Block,
+            ~ TrialNumber, ~ TrialType, ~ Trial_Abbreviation, ~ everything())
 
   # Correct any abbreviations
   trial_info$Trial_Abbreviation <- trial_info$Trial_Abbreviation %>%
@@ -42,6 +46,10 @@ get_rwr_trial_info <- function(stimulusLog) {
   trial_info
 }
 
+#' Create a WordList for a RWR expriment
+#' @param df_trials a data-frame with trial-level information about a RWR
+#'   repetition experiment
+#' @return a data-frame with the "WordList" for those trials
 #' @export
 get_wordlist_info <- function(df_trials) {
   # Our goal here is to do a single table join to combine the trial information
@@ -63,8 +71,8 @@ get_wordlist_info <- function(df_trials) {
   num_trials <- nrow(df_trials)
 
   # Get the wordlist definition
-  target_info <- l2t_wordlists$RWR[[paste0("TimePoint", timepoint)]] %>%
-    rename(WL_Abbreviation = Abbreviation)
+  target_info <- int_l2t_wordlists$RWR[[paste0("TimePoint", timepoint)]] %>%
+    rename_(WL_Abbreviation = ~ Abbreviation)
 
   # The TP3 wordlist has two "Abbreviation" columns, depending on the dialect
   # and number of trials. Determine which to use.
@@ -184,15 +192,15 @@ create_trial_numbers <- function(trial_types) {
   # Split into different groups and add numbers to each item in group
   trial_numbers <- trial_types %>%
     split(trial_types) %>%
-    Map(add_sequence_numbers, .) %>%
+    lapply(add_sequence_numbers) %>%
     unlist(use.names = FALSE)
 
   trial_numbers
 }
 
 
-# GetDialect <- function(stimulusLog){
-#   dialect <- grep(pattern = 'Experiment:', x = stimulusLog, value = TRUE)
+# GetDialect <- function(eprime_path){
+#   dialect <- grep(pattern = 'Experiment:', x = eprime_path, value = TRUE)
 #   # Extract the name of the picture prompt from the grep'ed lines of text.
 #   dialect <- substr(dialect, 13, 15)
 #   return(dialect[1])

@@ -1,4 +1,13 @@
 
+# Document the contents of the data folder:
+
+#' Stimulus descriptions for L2T repetition experiments
+"l2t_wordlists"
+
+
+
+
+
 `%>%` <- dplyr::`%>%`
 
 abbreviation_corrections <- tibble::tribble(
@@ -15,11 +24,11 @@ abbreviation_corrections <- tibble::tribble(
 correct_abbreviations <- function(xs, tp) {
   # Create a look-up vector. Name will be a raw abbreviation. Value will be the
   # (possibly) corrected abbreviation.
-  item_lookup <- setNames(unique(xs), unique(xs))
+  item_lookup <- stats::setNames(unique(xs), unique(xs))
 
   # Find abbreviations to correct
-  corrections <- L2TWordLists:::abbreviation_corrections %>%
-    filter(TimePoint == tp)
+  corrections <- abbreviation_corrections %>%
+    filter_(~ TimePoint == tp)
 
   # Update the look-up vector
   item_lookup[corrections$wordAbbrs] <- corrections$correctAbbr
@@ -28,7 +37,6 @@ correct_abbreviations <- function(xs, tp) {
 }
 
 
-#' @export
 l2t_wordlists_data <- list()
 
 # Capturing groups of an L2T participant ID
@@ -46,17 +54,14 @@ l2t_wordlists_data$id_pattern <- l2t_wordlists_data$id_parts %>%
   unlist %>%
   paste0(collapse = "")
 
-#' Stimulus descriptions for L2T repetition experiments
-"l2t_wordlists"
 
 
-
-#' Locate and extract an L2T id from a string or vector of strings
+# Locate and extract an L2T id from a string or vector of strings
 extract_l2t_id <- function(xs) {
   stringr::str_extract(xs, l2t_wordlists_data$id_pattern)
 }
 
-#' Parse an L2T ID into its meaningful parts
+# Parse an L2T ID into its meaningful parts
 parse_l2t_id <- function(x) {
   stopifnot(length(x) == 1)
   # String -> list of matrices of matching expressions
@@ -68,7 +73,7 @@ parse_l2t_id <- function(x) {
     # Keep first row of dataframe
     `[`(1, , drop = FALSE) %>%
     # Rename columns and convert to list
-    setNames(c("FullID", names(l2t_wordlists_data$id_parts))) %>%
+    stats::setNames(c("FullID", names(l2t_wordlists_data$id_parts))) %>%
     as.list
 
   results$ShortID <- paste0(results$ResearchID, results$StudyType)

@@ -12,14 +12,16 @@ knitr::opts_chunk$set(
 )
 ```
 
-# L2TWordLists [![Travis-CI Build Status](https://travis-ci.org/LearningToTalk/L2TWordLists.svg?branch=master)](https://travis-ci.org/LearningToTalk/L2TWordLists)
+# L2TWordLists 
+
+[![Travis-CI Build Status](https://travis-ci.org/LearningToTalk/L2TWordLists.svg?branch=master)](https://travis-ci.org/LearningToTalk/L2TWordLists)
 
 
 The goal of L2TWordLists is to ...
 
 ## Installation
 
-You can install L2TWordLists from github with:
+You can install L2TWordLists from GitHub with:
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
@@ -40,17 +42,19 @@ l2t_wordlists
 
 ## Usage
 
+Parse an Eprime file to get trial-level information:
+
 ```{r}
 test_file <- "./tests/testthat/test-files/RealWordRep_008L54MS5.txt"
 
 # Parse Eprime file
-df_trials <- test_file %>% 
-  get_rwr_trial_info()
+df_trials <- get_rwr_trial_info(test_file)
 df_trials
-
-# Create WordList
-df_trials %>% 
-  get_wordlist_info()
 ```
 
+Create a WordList table using that trial-level information:
+
+```{r}
+get_wordlist_info(df_trials)
+```
 

@@ -17,11 +17,14 @@ rwr_tp3 <- readr::read_tsv("./data-raw/RealWordRepItems_TP3.txt") %>%
   rename(Word = Orthography, TargetC = Target1,
          TargetV = Target2, Frame = Frame2)
 
-l2t_wordlists <- list(
+int_l2t_wordlists <- l2t_wordlists <- list(
   RWR = list(
     TimePoint1 = rwr_tp1,
     TimePoint2 = rwr_tp2,
     TimePoint3 = rwr_tp3)
 )
 
+# external version
 devtools::use_data(l2t_wordlists, overwrite = TRUE)
+# package-internal version
+devtools::use_data(int_l2t_wordlists, overwrite = TRUE, internal = TRUE)

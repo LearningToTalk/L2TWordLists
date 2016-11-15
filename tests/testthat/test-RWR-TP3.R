@@ -1,9 +1,9 @@
 context("RWR TP3")
 
-test_that("Same output as before", {
+test_that("Same output as original wordlist scripts", {
   # Some weirdness with how there is a spcae in the reference version's frame
   # but not this one's.
-  t1 <- test_path("test-files/RealWordRep_008L54MS5.txt")
+  t1 <- testthat::test_path("test-files/RealWordRep_008L54MS5.txt")
   df_trials <- t1 %>%
     get_rwr_trial_info()
 
@@ -17,11 +17,11 @@ test_that("Same output as before", {
   df_trials2 <- readr::read_tsv(ref_version) %>%
     select(-Frame)
 
-  expect_equal(df_trials, df_trials2)
+  testthat::expect_equal(df_trials, df_trials2)
 
 
 
-  t2 <- test_path("test-files/RealWordRep_035L57FA5.txt")
+  t2 <- testthat::test_path("test-files/RealWordRep_035L57FA5.txt")
   df_trials <- t2 %>%
     get_rwr_trial_info() %>%
     get_wordlist_info() %>%
@@ -33,7 +33,7 @@ test_that("Same output as before", {
   df_trials2 <- readr::read_tsv(ref_version) %>%
     select(-Frame)
 
-  expect_equal(df_trials, df_trials2)
+  testthat::expect_equal(df_trials, df_trials2)
 
 
 
