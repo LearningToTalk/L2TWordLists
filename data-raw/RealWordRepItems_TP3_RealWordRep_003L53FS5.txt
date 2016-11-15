@@ -1,0 +1,133 @@
+Abbreviation	Orthography	WorldBet	Target1	Target2	Frame2	ComparisonPair	Block	AAEsoundFile	Abbreviation120
+SHRT	shorts	Sorts	S	or	ts		Familiarization	SHRT_A_01_TP2	SHRT
+GIRL	girl	g3rl	g	3r	l		Familiarization	GIRL_A_01	GIRL
+COLD	cold	kold	k	o	ld		Familiarization	COLD_A_01	COLD
+COWW	cow	kaU	k	aU			Familiarization	COWW_A_01	COWW
+Cake	cake	kek	k	e	k		block1	cake_A	Cake
+Cake	cake	kek	k	e	k		block3	cake_A	Cake
+CATT	cat	kaet	k	ae	t		block2	CATT_A_02_TP2	Cat
+CFEE	coffee	kafi	k	a	fi		block2	CFEE_A_01_TP2	Coffee
+Chair	chair	tSEr	tS	Er			block2	chair_A	Chair
+Cheese	cheese	tSiz	tS	i	z		block2	cheese_A	Cheese
+Chicken	chicken	tSIkIn	tS	I	kIn	chimmig	block1	chicken_A	Chicken
+CHKN	chicken	tSIkIn	tS	I	kIn	chisem	block3	CHKN_A_01_TP2	Chicken
+CKIE	cookie	kUki	k	U	ki		block1	CKIE_A_01_TP2	Cookie
+CKIE	cookie	kUki	k	U	ki		block3	cookie_A	Cookie
+Candle	candle	kaend6l	k	ae	nd6l		block2	candle_A	Candle
+Candy	candy	kaendi	k	ae	ndi		block1	candy_A	Candy
+candy	candy	kaendi	k	ae	ndi		block3	candy2_A	Candy
+COAT	coat	kot	k	o	t		block1	coat_A	Coat
+COAT	coat	kot	k	o	t		block3	coat_A	Coat
+CTNG	cutting	kVtIN	k	V	tIN		block2	CTNG_A_01_TP2	Cutting
+CUPP	cup	kVp	k	V	p		block2	CUPP_A_02_TP2	Cup
+KCHN	kitchen	kItSIn	k	I	tSIn		block2	KCHN_A_02_TP2	Kitchen
+Rain	rain	ren	r	e	n	refim	block2	rain_A	Rain
+RBBT	rabbit	raebIt	r	ae	bIt	raenol	block1	RBBT_A_02_TP2	Rabbit
+RBBT	rabbit	raebIt	r	ae	bIt		block3	RBBT_A_03_TP2	Rabbit
+Reading	reading	ridIN	r	i	dIN	reefross	block2	reading_A	Reading
+REDD	red	rEd	r	E	d		block1	REDD_A_03_TP2	Red
+REDD	red	rEd	r	E	d		block3	REDD_A_04_TP2	Red
+RNNG	running	rvnIN	r	V	nIN		block1	RNNG_A_01_TP2	Running
+RNNG	running	rvnIN	r	V	nIN	ruhmaid	block3	running_A	Running
+ROCK	rock	rak	r	a	k		block1	ROCK_A_02_TP2	Rock
+ROCK	rock	rak	r	a	k		block3		Rock
+Roof	roof	rUf	r	U	f		block1	roof_A	Roof
+Roof2	roof	rUf	r	U	f		block3	roof_A	Roof
+Raisins	raisins	rezInz	r	e	zInz	raybith	block2	raisins_A	
+SDWK	sidewalk	saIdwak	s	aI	dwak	saiprote	block1	SDWK_A_04_TP2	Sidewalk
+SDWK	sidewalk	saIdwak	s	aI	dwak		block3	SDWK_A_04_TP2	Sidewalk
+SHDR	shoulder	Sold3r	S	o	ld3r		block3	shoulder_A	Shoulder
+SHDR	shoulder	Sold3r	S	o	ld3r		block1	shoulder_A	Shoulder
+SHEEP	sheep	Sip	S	i	p		block1	sheep_A	Sheep
+SHEEP	sheep	Sip	S	i	p		block3	SHEEP_A_01_TP2	Sheep
+SHEL	shell	SEl	S	E	l		block1	SHEL_A_01_TP2	Shell
+SHEL	shell	SEl	S	E	l		block3	SHEL_A_01_TP2	Shell
+SHIP	ship	SIp	S	I	p		block1	SHIP_A_01_TP2	Ship
+SHIP	ship	SIp	S	I	p		block3	SHIP_A_02_TP2	Ship
+SHOS	shoes	Suz	S	u	z		block2	SHOS_A_04_TP2	Shoes
+SHVL	shovel	SVv6l	S	V	v6l		block1	SHVL_A_01_TP2	Shovel
+SHVL	shovel	SVv6l	S	V	v6l		block3	shovel_A	Shovel
+SHWR	shower	SaU6r	S	aU	6r		block1	SHWR_A_01_TP2	Shower
+SHWR	shower	SaU6r	S	aU	6r		block3	shower_A	Shower
+SINK	sink	sINk	s	I	Nk		block2	SINK_A_02_TP2	Sink
+SNBX	sandbox	saendbaks	s	ae	ndbaks		block2	SNBX_A_02_TP2	
+SOUP	soup	sup	s	u	p		block1	soup_A	Soup
+SOUP	soup	sup	s	u	p		block3	SOUP_A_01_TP2	Soup
+SSRS	scissors	sIz6rz	s	I	z6rz		block2	SSSR_A_01_TP2	Scissors
+SSTR	sister	sIst6r	s	I	st6r		block2	SSTR_A_01_TP2	Sister
+STCS	suitcase	sutkes	s	u	tkes	soodross	block1	STCS_A_04_TP2	Suitcase
+STCS	suitcase	sutkes	s	u	tkes		block3	STCS_A_05_TP2	Suitcase
+Sun	sun	sVn	s	V	n		block2	sun_A	Sun
+SUNN	sun	sVn	s	V	n		block3	SUNN_A_01_TP2	
+SWCH	sandwich	saendwItS	s	ae	ndwItS		block1	SWCH_A_02_TP2	Sandwich
+SWCH	sandwich	saendwItS	s	ae	ndwItS		block3	SWCH_A_02_TP2	Sandwich
+TABL	table	tebl	t	e	b6l		block2	TABL_A_01_TP2	Table
+TAKE	take	tek	t	e	k		block2	TAKE_A_03_TP3	Take
+TCKL	tickle	tIkl	t	I	k6l		block2	TCKL_A_01_TP2	Tickle
+TDBR	teddybear	tEdibEr	t	E	dibEr		block1	TDBR_A_01_TP2	Teddybear
+TDBR	teddybear	tEdibEr	t	E	dibEr		block3		Teddybear
+TENT	tent	tEnt	t	E	nt		block2	TENT_A_01_TP2	Tent
+THBR	toothbrush	tuTbrVS	t	u	TbrVS		block2	THBR_A_05_TP2	Toothbrush
+TMMY	tummy	tVmi	t	V	mi		block1	tummy_A	Tummy
+TMMY	tummy	tVmi	t	V	mi		block3	TMMY_A_02_TP2	Tummy
+TNGE	tongue	tVN	t	V	N		block2	TNGE_A_01_TP2	Tongue
+TOST	toast	tost	t	o	st		block2	TOST_A_01_TP2	
+TSTR	toaster	tost6r	t	o	st6r		block1	TSTR_A_01_TP2	Toaster
+TSTR	toaster	tost6r	t	o	st6r		block3	toaster_A	Toaster
+Walk	walk	wak	w	a	k		block2	walk_A	Walk
+Water	water	wat6r	w	a	t6r		block2	water_A	Water
+WEBB	web	wEb	w	E	b		block2	WEBB_A_02_TP2	Web
+WETT	wet	wEt	w	E	t		block2	wet_A	Wet
+Wheel	wheel	wil	w	i	l		block2	wheel_A	Wheel
+WNDW	window	wIndo	w	I	ndo		block1	window_A	Window
+WNDW	window	wIndo	w	I	ndo		block3	WNDW_A_02_TP2	Window
+Washer	washer	waS6r	w	a	S6r		block2	washer_A	Washer
+WTNG	waiting	wetIN	w	e	tIN		block2	WTNG_A_03_TP2	Waiting
+Woman	woman	wUm6n	w	U	m6n		block1	woman_A	Woman
+woman	woman	wUm6n	w	U	m6n		block3	woman2_A	Woman
+Wagon	wagon	waeg6n	w	ae	g6n		block1	wagon_A	Wagon
+wagon	wagon	waeg6n	w	ae	g6n		block3	wagon2_A	Wagon
+Cracker	cracker	kraek6r	k	r	aek6r	kraenap	block1	cracker_A	Cracker
+cracker	cracker	kraek6r	k	r	aek6r	kraesem	block3	cracker2_A	Cracker
+Queen	queen	kwin	k	w	in		block1	queen_A	Queen
+Queen	queen	kwin	k	w	in		block3	queen_A	Queen
+Quiet	quiet	kwaI6t	k	w	aI6t	kwalaid	block1	quiet_A	Quiet
+quiet	quiet	kwaI6t	k	w	aI6t	kwameg	block3	quiet2_A	Quiet
+Train	train	tren	t	r	en		block1	train_A	Train
+Train	train	tren	t	r	en		block3	train_A	Train
+Trash	trash	traeS	t	r	aeS		block1	trash_A	Trash
+Trash	trash	traeS	t	r	aeS		block3	trash_A	Trash
+Rainbow	rainbow	renbo	r	e	nbo	regip	block1	rainbow_A	Rainbow
+Rainbow	rainbow	renbo	r	e	nbo	regip	block3	rainbow_A	Rainbow
+Crawl	crawl	cral	k	r	al		block2	crawl_A	Crawl
+Crying	crying	kraIIN	k	r	aIIN	kradaek	block2	crying_A	Crying
+crying	crying	kraIIN	k	r	aIIN	kramel	block3	crying2_A	
+Shadow	shadow	Saedo	S	ae	do		block1	shadow_A	Shadow
+shadow	shadow	Saedo	S	ae	do		block3	shadow2_A	Shadow
+Cereal	cereal	sIri6l	s	I	ri6l		block2	cereal_A	Cereal
+Roll	roll	rol	r	o	l		block2	roll_A	Roll
+Room	room	rum	r	u	m		block2	room_A	Room
+Seven	seven	sEvIn	s	E	vIn		block2	seven_A	Seven
+Sugar	sugar	SUg6r	S	U	g6r		block2	sugar_A	Sugar
+Summer	summer	sVm6r	s	V	m6r	subbith	block2	summer_A	Summer
+summer	summer	sVm6r	s	V	m6r		block3	summer2_A	
+Teacher	teacher	titS6r	t	i	tS6r		block2	teacher_A	Teacher
+Towel	towel	taU6l	t	aU	6l		block2	towel_A	Towel
+Trouble	trouble	trVb6l	t	r	Vb6l	truhglap	block2	trouble_A	Trouble
+trouble	trouble	trVb6l	t	r	Vb6l	truhtok	block3	trouble2_A	
+Truck	truck	trVk	t	r	Vk		block2	truck_A	Truck
+Twelve	twelve	twElv	t	w	Elv		block2	twelve_A	Twelve
+Twenty	twenty	twEnti	t	w	Enti	twefrap	block2	twenty2_A	Twenty
+Twenty	twenty	twEnti	t	w	Enti	twemag	block3	twenty_A	
+Twenty	twenty	twEnti	t	w	Enti	twefrap	block2		
+Washcloth	washcloth	waSklaT	w	a	SklaT		block2	washcloth_A	Washcloth
+Wolf	wolf	wUlf	w	U	lf		block2	wolf_A	Wolf
+Wood	wood	wUd	w	U	d		block2	wood_A	Wood
+Kitten	kitten	kIt6n	k	I	t6n		block2	kitten_A	Kitten
+COMB	comb	kom	k	o	m		block2	COMB_A_01_TP2	
+Cousin	cousin	kVzIn	k	V	zIn		block2	cousin_A	Cousin
+KEYS	keys	kiz	k	i	z		block2	keys_A	
+Sharing	sharing	SerIN	S	er	IN	shayvoss	block2	sharing_A	
+TIGR	tiger	taIg6r	t	aI	g6r		block2	TIGR_A_01_TP2	Toast
+SADD	sad	saed	s	ae	d		block2		Sad
+TLPH	telephone	tEl6fon	t	E	l6fon		block2		Telephone

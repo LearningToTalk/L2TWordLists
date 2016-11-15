@@ -68,15 +68,26 @@ lookup_rwr_wordlist <- function(df_trials) {
 
   timepoint <- unique(df_trials$TimePoint)
   dialect <- unique(df_trials$Dialect)
+  experiment <- unique(df_trials$Experiment)
   num_trials <- nrow(df_trials)
+  eprime_file <- unique(df_trials$Eprime.Basename)
 
   # Get the wordlist definition
-  target_info <- int_l2t_wordlists$RWR[[paste0("TimePoint", timepoint)]] %>%
+  target_info <- int_l2t_wordlists$RWR[[paste0("TimePoint", timepoint)]]
+
+  # Check for a custom wordlist
+  has_custom_list <- eprime_file %in% names(int_l2t_wordlists$CustomLists)
+
+  if (has_custom_list) {
+    target_info <- int_l2t_wordlists$CustomLists[[eprime_file]]
+  }
+
+  target_info <- target_info %>%
     rename_(WL_Abbreviation = ~ Abbreviation)
 
   # The TP3 wordlist has two "Abbreviation" columns, depending on the dialect
   # and number of trials. Determine which to use.
-  abbreviation_set <- if (num_trials == 120 & dialect == 'SAE') {
+  abbreviation_set <- if (experiment == "SAE_RealWordRep_BLOCKED_TP3.zeta") {
     "Abbreviation120"
   } else {
     "WL_Abbreviation"

@@ -4,7 +4,7 @@
 \name{l2t_wordlists}
 \alias{l2t_wordlists}
 \title{Stimulus descriptions for L2T repetition experiments}
-\format{An object of class \code{list} of length 1.}
+\format{An object of class \code{list} of length 2.}
 \usage{
 l2t_wordlists
 }
