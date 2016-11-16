@@ -1,3 +1,47 @@
+
+#' Convenience function to create a WordList given a ResearchID, study and folder
+#'
+#' @param short_id four-character short participant ID (e.g., "001L"). Use `""`
+#'   for a wildcard search that will match all 4-character participants IDs.
+#' @param study_name name of an L2T study (e.g., "TimePoint1")
+#' @param dir_task the fully specified filepath to the folder for a Task. The
+#'   value for `study_name` should be a subfolder in this location.
+#' @param dir_eprime folder that contains Eprime output files. Defaults to `Recordings`.
+#' @param dir_wordlist folder where the WordList should be saved. Defaults to `WordLists`.
+#' @param read_only whether to protect the saved WordList. Defaults to TRUE.
+#' @param update whether to update the saved WordList. Defaults to FALSE.
+#' @return the generated WordList table(s)
+#' @export
+#' @rdname create_wordlists
+create_nwr_wordlist_file <- function(short_id, study_name, dir_task,
+                                     dir_eprime = "Recordings",
+                                     dir_wordlist = "WordLists",
+                                     read_only = TRUE, update = FALSE) {
+
+  create_wordlist_file(
+    short_id = short_id,
+    study_name = study_name,
+    dir_task = dir_task,
+    dir_eprime = dir_eprime,
+    dir_wordlist = dir_wordlist,
+    read_only = read_only,
+    update = update,
+    task_name = "NonWordRep",
+    wordlist_func = function(x) lookup_nwr_wordlist(get_nwr_trial_info(x))
+  )
+
+}
+
+
+
+
+
+
+
+
+
+
+
 #' Create a WordList for a NWR expriment
 #' @param df_trials a data-frame with trial-level information about a NWR
 #'   repetition experiment

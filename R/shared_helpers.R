@@ -1,3 +1,89 @@
+
+create_wordlist_file <- function(short_id, study_name, dir_task,
+                                 task_name, wordlist_func,
+                                 dir_eprime = "Recordings",
+                                 dir_wordlist = "WordLists",
+                                 read_only = TRUE, update = FALSE) {
+
+  write_file <- if (read_only) write_protected_tsv else readr::write_tsv
+
+  dir_eprime <- file.path(dir_task, study_name, dir_eprime)
+  dir_wordlist <- file.path(dir_task, study_name, dir_wordlist)
+
+
+  if (short_id == "") {
+    short_id <- "\\d{3}[A-Z]\\d{2}"
+  }
+
+  # Find Eprime data
+  search_pattern <- paste0(task_name, "_", short_id, ".+txt$")
+  search_results <- list.files(dir_eprime, search_pattern, full.names = TRUE)
+
+  # Fail if nothing found
+  if (length(search_results) == 0) {
+    stop("Could not file Eprime data for ", short_id,
+         " in folder:\n\t", dir_eprime, call. = FALSE)
+  }
+
+  # Message if multiple files found
+  if (1 < length(search_results)) {
+    message("Multiple files found: ",
+            paste0(basename(search_results), collapse = ", "))
+  }
+
+  # Create WordList paths
+  admin_name <- search_results %>%
+    basename() %>%
+    tools::file_path_sans_ext()
+
+  wordlist_name <- paste0(admin_name, "_WordList.txt") %>%
+    file.path(dir_wordlist, .)
+
+  # Fail if WordLists exist already and we're not updating
+  if (any(file.exists(wordlist_name)) & !update) {
+    alreadys <- wordlist_name[which(file.exists(wordlist_name))] %>%
+      paste0(collapse = "\n\t")
+    stop("WordList file already exists:\n\t",
+         alreadys,
+         "\nUse `update = TRUE` to overwrite a WordList.",
+         call. = FALSE)
+  }
+
+  if (update) {
+    Sys.chmod(wordlist_name, mode = "777")
+  }
+
+  parsed <- search_results %>%
+    lapply(. %>% wordlist_func)
+
+  save_wordlist <- function(x, path) {
+    verb <- if (update) "Updating file" else "Writing file"
+    message(verb, " ", basename(path))
+    write_file(x, path)
+    x
+  }
+
+  Map(save_wordlist, parsed, wordlist_name)
+
+  # Create a little container of file-locations and data-frames
+  describe_output <- function(filepath, data) {
+    list(path = filepath, data = data)
+  }
+
+  output <- unname(Map(describe_output, wordlist_name, parsed))
+
+  invisible(output)
+}
+
+
+
+
+
+
+
+
+
+
 # File-reading and processing steps shared by both tasks
 get_trial_info <- function(eprime_path) {
   # Read and parse the stimulus log
