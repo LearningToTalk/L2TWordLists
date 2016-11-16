@@ -149,3 +149,11 @@ test_that("NWR TimePoint1 WordLists match original ones", {
   test_wordlists(df_test_set, create_nwr_wordlist)
 })
 
+
+test_that("NWR TimePoint2 WordLists match original ones", {
+  df_test_set <- df_files %>%
+    filter(Task == "NonWordRep", Study == "TimePoint2")
+
+  test_wordlists(df_test_set, create_nwr_wordlist)
+})
+

@@ -1,0 +1,75 @@
+TrialNumber	TrialType	Orthography	WorldBet	Frame1	Target1	Target2	Frame2	TargetStructure	Frequency	ComparisonPair
+Fam1	Familiarization	dablor	dablor		d	a	blr			
+Fam2	Familiarization	dqkram	daekram		d	ae	kram			
+Fam3	Familiarization	sqnut	Saenut		S	ae	nut			
+Fam4	Familiarization	kh3rpoyn	kh3rpoin		k	3r	poIn			
+Fam5	Familiarization	khizel	khIzEl		k	I	zEl			
+Fam6	Familiarization	thaumag	thaUmag		t	aU	mag			
+Test1	Test	podowd	podaUd	pod	aU	d		VC	high	VC3
+Test2	Test	doenewg	donug	don	u	g		VC	low	VC2
+Test3	Test	toogrife	tugraIf		t	u	graIf	CV	nonword	toothbrush
+Test4	Test	minnamp	mInaemp	mInae	m	p		CC	high	CC1
+Test5	Test	pwaugub	pwag6b		p	w	ag6b	CC	low	CC2
+Test6	Test	rahlide	ralaId		r	a	laId	CV	nonword	rocking
+Test7	Test	seeploke	sIplok		s	I	plok	CV	nonword	sister
+Test8	Test	owkpuhday	aUkp6de		aU	k	p6de	VC	low	VC6
+Test9	Test	motowk	motaUk	mot	aU	k		VC	low	VC1
+Test10	Test	thIblor	tIblor		t	I	blor	CV	nonword	tickle
+Test11	Test	voogeem	vugim		v	u	gim	CV	low	CV3
+Test12	Test	owftuhga	aUft6ga		aU	f	t6ga	VC	low	VC7
+Test13	Test	mabbep	maebEp		m	ae	bEp	CV	high	CV2
+Test14	Test	baydag	bedaeg	bed	ae	g		VC	high	VC2
+Test15	Test	eeptuhn	ipt6n		i	p	t6n	VC	high	VC4
+Test16	Test	moypudd	moip6d		m	oi	p6d	CV	low	CV2
+Test17	Test	chimmig	tSImIg		tS	I	mIg	CV	nonword	chicken
+Test18	Test	eekbuhnee	ikb6ni		i	k	b6ni	VC	high	VC6
+Test19	Test	kamig	kaemIg		k	ae	mIg	CV	nonword	candle
+Test20	Test	gaUn6pek	gaUn6pek		g	aU	n6pek	CV	low	CV6
+Test21	Test	ountuhko	aUnt6ko		aU	n	t6ko	VC	high	VC7
+Test22	Test	boduhyow	bod6jaU	bod6	j	aU		CV	low	CV5
+Test23	Test	nubuhmunn	nUb6m6n		n	U	b6m6n	CV	low	CV7
+Test24	Test	fIk6taemp	fIk6taemp	fIk6tae	m	p		CC	high	CC5
+Test25	Test	keddohwumb	kEd6w6mb	kEd6w6	m	b		CC	low	CC5
+Test26	Test	tugnuhdeet	tVgn6dit	t	V	g	n6dit	VC	high	VC5
+Test27	Test	pwenuhtep	pwEn6tEp		p	w	En6tEp	CC	low	CC6
+Test28	Test	wahprote	waprot		w	a	prot	CV	nonword	water
+Test29	Test	doagdate	dogdet	do	g	d	et	CC	low	CC4
+Test30	Test	subbith	sVbIT		s	V	bIT	CV	nonword	sunny
+Test31	Test	taydowm	tedaUm	ted	aU	m		VC	low	VC3
+Test32	Test	nuhfamb	n6faemb	n6fae	m	b		CC	low	CC1
+Test33	Test	viddigop	vIt6gap		v	I	t6gap	CV	high	CV4
+Test34	Test	whimell	wImEl		w	I	mEl	CV	nonword	window
+Test35	Test	tacktoot	taektut	tae	k	t	ut	CC	high	CC4
+Test36	Test	toezell	tozEl		t	o	zEl	CV	nonword	toaster
+Test37	Test	naffkuhtoo	naefk6tu	nae	f	k	6tu	CC	low	CC7
+Test38	Test	shayvoss	Sevas		S	e	vas	CV	nonword	sharing
+Test39	Test	samell	saemEl		s	ae	mEl	CV	nonword	sandwich
+Test40	Test	soudack	sodaek		s	o	daek	CV	SKIP	
+Test41	Test	viddag	vIdaeg		v	I	daeg	CV	high	CV3
+Test42	Test	payteek	petik	pet	i	k		VC	high	VC1
+Test43	Test	reefross	rifras		r	i	fras	CV	nonword	reading
+Test44	Test	yougoyt	jugoit	ju	g	oi	t	CV	low	CV1
+Test45	Test	mayduhyou	med6ju	med6	j	u		CV	high	CV5
+Test46	Test	kahsep	kasEp		k	a	sEp	CV	nonword	coffee
+Test47	Test	waymog	wemag		w	e	mag	CV	nonword	waiting
+Test48	Test	geetuhmoke	git6mok		g	i	t6mok	CV	high	CV6
+Test49	Test	teektuhpoe	tikt6po	ti	k	t	6po	CC	high	CC8
+Test50	Test	boofkeet	bufkit	bu	f	k	it	CC	low	CC3
+Test51	Test	raybith	rebIT		r	e	bIT	CV	nonword	raisins
+Test52	Test	saiprote	saIprot		s	aI	prot	CV	nonword	sidewalk
+Test53	Test	bogeeb	bogib	bo	g	i	b	CV	high	CV1
+Test54	Test	kipown	kIpon		k	I	pon	CV	nonword	kitchen
+Test55	Test	vookuhtem	vuk6tEm		v	u	k6tEm	CV	low	CV4
+Test56	Test	keeftane	kiften	ki	f	t	en	CC	high	CC3
+Test57	Test	doognitade	dugn6ted	d	u	g	n6ted	VC	low	VC5
+Test58	Test	ruhgloke	rVglok		r	V	glok	CV	nonword	running
+Test59	Test	degdinay	dEgd6ne	dE	g	d	6ne	CC	low	CC8
+Test60	Test	gufftuhdye	gVft6daI	gV	f	t	6daI	CC	high	CC7
+Test61	Test	wahkrad	wakraed		w	a	kraed	CV	nonword	washer
+Test62	Test	cuffeam	kVfim		k	V	fim	CV	nonword	cutting
+Test63	Test	soodross	sudras		s	u	dras	CV	nonword	suitcase
+Test64	Test	nidduhbip	nId6bIp		n	I	d6bIp	CV	high	CV7
+Test65	Test	twekket	twEkEt		t	w	EkEt	CC	high	CC2
+Test66	Test	twedduhmin	twEd6mIn		t	w	Ed6mIn	CC	high	CC6
+Test67	Test	rapoin	raepoIn		r	ae	poIn	CV	nonword	rabbit
+Test68	Test	owptudd	aUpt6d		aU	p	t6d	VC	low	VC4
