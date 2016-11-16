@@ -1,0 +1,92 @@
+OrigOrder	Orthography	WorldBet	Frame1	Target1	Target2	Frame2	TP3_AudioFileAAE	TP3_AudioFileSAE	TargetStructure	Frequency	ComparisonPair	TP2_AudioFileAAE	TP2_AudioFileSAE	LexFreq
+27	owftuhga	aUft6ga		aU	f	t6ga	auft6ga_A.wav	auft6ga.wav	VC	low	VC7	auft6ga_01_A.wav	auft6ga_03_mono.wav	
+25	owkpuhday	aUkp6de		aU	k	p6de	aUkp6de_A.wav	aUkp6de.wav	VC	low	VC6	aUkp6de_02_A.wav	aUkp6de_02_mono.wav	
+28	ountuhko	aUnt6ko		aU	n	t6ko	aunt6ko_A.wav	aunt6ko.wav	VC	high	VC7	aunt6ko_01_A.wav	aunt6ko_02_mono.wav	
+21	owptudd	aUpt6d		aU	p	t6d	aupt6d_A.wav	aupt6d.wav	VC	low	VC4	aupt6d_02_A.wav	aupt6d_02_mono.wav	
+18	baydag	bedaeg	bed	ae	g		bedaeg_A.wav	bedaeg.wav	VC	high	VC2	bedaeg_02_A.wav	bedaeg_03_mono.wav	
+9	boduhyow	bod6jaU	bod6	j	aU		bod6jaU_A.wav	bod6jaU.wav	CV	low	CV5	bod6jaU_01_A.wav	bod6jaU_02_mono.wav	
+2	bogeeb	bogib	bo	g	i	b	bogib_A.wav	bogib.wav	CV	high	CV1	bogib_01_A.wav	bogib_03_mono.wav	
+33	boofkeet	bufkit	bu	f	k	it	bufkit_A.wav	bufkit.wav	CC	low	CC3	bufkit_01_A.wav	bufkit_02_mono.wav	
+43	degdinay	dEgd6ne	dE	g	d	6ne	dEgd6ne_A.wav	dEgd6ne.wav	CC	low	CC8	dEgd6ne_01_A.wav	dEgd6ne_02_mono.wav	
+35	doagdate	dogdet	do	g	d	et	dogdet_A.wav	dogdet.wav	CC	low	CC4	dogdet_02_A.wav	dogdet_02_mono.wav	
+17	doenewg	donug	don	u	g		donug_A.wav	donug.wav	VC	low	VC2	donug_01_A.wav	donug_01_mono.wav	
+23	doognitade	dugn6ted	d	u	g	n6ted	dugn6ted_A.wav	dugn6ted.wav	VC	low	VC5	dugn6ted_01_A.wav	dugn6ted_01_mono.wav	
+38	fIk6taemp	fIk6taemp	fIk6tae	m	p		fIk6taemp_A.wav	fIk6taemp.wav	CC	high	CC5	fIk6taemp_03_A.wav	fIk6taemp_01_mono.wav	
+11	gaUn6pek	gaUn6pek		g	aU	n6pek	gaUn6pek_A.wav	gaUn6pek.wav	CV	low	CV6	gaUn6pek_01_A.wav	gaUn6pek_02_mono.wav	
+12	geetuhmoke	git6mok		g	i	t6mok	git6mok_A.wav	git6mok.wav	CV	high	CV6	git6mok_01_A.wav	git6mok_03_mono.wav	
+42	gufftuhdye	gVft6daI	gV	f	t	6daI	gvft6daI_A.wav	gvft6daI.wav	CC	high	CC7	gvft6dal_02_A.wav	gvft6dal_02_mono.wav	
+26	eekbuhnee	ikb6ni		i	k	b6ni	ikb6ni_A.wav	ikb6ni.wav	VC	high	VC6	ikb6ni_01_A.wav	ikb6ni_01_mono.wav	
+22	eeptuhn	ipt6n		i	p	t6n	ipt6n_A.wav	ipt6n.wav	VC	high	VC4	ipt6n_01_A.wav	ipt6n_01_mono.wav	
+1	yougoyt	jugoit	ju	g	oi	t	jugoit_A.wav	jugoit.wav	CV	low	CV1	jugoit.wav	jugoit_A.wav	
+37	keddohwumb	kEd6w6mb	kEd6w6	m	b		kEd6w6mb_A.wav	kEd6w6mb.wav	CC	low	CC5	kEd6w6mb_01_A.wav	kEd6w6mb_01_mono.wav	
+34	keeftane	kiften	ki	f	t	en	kiften_A.wav	kiften.wav	CC	high	CC3	kiften_01_A.wav	kiften_02_mono.wav	
+47	kradaek	kradaek		k	r	adaek	kradaek_A.wav	kradaek.wav	CC	nonword	crying			
+45	kraenap	kraenap		k	r	aenap	kraenap_A.wav	kraenap.wav	CC	nonword	cracker			
+46	kraesem	kraesEm		k	r	aesEm	kraesem_A.wav	kraesem.wav	CC	nonword	cracker			
+48	kramel	kramEl		k	r	amEl	kramel_A.wav	kramel.wav	CC	nonword	crying			
+51	kwalaid	kwalaId		k	w	alaId	kwalaid_A.wav	kwalaid.wav	CC	nonword	quiet			high
+52	kwameg	kwamIg		k	w	amIg	kwameg_A.wav	kwameg.wav	CC	nonword	quiet			high
+57	kwefim	kwEfim		k	w	Efim	kwefim_A.wav	kwefim.wav	CC	nonword2	twemag			high
+58	kwepas	kwEpas		k	w	Epas	kwepas_A.wav	kwepas.wav	CC	nonword2	twefrap			high
+4	mabbep	maebEp		m	ae	bEp	maebEp_A.wav	maebEp.wav	CV	high	CV2	maebEp_01_A.wav	maebEp_02_mono.wav	
+10	mayduhyou	med6ju	med6	j	u		med6ju_A.wav	med6ju.wav	CV	high	CV5	med6ju_01_A.wav	med6ju_02_mono.wav	
+30	minnamp	mInaemp	mInae	m	p		mInaemp_A.wav	mInaemp.wav	CC	high	CC1	mInaemp_01_A.wav	mInaemp_02_mono.wav	
+3	moypudd	moip6d		m	oi	p6d	moip6d_A.wav	moip6d.wav	CV	low	CV2	moip6d_01_A.wav	moip6d_03_mono.wav	
+15	motowk	motaUk	mot	aU	k		motaUk_A.wav	motaUk.wav	VC	low	VC1	motaUk_01_A.wav	motaUk_02_mono.wav	
+29	nuhfamb	n6faemb	n6fae	m	b		n6faemb_A.wav	n6faemb.wav	CC	low	CC1	n6faemb_02_A.wav	n6faemb_01_mono.wav	
+41	naffkuhtoo	naefk6tu	nae	f	k	6tu	naefk6tu_A.wav	naefk6tu.wav	CC	low	CC7	naefk6tu_01_A.wav	naefk6tu_01_mono.wav	
+14	nidduhbip	nId6bIp		n	I	d6bIp	nId6bIp_A.wav	nId6bIp.wav	CV	high	CV7	nId6bIp_01_A.wav	nId6bIp_01_mono.wav	
+13	nubuhmunn	nUb6m6n		n	U	b6m6n	nUb6m6n_A.wav	nUb6m6n.wav	CV	low	CV7	nUb6m6n_01_A.wav	nUb6m6n_02_mono.wav	
+16	payteek	petik	pet	i	k		petik_A.wav	petik.wav	VC	high	VC1	petik_01_A.wav	petik_02_mono.wav	
+20	podowd	podaUd	pod	aU	d		podaUd_A.wav	podaUd.wav	VC	high	VC3	podaUd_01_A.wav	podaUd_02_mono.wav	
+31	pwaugub	pwag6b		p	w	ag6b	pwag6b_A.wav	pwag6b.wav	CC	low	CC2	pwag6b_01_A.wav	pwag6b_02_mono.wav	
+39	pwenuhtep	pwEn6tEp		p	w	En6tEp	pwEn6tEp_A.wav	pwEn6tEp.wav	CC	low	CC6	pwEn6tEp_01_A.wav	pwEn6tEp_01_mono.wav	
+68	raenol	raenol		r	ae	nol	raenol_A.wav	raenol.wav	CV	nonword	rabbit			
+66	raybith	rebIT		r	e	bIT	raybith_A.wav	raybith.wav	CV	nonword	raisins			
+70	refim	refim		r	e	fim	reefross_A.wav	refim.wav	CV	nonword	rain			
+65	regip	regip		r	e	gip	refim_A.wav	regip.wav	CV	nonword	rainbow			
+67	reefross	rifras		r	i	fras	regip_A.wav	reefross.wav	CV	nonword	reading			
+69	ruhmaid	rVmaId		r	V	maId	ruhmaid_A.wav	ruhmaid.wav	CV	nonword	running			
+62	saiprote	saIprot		s	aI	prot	saiprote_A.wav	saiprote.wav	CV	nonword	sidewalk			
+61	shayvoss	Sevas		S	e	vas	shayvoss_A.wav	shayvoss.wav	CV	nonword	sharing			
+63	soodross	sudras		s	u	dras	soodross_A.wav	soodross.wav	CV	nonword	suitcase			
+64	subbith	sVbIT		s	V	bIT	subbith_A.wav	subbith.wav	CV	nonword	summer			
+36	tacktoot	taektut	tae	k	t	ut	taektut_A.wav	taektut.wav	CC	high	CC4	taektut_01_A.wav	taektut_01_mono.wav	
+19	taydowm	tedaUm	ted	aU	m		tedaUm_A.wav	tedaUm.wav	VC	low	VC3	tedaUm_01_A.wav	tedaUm_02_mono.wav	
+44	teektuhpoe	tikt6po	ti	k	t	6po	tikt6po_A.wav	tikt6po.wav	CC	high	CC8	tikt6po_01_A.wav	tikt6po_01_mono.wav	
+49	truhglap	trVglap		t	r	Vglap	truhglap_A.wav	truhglap.wav	CC	nonword	trouble			
+50	truhtok	trVtok		t	r	Vtok	truhtok_A.wav	truhtok.wav	CC	nonword	trouble			
+59	chimmig	tSImIg		tS	I	mIg	chimmig_A.wav	chimmig.wav	CV	nonword	chicken			
+60	chisem	tSIsEm		tS	I	sEm	chisem_A.wav	chisem.wav	CV	nonword	chicken			
+24	tugnuhdeet	tVgn6dit	t	V	g	n6dit	tvgn6dit_A.wav	tvgn6dit.wav	VC	high	VC5	tvgn6dit_01_A.wav	tvgn6dit_04_mono.wav	
+53	twaiklor	twaIklor		t	w	aIklor	twaiklor_A.wav	twaiklor.wav	CC	nonword2	kwalaid			low
+54	twaipon	twaIpon		t	w	aIpon	twaipon_A.wav	twaipon.wav	CC	nonword2	kwameg			low
+40	twedduhmin	twEd6mIn		t	w	Ed6mIn	twEd6mIn_A.wav	twEd6mIn.wav	CC	high	CC6	twed6mIn_01_A.wav	twed6mIn_01_mono.wav	
+56	twefrap	twEfrap		t	w	Efrap	twefrap_A.wav	twefrap.wav	CC	nonword	twenty			low
+32	twekket	twEkEt		t	w	EkEt	twEkEt_A.wav	twEkEt.wav	CC	high	CC2	twEkEt_02_A.wav	twEkEt_02_mono.wav	
+55	twemag	twEmag		t	w	Emag	twemag_A.wav	twemag.wav	CC	nonword	twenty			low
+6	viddag	vIdaeg		v	I	daeg	vIdaeg_A.wav	vIdaeg.wav	CV	high	CV3	vIdaeg_01_A.wav	vIdaeg_01_mono.wav	
+8	viddigop	vIt6gap		v	I	t6gap	vIt6gap_A.wav	vIt6gap.wav	CV	high	CV4	vIt6gap_02_A.wav	vIt6gap_02_mono.wav	
+5	voogeem	vugim		v	u	gim	vugim_A.wav	vugim.wav	CV	low	CV3	vugim_01_A.wav	vugim_03_mono.wav	
+7	vookuhtem	vuk6tEm		v	u	k6tEm	vukatEm_A.wav	vukatEm.wav	CV	low	CV4	vuk6tEm_01_A.wav	vukatEm_02_mono.wav	
+	dablor	dablor		d	a	blr	dablor_A.wav	dablor.wav			Familiarization	dablor_A.wav	dablor.wav	
+	dqkram	daekram		d	ae	kram	dqkram_A.wav	dqkram.wav			Familiarization	dqkram_A.wav	dqkram.wav	
+	sqnut	Saenut		S	ae	nut	sqnut_A.wav	sqnut.wav			Familiarization	sqnut_A.wav	sqnut.wav	
+	kh3rpoyn	kh3rpoin		k	3r	poin	kh3rpoyn_A.wav	kh3rpoyn.wav			Familiarization	kh3rpoyn_A.wav	kh3rpoyn.wav	
+	khizel	khIzEl		k	I	zEl	khizel_A.wav	khizel.wav			Familiarization	khizel_A.wav	khizel.wav	
+	thaumag	thaUmag		t	aU	mag	thaumag_A.wav	thaumag.wav			Familiarization	thaumag_A.wav	thaumag.wav	
+	waymog	wemag		w	e	mag	waymog_A.wav	waymog.wav	SKIP	SKIP	SKIP			
+	wahkrad	wakraed		w	a	kraed	wahkrad_A.wav	wahkrad.wav	SKIP	SKIP	SKIP			
+	wahprote	waprot		w	a	prot	wahprote_A.wav	wahprote.wav	SKIP	SKIP	SKIP			
+	whimell	wImEl		w	I	mEl	whimell_A.wav	whimell.wav	SKIP	SKIP	SKIP			
+	ruhgloke	r6glok		r	V	glok	ruhgloke_A.wav	ruhgloke.wav	SKIP	SKIP	SKIP			
+	rapoin	raepoIn		r	ae	poIn	rapoin_A.wav	rapoin.wav	SKIP	SKIP	SKIP			
+	rahlide	ralaId		r	a	laId	rahlide_A.wav	rahlide.wav	SKIP	SKIP	SKIP			
+	seeploke	sIplok		s	I	plok	sIplok_A.wav	seeploke.wav	SKIP	SKIP	SKIP			
+	soudack	sodaek		s	o	daek	soudack_A.wav	soudack.wav	SKIP	SKIP	SKIP			
+	chinut	tSInut		tS	I	nut		chinut_TP3.wav	SKIP	SKIP	SKIP			
+	kreivas	krevas		k	r	evas		kreivas_TP3.wav	SKIP	SKIP	SKIP			
+	kwigaek	kwigaek		k	w	igaek		kwigaek_TP3.wav	SKIP	SKIP	SKIP			
+	traevait	traevaIt		t	r	aevaIt		traevait_TP3.wav	SKIP	SKIP	SKIP			
+	traibith	traIbIT		t	r	aIbIT		traibith_TP3.wav	SKIP	SKIP	SKIP			
+	treimut	tremut		t	r	mut		treimut_TP3.wav	SKIP	SKIP	SKIP			

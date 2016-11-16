@@ -93,45 +93,22 @@ create_rwr_wordlist_file <- function(short_id, study_name, dir_task,
 #' @return a data-frame with information about each trial
 #' @export
 get_rwr_trial_info <- function(eprime_path) {
-  # Read and parse the stimulus log
-  eprime_frames <- eprime_path %>%
-    rprime::read_eprime() %>%
-    rprime::FrameList()
+  trial_info <- get_trial_info(eprime_path)
 
-  # Header
-  header <- eprime_frames %>%
-    rprime::filter_in("Running", "Header") %>%
-    rprime::to_data_frame() %>%
-    tibble::as_tibble()
-
-  dialect <- extract_dialect(header$Experiment)
-  timepoint <- extract_timepoint(header$Experiment)
-
-  # Trial level information
-  trial_info <- eprime_frames %>%
-    rprime::keep_levels(2) %>%
-    rprime::to_data_frame() %>%
-    tibble::as_tibble() %>%
-    rename_(AudioPrompt = ~ soundFile, PicturePrompt = ~ picFile)
-
-  # Derived values
+  # Additional steps for RWR files. Downstream table joins with the word-lists
+  # use either the Abbreviation, Abbreviation/Block, or SoundFile/Block fields,
+  # so we need to add them here.
   trial_info <- trial_info %>%
     mutate_(
       Trial_Abbreviation = ~ get_word_abbreviations(AudioPrompt),
-      TrialType = ~ ifelse(Running == "Familiarization",
-                           "Familiarization", "Test"),
-      TrialNumber = ~ create_trial_numbers(TrialType),
-      Block = ~ stringr::str_replace(Running, "List", "block"),
-      Dialect = ~ dialect,
-      Experiment = ~ header$Experiment,
-      TimePoint = ~ timepoint) %>%
-    select_(~ -Eprime.Level, ~ -Eprime.LevelName, ~ -Eprime.FrameNumber) %>%
+      Block = ~ stringr::str_replace(Running, "List", "block")) %>%
     select_(~ TimePoint, ~ Dialect, ~ Experiment, ~ Eprime.Basename, ~ Block,
             ~ TrialNumber, ~ TrialType, ~ Trial_Abbreviation, ~ everything())
 
   # Correct any abbreviations
+  timepoint <- unique(trial_info$TimePoint)
   trial_info$Trial_Abbreviation <- trial_info$Trial_Abbreviation %>%
-    correct_abbreviations(timepoint)
+    correct_rwr_abbreviations(timepoint)
 
   trial_info
 }
@@ -163,7 +140,8 @@ lookup_rwr_wordlist <- function(df_trials) {
   eprime_file <- unique(df_trials$Eprime.Basename)
 
   # Get the wordlist definition
-  target_info <- int_l2t_wordlists$RWR[[paste0("TimePoint", timepoint)]]
+  timepoint_name <- paste0("TimePoint", timepoint)
+  target_info <- int_l2t_wordlists$RealWordRep[[timepoint_name]]
 
   # Check for a custom wordlist
   has_custom_list <- eprime_file %in% names(int_l2t_wordlists$CustomLists)
@@ -233,19 +211,6 @@ lookup_rwr_wordlist <- function(df_trials) {
 
 
 
-extract_timepoint <- function(x) {
-  parsed_timepoint <- x %>%
-    stringr::str_extract("TP\\d") %>%
-    stringr::str_extract("\\d") %>%
-    as.numeric
-
-  # Default to TP1
-  if (is.na(parsed_timepoint)) {
-    parsed_timepoint <- 1
-  }
-
-  parsed_timepoint
-}
 
 
 get_word_abbreviations <- function(audio_prompts) {
@@ -253,43 +218,3 @@ get_word_abbreviations <- function(audio_prompts) {
 }
 
 
-# TrialTypes2TrialNums <- function(trialTypes) {
-#   fam.trial     <- 1
-#   test.trial    <- 1
-#   trial.numbers <- c()
-#   for (trial.type in trialTypes) {
-#     if (trial.type == 'Familiarization') {
-#       trial.num <- sprintf('Fam%d', fam.trial)
-#       fam.trial <- fam.trial + 1
-#     } else if (trial.type == 'Test') {
-#       trial.num <- sprintf('Test%d', test.trial)
-#       test.trial <- test.trial + 1
-#     } else {
-#       trial.num <- ''
-#     }
-#     trial.numbers <- c(trial.numbers, trial.num)
-#   }
-#   return(trial.numbers)
-# }
-#
-
-create_trial_numbers <- function(trial_types) {
-  # Abbreviate
-  trial_types <- ifelse(trial_types == "Familiarization", "Fam", trial_types)
-
-  add_sequence_numbers <- function(xs) {
-    sprintf("%s%d", xs, seq_along(xs))
-  }
-
-  # Split into different groups and add numbers to each item in group
-  trial_numbers <- trial_types %>%
-    split(trial_types) %>%
-    lapply(add_sequence_numbers) %>%
-    unlist(use.names = FALSE)
-
-  trial_numbers
-}
-
-extract_dialect <- function(xs) {
-  stringr::str_extract(xs, "AAE|SAE")
-}

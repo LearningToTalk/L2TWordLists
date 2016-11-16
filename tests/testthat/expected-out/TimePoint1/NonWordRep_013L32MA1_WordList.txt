@@ -1,0 +1,51 @@
+TrialNumber	TrialType	Orthography	WorldBet	Frame1	Target1	Target2	Frame2	TargetStructure	Frequency	ComparisonPair
+Fam1	Familiarization	dahblor	dablor	.	.	.	.	.	.	.
+Fam2	Familiarization	dakram	daekram	.	.	.	.	.	.	.
+Fam3	Familiarization	shanoot	Saenut	.	.	.	.	.	.	.
+Fam4	Familiarization	kerpoyn	kh3rpoin	.	.	.	.	.	.	.
+Fam5	Familiarization	kizel	khIzEl	.	.	.	.	.	.	.
+Fam6	Familiarization	towmahg	thaUmag	.	.	.	.	.	.	.
+Test1	Test	doognitade	dugn6ted	d	u	g	n6ted	VC	low	VC5
+Test2	Test	voogeem	vugim		v	u	gim	CV	low	CV3
+Test3	Test	gufftuhdye	gVft6daI	gV	f	t	6daI	CC	high	CC7
+Test4	Test	fickatamp	fIk6taemp	fIk6tae	m	p		CC	high	CC5
+Test5	Test	naffkuhtoo	naefk6tu	nae	f	k	6tu	CC	low	CC7
+Test6	Test	eeptuhn	ipt6n		i	p	t6n	VC	high	VC4
+Test7	Test	eekbuhnee	ikb6ni		i	k	b6ni	VC	high	VC6
+Test8	Test	owptudd	aUpt6d		aU	p	t6d	VC	low	VC4
+Test9	Test	doenewg	donug	don	u	g		VC	low	VC2
+Test10	Test	boduhyow	bod6jaU	bod6	j	aU		CV	low	CV5
+Test11	Test	boofkeet	bufkit	bu	f	k	it	CC	low	CC3
+Test12	Test	gownuhpake	gaUn6pek		g	aU	n6pek	CV	low	CV6
+Test13	Test	payteek	petik	pet	i	k		VC	high	VC1
+Test14	Test	vookuhtem	vuk6tEm		v	u	k6tEm	CV	low	CV4
+Test15	Test	pwenuhtep	pwEn6tEp		p	w	En6tEp	CC	low	CC6
+Test16	Test	viddag	vIdaeg		v	I	daeg	CV	high	CV3
+Test17	Test	keddohwumb	kEd6w6mb	kEd6w6	m	b		CC	low	CC5
+Test18	Test	geetuhmoke	git6mok		g	i	t6mok	CV	high	CV6
+Test19	Test	twekket	twEkEt		t	w	EkEt	CC	high	CC2
+Test20	Test	baydag	bedaeg	bed	ae	g		VC	high	VC2
+Test21	Test	doagdate	dogdet	do	g	d	et	CC	low	CC4
+Test22	Test	nuhfamb	n6faemb	n6fae	m	b		CC	low	CC1
+Test23	Test	yougoyt	jugoit	ju	g	oi	t	CV	low	CV1
+Test24	Test	viddigop	vIt6gap		v	I	t6gap	CV	high	CV4
+Test25	Test	moypudd	moip6d		m	oi	p6d	CV	low	CV2
+Test26	Test	ountuhko	aUnt6ko		aU	n	t6ko	VC	high	VC7
+Test27	Test	teektuhpoe	tikt6po	ti	k	t	6po	CC	high	CC8
+Test28	Test	pwaugub	pwag6b		p	w	ag6b	CC	low	CC2
+Test29	Test	taydowm	tedaUm	ted	aU	m		VC	low	VC3
+Test30	Test	mabbep	maebEp		m	ae	bEp	CV	high	CV2
+Test31	Test	owftuhga	aUft6ga		aU	f	t6ga	VC	low	VC7
+Test32	Test	mayduhyou	med6ju	med6	j	u		CV	high	CV5
+Test33	Test	nubuhmunn	nUb6m6n		n	U	b6m6n	CV	low	CV7
+Test34	Test	owkpuhday	aUkp6de		aU	k	p6de	VC	low	VC6
+Test35	Test	twedduhmin	twEd6mIn		t	w	Ed6mIn	CC	high	CC6
+Test36	Test	tacktoot	taektut	tae	k	t	ut	CC	high	CC4
+Test37	Test	bogeeb	bogib	bo	g	i	b	CV	high	CV1
+Test38	Test	minnamp	mInaemp	mInae	m	p		CC	high	CC1
+Test39	Test	keeftane	kiften	ki	f	t	en	CC	high	CC3
+Test40	Test	degdinay	dEgd6ne	dE	g	d	6ne	CC	low	CC8
+Test41	Test	nidduhbip	nId6bIp		n	I	d6bIp	CV	high	CV7
+Test42	Test	tugnuhdeet	tVgn6dit	t	V	g	n6dit	VC	high	VC5
+Test43	Test	podowd	podaUd	pod	aU	d		VC	high	VC3
+Test44	Test	motowk	motaUk	mot	aU	k		VC	low	VC1

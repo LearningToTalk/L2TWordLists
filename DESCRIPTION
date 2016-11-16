@@ -4,7 +4,8 @@ Version: 0.0.1.9000
 Authors@R: c(
   person("Tristan", "Mahr", email = "tristan.mahr@wisc.edu", role = c("aut", "cre")), 
   person("Pat", "Reidy", role = c("aut")), 
-  person("Mary", "Beckman", role = c("aut"))) 
+  person("Mary", "Beckman", role = c("aut")),
+  person("Franzo", "Law", role = c("aut"))) 
 Description: This packages helps members of the L2T lab extract information from Eprime text files from word-repetition experiments.
 Depends:
     R (>= 3.3.1)

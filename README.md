@@ -174,8 +174,8 @@ Default forms of the list are stored by Task and TimePoint, and custom one-off l
 
 ``` r
 l2t_wordlists
-#> $RWR
-#> $RWR$TimePoint1
+#> $RealWordRep
+#> $RealWordRep$TimePoint1
 #> # A tibble: 56 × 6
 #>    Abbreviation   Word WorldBet TargetC TargetV Frame
 #>           <chr>  <chr>    <chr>   <chr>   <chr> <chr>
@@ -191,7 +191,7 @@ l2t_wordlists
 #> 10         COLD   cold     kold       k       o    ld
 #> # ... with 46 more rows
 #> 
-#> $RWR$TimePoint2
+#> $RealWordRep$TimePoint2
 #> # A tibble: 78 × 6
 #>    Abbreviation    Word WorldBet TargetC TargetV Frame
 #>           <chr>   <chr>    <chr>   <chr>   <chr> <chr>
@@ -207,7 +207,7 @@ l2t_wordlists
 #> 10         CNDY   candy   kaendi       k      ae   ndi
 #> # ... with 68 more rows
 #> 
-#> $RWR$TimePoint3
+#> $RealWordRep$TimePoint3
 #> # A tibble: 121 × 10
 #>    Abbreviation    Word WorldBet TargetC TargetV Frame ComparisonPair
 #>           <chr>   <chr>    <chr>   <chr>   <chr> <chr>          <chr>
@@ -223,6 +223,61 @@ l2t_wordlists
 #> 10      Chicken chicken   tSIkIn      tS       I   kIn        chimmig
 #> # ... with 111 more rows, and 3 more variables: Block <chr>,
 #> #   AAEsoundFile <chr>, Abbreviation120 <chr>
+#> 
+#> 
+#> $NonWordRep
+#> $NonWordRep$TimePoint1
+#> # A tibble: 50 × 11
+#>    Orthography WorldBet Frame1 Target1 Target2 Frame2     AudioFileAAE
+#>          <chr>    <chr>  <chr>   <chr>   <chr>  <chr>            <chr>
+#> 1      yougoyt   jugoit     ju       g      oi      t       jugoit.wav
+#> 2       bogeeb    bogib     bo       g       i      b   bogib_01_A.wav
+#> 3      moypudd   moip6d   <NA>       m      oi    p6d  moip6d_01_A.wav
+#> 4       mabbep   maebEp   <NA>       m      ae    bEp  maebEp_01_A.wav
+#> 5      voogeem    vugim   <NA>       v       u    gim   vugim_01_A.wav
+#> 6       viddag   vIdaeg   <NA>       v       I   daeg  vIdaeg_01_A.wav
+#> 7    vookuhtem  vuk6tEm   <NA>       v       u  k6tEm vuk6tEm_01_A.wav
+#> 8     viddigop  vIt6gap   <NA>       v       I  t6gap vIt6gap_02_A.wav
+#> 9     boduhyow  bod6jaU   bod6       j      aU   <NA> bod6jaU_01_A.wav
+#> 10   mayduhyou   med6ju   med6       j       u   <NA>  med6ju_01_A.wav
+#> # ... with 40 more rows, and 4 more variables: AudioFileSAE <chr>,
+#> #   TargetStructure <chr>, Frequency <chr>, ComparisonPair <chr>
+#> 
+#> $NonWordRep$TimePoint2
+#> # A tibble: 75 × 11
+#>    Orthography WorldBet Frame1 Target1 Target2 Frame2     AudioFileAAE
+#>          <chr>    <chr>  <chr>   <chr>   <chr>  <chr>            <chr>
+#> 1      yougoyt   jugoit     ju       g      oi      t       jugoit.wav
+#> 2       bogeeb    bogib     bo       g       i      b   bogib_01_A.wav
+#> 3      moypudd   moip6d   <NA>       m      oi    p6d  moip6d_01_A.wav
+#> 4       mabbep   maebEp   <NA>       m      ae    bEp  maebEp_01_A.wav
+#> 5      voogeem    vugim   <NA>       v       u    gim   vugim_01_A.wav
+#> 6       viddag   vIdaeg   <NA>       v       I   daeg  vIdaeg_01_A.wav
+#> 7    vookuhtem  vuk6tEm   <NA>       v       u  k6tEm vuk6tEm_01_A.wav
+#> 8     viddigop  vIt6gap   <NA>       v       I  t6gap vIt6gap_02_A.wav
+#> 9     boduhyow  bod6jaU   bod6       j      aU   <NA> bod6jaU_01_A.wav
+#> 10   mayduhyou   med6ju   med6       j       u   <NA>  med6ju_01_A.wav
+#> # ... with 65 more rows, and 4 more variables: AudioFileSAE <chr>,
+#> #   TargetStructure <chr>, Frequency <chr>, ComparisonPair <chr>
+#> 
+#> $NonWordRep$TimePoint3
+#> # A tibble: 91 × 15
+#>    OrigOrder Orthography WorldBet Frame1 Target1 Target2 Frame2
+#>        <int>       <chr>    <chr>  <chr>   <chr>   <chr>  <chr>
+#> 1         27    owftuhga  aUft6ga   <NA>      aU       f   t6ga
+#> 2         25   owkpuhday  aUkp6de   <NA>      aU       k   p6de
+#> 3         28    ountuhko  aUnt6ko   <NA>      aU       n   t6ko
+#> 4         21     owptudd   aUpt6d   <NA>      aU       p    t6d
+#> 5         18      baydag   bedaeg    bed      ae       g   <NA>
+#> 6          9    boduhyow  bod6jaU   bod6       j      aU   <NA>
+#> 7          2      bogeeb    bogib     bo       g       i      b
+#> 8         33    boofkeet   bufkit     bu       f       k     it
+#> 9         43    degdinay  dEgd6ne     dE       g       d    6ne
+#> 10        35    doagdate   dogdet     do       g       d     et
+#> # ... with 81 more rows, and 8 more variables: TP3_AudioFileAAE <chr>,
+#> #   TP3_AudioFileSAE <chr>, TargetStructure <chr>, Frequency <chr>,
+#> #   ComparisonPair <chr>, TP2_AudioFileAAE <chr>, TP2_AudioFileSAE <chr>,
+#> #   LexFreq <chr>
 #> 
 #> 
 #> $CustomLists
@@ -253,6 +308,8 @@ The testing data was selected to use all available combinations of dialect, expe
 
 | Task        | Study      | Dialect | ExperimentName                         |  NumTrials|
 |:------------|:-----------|:--------|:---------------------------------------|----------:|
+| NonWordRep  | TimePoint1 | AAE     | AAE\_NonWordRep                        |         50|
+| NonWordRep  | TimePoint1 | SAE     | SAE\_NonWordRep                        |         50|
 | RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_3-13-13     |        103|
 | RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_3-13-13     |         52|
 | RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_PartI       |         37|

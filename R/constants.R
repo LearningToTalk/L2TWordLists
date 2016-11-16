@@ -4,15 +4,15 @@
 #' Stimulus descriptions for L2T repetition experiments
 "l2t_wordlists"
 
-
-
-
 # Manually import the pipe
 `%>%` <- dplyr::`%>%`
 
+
+
+
 # These are manual abbreviation corrections. They were adapted from the series
 # of ifelse statements in the original scripts.
-abbreviation_corrections <- tibble::tribble(
+rwr_abbreviation_corrections <- tibble::tribble(
   ~TimePoint, ~RawAbbr, ~CorrectAbbr,
   2,          "SHEEP",    "SHEP",
   2,          "SEDR",     "SHDR",
@@ -23,8 +23,9 @@ abbreviation_corrections <- tibble::tribble(
   3,          "SSSR",     "SSRS"
 )
 
-# Helper function that replaces uses abbreviation correction list to
-correct_abbreviations <- function(xs, tp) {
+# Helper function that uses the abbreviation correction list to correct some
+# item abbreviations.
+correct_rwr_abbreviations <- function(xs, tp) {
   # Basically, we perform character subsetting
   # http://adv-r.had.co.nz/Subsetting.html#applications
 
@@ -34,12 +35,99 @@ correct_abbreviations <- function(xs, tp) {
   item_lookup <- stats::setNames(unique(xs), unique(xs))
 
   # Get corrections for this timepoint
-  corrections <- abbreviation_corrections %>% filter_(~ TimePoint == tp)
+  corrections <- rwr_abbreviation_corrections %>% filter_(~ TimePoint == tp)
 
   # Update the look-up vector
   item_lookup[corrections$RawAbbr] <- corrections$CorrectAbbr
   item_lookup[xs]
 }
+
+
+# Corrections for NonWordRep items. The `RawForm` is derived from the filename
+# of the .wav file played during the experiment. The `CorrectedForm` is a
+# corrected WorldBet representation of the word that was presented.
+nwr_item_corrections <- c(
+  # "RawForm" = "CorrectedForm"
+  "auft6ga"   = "aUft6ga",
+  "aunt6ko"   = "aUnt6ko",
+  "aupt6d"    = "aUpt6d",
+  "bod6jau"   = "bod6jaU",
+  "chimmig"   = "tSImIg",
+  "chisem"    = "tSIsEm",
+  "cuffeam"   = "kVfim",
+  "dqkram"    = "daekram",
+  "gvft6daI"  = "gVft6daI",
+  "jugoin"    = "jugoit",
+  "kahsep"    = "kasEp",
+  "kamig"     = "kaemIg",
+  "kh3rpoyn"  = "kh3rpoin",
+  "khErpoin"  = "kh3rpoin",
+  "khizel"    = "khIzEl",
+  "kipown"    = "kIpon",
+  "kraesem"   = "kraesEm",
+  "kramel"    = "kramEl",
+  "kwalaid"   = "kwalaId",
+  "kwameg"    = "kwamIg",
+  # "RawForm" = "CorrectedForm"
+  "kwefim"    = "kwEfim",
+  "kwepas"    = "kwEpas",
+  "rahlide"   = "ralaId",
+  "rapoin"    = "raepoIn",
+  "raybith"   = "rebIT",
+  "reefross"  = "rifras",
+  "ruhgloke"  = "rVglok",
+  "ruhmaid"   = "rVmaId",
+  "saiprote"  = "saIprot",
+  "samell"    = "saemEl",
+  "seeploke"  = "sIplok",
+  "shaenut"   = "Saenut",
+  "shayvoss"  = "Sevas",
+  "soodross"  = "sudras",
+  "soudack"   = "sodaek",
+  "sqnut"     = "Saenut",
+  "subbith"   = "sVbIT",
+  "thaumag"   = "thaUmag",
+  "thIblor"   = "tIblor",
+  "toezell"   = "tozEl",
+  "toogrife"  = "tugraIf",
+  "truhglap"  = "trVglap",
+  # "RawForm" = "CorrectedForm"
+  "truhtok"   = "trVtok",
+  "tvgn6dit"  = "tVgn6dit",
+  "twaiklor"  = "twaIklor",
+  "twaipon"   = "twaIpon",
+  "twemag"    = "twEmag",
+  "tyblore"   = "taIblor",
+  "vukatEm"   = "vuk6tEm",
+  "wahkrad"   = "wakraed",
+  "wahprote"  = "waprot",
+  "waymog"    = "wemag",
+  "whimell"   = "wImEl",
+  "twefrap"   = "twEfrap"
+)
+
+# Correct items from the NonWordRep task.
+correct_nwr_items <- function(xs) {
+  # We use look-up vector techniques as in the RWR correction function...
+
+  # Start with an incorrect look-up vector. Names and values are just the raw
+  # item names.
+  item_lookup <- stats::setNames(unique(xs), unique(xs))
+
+  # Find any item names that are in the master vector of corrections.
+  correction_locations <- which(item_lookup %in% names(nwr_item_corrections))
+  raw_to_correct <- names(item_lookup)[correction_locations]
+
+  # Overwrite the values for any items that appeared in the corrections vector.
+  # Now, we have a corrected look-up vector that maps raw item names onto
+  # correct item names.
+  item_lookup[raw_to_correct] <- nwr_item_corrections[raw_to_correct]
+  unname(item_lookup[xs])
+}
+
+
+
+
 
 # Other constants that might be useful
 l2t_wordlists_data <- list()
