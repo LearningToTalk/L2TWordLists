@@ -95,13 +95,9 @@ get_nwr_trial_info <- function(eprime_path) {
   # Find the ItemKey that goes with each AudioPrompt
   trial_info$ItemKey <- trial_info$AudioPrompt
 
-  # Clean any dialect suffixes
-  dialect <- unique(trial_info$Dialect)
-
-  if (dialect == "AAE") {
-    trial_info$ItemKey <- trial_info$ItemKey %>%
-      stringr::str_replace_all("_A$", "")
-  }
+  # Clean any dialect/timepoint suffixes
+  trial_info$ItemKey <- trial_info$ItemKey %>%
+      stringr::str_replace_all("_.+$", "")
 
   # Apply any manual corrections to the item keys
   trial_info$ItemKey <- correct_nwr_items(trial_info$ItemKey)

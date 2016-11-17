@@ -371,37 +371,39 @@ We created our WordList tables using an incrementally developed suite of R scrip
 
 The testing data was selected to use all available combinations of dialect, experiment name (i.e., the name of the Eprime executable that generated the output), and trial counts among our collected data. The table belows shows each of the combinations of dialect, experiment name, and trial counts that are tested in this package.
 
-| Task        | Study      | Dialect | ExperimentName                         |  NumTrials|
-|:------------|:-----------|:--------|:---------------------------------------|----------:|
-| NonWordRep  | TimePoint1 | AAE     | AAE\_NonWordRep                        |         50|
-| NonWordRep  | TimePoint1 | SAE     | SAE\_NonWordRep                        |         50|
-| NonWordRep  | TimePoint2 | AAE     | AAE\_NonWordRep\_TP2                   |         74|
-| NonWordRep  | TimePoint2 | SAE     | SAE\_NonWordRep\_TP2                   |         74|
-| NonWordRep  | TimePoint3 | AAE     | AAE\_NonWordRep\_TP3                   |         76|
-| NonWordRep  | TimePoint3 | SAE     | SAE\_NonWordRep\_TP3                   |         76|
-| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_3-13-13     |        103|
-| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_3-13-13     |         52|
-| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_PartI       |         37|
-| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP2         |         94|
-| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.epsilon |        118|
-| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.zeta    |        120|
-| RealWordRep | CochlearV2 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP2         |         94|
-| RealWordRep | CochlearV2 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.epsilon |        118|
-| RealWordRep | CochlearV2 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.zeta    |        120|
-| RealWordRep | TimePoint1 | AAE     | AAE\_RealWordRep                       |        103|
-| RealWordRep | TimePoint1 | AAE     | AAE\_RealWordRep\_BLOCKED\_3-13-13     |        103|
-| RealWordRep | TimePoint1 | SAE     | SAE\_RealWordRep                       |        103|
-| RealWordRep | TimePoint1 | SAE     | SAE\_RealWordRep\_BLOCKED\_3-13-13     |        103|
-| RealWordRep | TimePoint1 | SAE     | SAE\_RealWordRep\_Blocked\_FINAL       |        103|
-| RealWordRep | TimePoint2 | AAE     | AAE\_RealWordRep\_BLOCKED\_TP2         |         94|
-| RealWordRep | TimePoint2 | AAE     | AAE\_RealWordRep\_BLOCKED\_TP2         |         52|
-| RealWordRep | TimePoint2 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP2         |         94|
-| RealWordRep | TimePoint3 | AAE     | AAE\_RealWordRep\_BLOCKED\_TP3\_beta   |        118|
-| RealWordRep | TimePoint3 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.beta    |        120|
-| RealWordRep | TimePoint3 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.beta    |        119|
-| RealWordRep | TimePoint3 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.epsilon |        118|
-| RealWordRep | TimePoint3 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.epsilon |          5|
-| RealWordRep | TimePoint3 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.gamma   |        118|
-| RealWordRep | TimePoint3 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.zeta    |        120|
+| Task        | Study      | Dialect | ExperimentName                           |  NumTrials|
+|:------------|:-----------|:--------|:-----------------------------------------|----------:|
+| NonWordRep  | misc-files | SAE     | SAE\_NonWordRep\_TP3                     |         78|
+| NonWordRep  | misc-files | SAE     | SAE\_NonWordRep\_TP3\_shortened\_version |         19|
+| NonWordRep  | TimePoint1 | AAE     | AAE\_NonWordRep                          |         50|
+| NonWordRep  | TimePoint1 | SAE     | SAE\_NonWordRep                          |         50|
+| NonWordRep  | TimePoint2 | AAE     | AAE\_NonWordRep\_TP2                     |         74|
+| NonWordRep  | TimePoint2 | SAE     | SAE\_NonWordRep\_TP2                     |         74|
+| NonWordRep  | TimePoint3 | AAE     | AAE\_NonWordRep\_TP3                     |         76|
+| NonWordRep  | TimePoint3 | SAE     | SAE\_NonWordRep\_TP3                     |         76|
+| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_3-13-13       |        103|
+| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_3-13-13       |         52|
+| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_PartI         |         37|
+| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP2           |         94|
+| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.epsilon   |        118|
+| RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.zeta      |        120|
+| RealWordRep | CochlearV2 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP2           |         94|
+| RealWordRep | CochlearV2 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.epsilon   |        118|
+| RealWordRep | CochlearV2 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.zeta      |        120|
+| RealWordRep | TimePoint1 | AAE     | AAE\_RealWordRep                         |        103|
+| RealWordRep | TimePoint1 | AAE     | AAE\_RealWordRep\_BLOCKED\_3-13-13       |        103|
+| RealWordRep | TimePoint1 | SAE     | SAE\_RealWordRep                         |        103|
+| RealWordRep | TimePoint1 | SAE     | SAE\_RealWordRep\_BLOCKED\_3-13-13       |        103|
+| RealWordRep | TimePoint1 | SAE     | SAE\_RealWordRep\_Blocked\_FINAL         |        103|
+| RealWordRep | TimePoint2 | AAE     | AAE\_RealWordRep\_BLOCKED\_TP2           |         94|
+| RealWordRep | TimePoint2 | AAE     | AAE\_RealWordRep\_BLOCKED\_TP2           |         52|
+| RealWordRep | TimePoint2 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP2           |         94|
+| RealWordRep | TimePoint3 | AAE     | AAE\_RealWordRep\_BLOCKED\_TP3\_beta     |        118|
+| RealWordRep | TimePoint3 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.beta      |        120|
+| RealWordRep | TimePoint3 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.beta      |        119|
+| RealWordRep | TimePoint3 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.epsilon   |        118|
+| RealWordRep | TimePoint3 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.epsilon   |          5|
+| RealWordRep | TimePoint3 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.gamma     |        118|
+| RealWordRep | TimePoint3 | SAE     | SAE\_RealWordRep\_BLOCKED\_TP3.zeta      |        120|
 
 The build status badge at the top of this page indicates whether the package successfully passed all these tests (and also passed the standard checks for R packages).

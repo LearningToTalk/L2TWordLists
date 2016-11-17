@@ -184,8 +184,12 @@ list_files <- function(...) {
   list.files(..., full.names = TRUE, recursive = TRUE)
 }
 
+files <- c(
+  list_files(testthat::test_path("test-files"), pattern = ".txt"),
+  list_files(testthat::test_path("misc-files"), pattern = ".txt"))
+
 df_eprime <- data_frame(
- Eprime_Path = list_files(testthat::test_path("test-files"), pattern = ".txt"),
+ Eprime_Path = files,
  Study = basename(dirname(Eprime_Path)),
  Eprime_Basename = basename(Eprime_Path) %>% tools::file_path_sans_ext(),
  Task = stringr::str_extract(Eprime_Basename, "^.+WordRep"))

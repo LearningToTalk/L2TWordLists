@@ -162,3 +162,15 @@ test_that("NWR TimePoint3 WordLists match original ones", {
   test_wordlists(df_test_set, create_nwr_wordlist)
 })
 
+
+# Exceptional files from TP3 that never got a reference WordList
+test_that("NWR WordLists work for experiments not supported by original script", {
+  test <- test_path("misc-files/NonWordRep_002L63FS6.txt")
+  list <- create_nwr_wordlist(test)
+  expect_false(any(is.na(list$Target1)))
+
+  test <- test_path("misc-files/NonWordRep_002L63FS6_short.txt")
+  list <- create_nwr_wordlist(test)
+  expect_false(any(is.na(list$Target1)))
+})
+

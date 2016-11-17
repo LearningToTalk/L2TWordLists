@@ -79,7 +79,7 @@ OrigOrder	Orthography	WorldBet	Frame1	Target1	Target2	Frame2	TP3_AudioFileAAE	TP
 	wahkrad	wakraed		w	a	kraed	wahkrad_A.wav	wahkrad.wav	SKIP	SKIP	SKIP			
 	wahprote	waprot		w	a	prot	wahprote_A.wav	wahprote.wav	SKIP	SKIP	SKIP			
 	whimell	wImEl		w	I	mEl	whimell_A.wav	whimell.wav	SKIP	SKIP	SKIP			
-	ruhgloke	r6glok		r	V	glok	ruhgloke_A.wav	ruhgloke.wav	SKIP	SKIP	SKIP			
+	ruhgloke	rVglok		r	V	glok	ruhgloke_A.wav	ruhgloke.wav	SKIP	SKIP	SKIP			
 	rapoin	raepoIn		r	ae	poIn	rapoin_A.wav	rapoin.wav	SKIP	SKIP	SKIP			
 	rahlide	ralaId		r	a	laId	rahlide_A.wav	rahlide.wav	SKIP	SKIP	SKIP			
 	seeploke	sIplok		s	I	plok	sIplok_A.wav	seeploke.wav	SKIP	SKIP	SKIP			
