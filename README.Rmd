@@ -37,26 +37,40 @@ Parse an Eprime file to get trial-level information:
 library(dplyr, warn.conflicts = FALSE)
 library(L2TWordLists)
 
-test_file <- "./tests/testthat/test-files/TimePoint3/RealWordRep_008L54MS5.txt"
+rwr_file <- "./tests/testthat/test-files/TimePoint3/RealWordRep_008L54MS5.txt"
 
 # Parse Eprime file
-df_trials <- get_rwr_trial_info(test_file)
-df_trials
+df_rwr_trials <- get_rwr_trial_info(rwr_file)
+df_rwr_trials
 ```
 
 Create a WordList table using that trial-level information:
 
 ```{r}
-df_wordlist <- lookup_rwr_wordlist(df_trials)
-df_wordlist
+df_rwr_wordlist <- lookup_rwr_wordlist(df_rwr_trials)
+df_rwr_wordlist
+```
+
+Analogous functions are available for the nonword-repetition task.
+
+```{r}
+nwr_file <- "./tests/testthat/test-files/TimePoint3/NonWordRep_001L53FS5.txt"
+
+# Parse Eprime file
+df_nwr_trials <- get_nwr_trial_info(nwr_file)
+df_nwr_trials
+
+# Create Wordlist
+df_nwr_wordlist <- lookup_nwr_wordlist(df_nwr_trials)
+df_nwr_wordlist
 ```
 
 Save a read-only copy of a WordList table:
 
 ```{r, eval = TRUE}
-# Save wordlist to a temporary file
+# Save wordlist to a temporary file (for illustration purposes)
 outpath <- tempfile("my-wordlist", fileext = ".txt")
-write_protected_tsv(df_wordlist, outpath)
+write_protected_tsv(df_rwr_wordlist, outpath)
 
 # mode is `444` when a file is read-only
 file.info(outpath)[["mode"]]
@@ -66,6 +80,8 @@ unname(file.access(outpath, 2))
 ```
 
 
+
+
 ### Create a WordList from a Participant ID
 
 ```{r, echo = FALSE, message = FALSE}
@@ -73,12 +89,17 @@ unname(file.access(outpath, 2))
 "./tests/testthat/l2t/RealWordRep/TimePoint1/WordLists/" %>% 
   list.files(full.names = TRUE) %>% 
   unlink(force = TRUE)
+
+# Clean up any leftovers from last time
+"./tests/testthat/l2t/NonWordRep/TimePoint1/WordLists/" %>% 
+  list.files(full.names = TRUE) %>% 
+  unlink(force = TRUE)
 ```
 
-The function `create_rwr_wordlist_file()` is a shortcut that will create a 
-WordList for a particular participant. This function replicates the main 
-functionality of our older R scripts. All the user needs to provide is a
-participant ID, a study name, and a task directory.
+The functions `create_rwr_wordlist_file()` and `create_nwr_wordlist_file()` are
+shortcuts that will create a WordList for a particular participant. These
+functions replicate the main functionality of our older R scripts. All the user
+needs to provide is a participant ID, a study name, and a task directory.
 
 ```{r}
 # Using a mock location for the package documentation...
@@ -88,6 +109,21 @@ participant_id <- "001L"
 
 create_rwr_wordlist_file(participant_id, study_name, task_dir)
 ```
+
+Here's an analogous example for nonword repetition.
+
+```{r}
+nwr_task_dir <- "./tests/testthat/l2t/NonWordRep"
+nwr_study_name <- "TimePoint1"
+nwr_participant_id <- "124L"
+
+create_nwr_wordlist_file(nwr_participant_id, nwr_study_name, nwr_task_dir)
+```
+
+#### WordList creation options
+
+The following examples show the options available to both functions, but use
+only the real-word-repetition function for conciseness.
 
 By default, the function will not overwrite a WordList.
 

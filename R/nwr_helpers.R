@@ -1,23 +1,26 @@
 
-#' Convenience function to create a WordList given a ResearchID, study and folder
+#' Convenience function to create a WordList given a ResearchID, study and
+#' folder
 #'
 #' @param short_id four-character short participant ID (e.g., "001L"). Use `""`
 #'   for a wildcard search that will match all 4-character participants IDs.
 #' @param study_name name of an L2T study (e.g., "TimePoint1")
 #' @param dir_task the fully specified filepath to the folder for a Task. The
 #'   value for `study_name` should be a subfolder in this location.
-#' @param dir_eprime folder that contains Eprime output files. Defaults to `Recordings`.
-#' @param dir_wordlist folder where the WordList should be saved. Defaults to `WordLists`.
-#' @param read_only whether to protect the saved WordList. Defaults to TRUE.
-#' @param update whether to update the saved WordList. Defaults to FALSE.
-#' @return the generated WordList table(s)
+#' @param dir_eprime folder that contains Eprime output files. Defaults to
+#'   `"Recordings"`.
+#' @param dir_wordlist folder where the WordList should be saved. Defaults to
+#'   `"WordLists"`.
+#' @param read_only whether to protect the saved WordList. Defaults to `TRUE`.
+#' @param update whether to update the saved WordList. Defaults to `FALSE`.
+#' @return a list of the file-paths of the generated WordList files and the
+#'   contents of the WordLists files (as data-frames).
 #' @export
 #' @rdname create_wordlists
 create_nwr_wordlist_file <- function(short_id, study_name, dir_task,
                                      dir_eprime = "Recordings",
                                      dir_wordlist = "WordLists",
                                      read_only = TRUE, update = FALSE) {
-
   create_wordlist_file(
     short_id = short_id,
     study_name = study_name,
@@ -29,15 +32,7 @@ create_nwr_wordlist_file <- function(short_id, study_name, dir_task,
     task_name = "NonWordRep",
     wordlist_func = function(x) lookup_nwr_wordlist(get_nwr_trial_info(x))
   )
-
 }
-
-
-
-
-
-
-
 
 
 
@@ -95,21 +90,20 @@ lookup_nwr_wordlist <- function(df_trials) {
 #' @return a data-frame with information about each trial
 #' @export
 get_nwr_trial_info <- function(eprime_path) {
-
   trial_info <- get_trial_info(eprime_path)
-  trial_info
-
 
   # Find the ItemKey that goes with each AudioPrompt
-  dialect <- unique(trial_info$Dialect)
-
   trial_info$ItemKey <- trial_info$AudioPrompt
+
+  # Clean any dialect suffixes
+  dialect <- unique(trial_info$Dialect)
 
   if (dialect == "AAE") {
     trial_info$ItemKey <- trial_info$ItemKey %>%
       stringr::str_replace_all("_A$", "")
   }
 
+  # Apply any manual corrections to the item keys
   trial_info$ItemKey <- correct_nwr_items(trial_info$ItemKey)
 
   trial_info <- trial_info %>%
@@ -120,7 +114,14 @@ get_nwr_trial_info <- function(eprime_path) {
 }
 
 
-#
+
+
+# This is the original ItemKey correction code that I (TJM) migrated/refactored.
+# There is one oddity: the check at the end of translator_function about
+# the suffix "_TP3". I never migrated this check, and nothing bad appears to
+# have happened. I'm keeping the old definition around as a note in case
+# something weird happens with TP3 files.
+
 # ItemKeys <- function(stimulusLog) {
 #   item.keys <- AudioPrompts(stimulusLog)
 #   if (Experiment(Header(stimulusLog)) == 'A') {
@@ -128,17 +129,7 @@ get_nwr_trial_info <- function(eprime_path) {
 #                      replacement = '',
 #                      x = item.keys)
 #   }
-#
-#   info <- sae_info <- get_trial_info("./tests/testthat/test-files/TimePoint1/NonWordRep_001L28FS1.txt") %>% glimpse
-#   info <- aae_info <- get_trial_info("./tests/testthat/test-files/TimePoint1/NonWordRep_013L32MA1.txt") %>% glimpse
-#
-#
-#
-#
-#
-#   item.keys2 <- sapply(item.keys, translator_function, USE.NAMES = FALSE)
-#   data_frame(item.keys, item.keys2) %>% filter(item.keys != item.keys2)
-#
+#   item.keys <- sapply(item.keys, translator_function, USE.NAMES = FALSE)
 #   return(item.keys)
 # }
 #
@@ -172,19 +163,12 @@ get_nwr_trial_info <- function(eprime_path) {
 #                        'twaIklor',	'twaIpon',	'twEmag',	'taIblor',
 #                        'vuk6tEm',	'wakraed',	'waprot',	'wemag',
 #                        'wImEl', 'twEfrap')
-# #
-# #
-# #     data_frame(correctWorldBet, badAudioNames)
-# #
-# #     sprintf('"%s" = "%s"', badAudioNames, correctWorldBet) %>% paste0(collapse = ",\n") %>% cat
-# #
-# #
-# #   toCorrect <- which(badAudioNames == element)
-# #
-# #   if(length(toCorrect)) {element = correctWorldBet[toCorrect]}
-# #   if(substr(element, nchar(element) - 3,nchar(element)) == "_TP3"){
-# #     element = substr(element, 1, nchar(element) - 4)
-# #   }
-# #   return(element)
-# }
 #
+#   toCorrect <- which(badAudioNames == element)
+#
+#   if(length(toCorrect)) {element = correctWorldBet[toCorrect]}
+#   if(substr(element, nchar(element) - 3,nchar(element)) == "_TP3"){
+#     element = substr(element, 1, nchar(element) - 4)
+#   }
+#   return(element)
+# }

@@ -26,11 +26,11 @@ Parse an Eprime file to get trial-level information:
 library(dplyr, warn.conflicts = FALSE)
 library(L2TWordLists)
 
-test_file <- "./tests/testthat/test-files/TimePoint3/RealWordRep_008L54MS5.txt"
+rwr_file <- "./tests/testthat/test-files/TimePoint3/RealWordRep_008L54MS5.txt"
 
 # Parse Eprime file
-df_trials <- get_rwr_trial_info(test_file)
-df_trials
+df_rwr_trials <- get_rwr_trial_info(rwr_file)
+df_rwr_trials
 #> # A tibble: 119 × 19
 #>    TimePoint Dialect                       Experiment
 #>        <dbl>   <chr>                            <chr>
@@ -55,8 +55,8 @@ df_trials
 Create a WordList table using that trial-level information:
 
 ``` r
-df_wordlist <- lookup_rwr_wordlist(df_trials)
-df_wordlist
+df_rwr_wordlist <- lookup_rwr_wordlist(df_rwr_trials)
+df_rwr_wordlist
 #> # A tibble: 119 × 12
 #>    TrialNumber Abbreviation   Word WorldBet TargetC TargetV Frame
 #>          <chr>        <chr>  <chr>    <chr>   <chr>   <chr> <chr>
@@ -74,12 +74,61 @@ df_wordlist
 #> #   Block <chr>, TrialType <chr>, AudioPrompt <chr>, PicturePrompt <chr>
 ```
 
+Analogous functions are available for the nonword-repetition task.
+
+``` r
+nwr_file <- "./tests/testthat/test-files/TimePoint3/NonWordRep_001L53FS5.txt"
+
+# Parse Eprime file
+df_nwr_trials <- get_nwr_trial_info(nwr_file)
+df_nwr_trials
+#> # A tibble: 76 × 22
+#>    TimePoint Dialect         Experiment      Eprime.Basename TrialNumber
+#>        <dbl>   <chr>              <chr>                <chr>       <chr>
+#> 1          3     SAE SAE_NonWordRep_TP3 NonWordRep_001L53FS5        Fam1
+#> 2          3     SAE SAE_NonWordRep_TP3 NonWordRep_001L53FS5        Fam2
+#> 3          3     SAE SAE_NonWordRep_TP3 NonWordRep_001L53FS5        Fam3
+#> 4          3     SAE SAE_NonWordRep_TP3 NonWordRep_001L53FS5        Fam4
+#> 5          3     SAE SAE_NonWordRep_TP3 NonWordRep_001L53FS5        Fam5
+#> 6          3     SAE SAE_NonWordRep_TP3 NonWordRep_001L53FS5        Fam6
+#> 7          3     SAE SAE_NonWordRep_TP3 NonWordRep_001L53FS5       Test1
+#> 8          3     SAE SAE_NonWordRep_TP3 NonWordRep_001L53FS5       Test2
+#> 9          3     SAE SAE_NonWordRep_TP3 NonWordRep_001L53FS5       Test3
+#> 10         3     SAE SAE_NonWordRep_TP3 NonWordRep_001L53FS5       Test4
+#> # ... with 66 more rows, and 17 more variables: TrialType <chr>,
+#> #   ItemKey <chr>, Procedure <chr>, Running <chr>, AudioPrompt <chr>,
+#> #   PicturePrompt <chr>, Cycle <chr>, Sample <chr>,
+#> #   FamVisualPresentation.OnsetTime <chr>, UserOrth <chr>,
+#> #   FamITI.OnsetTime <chr>, Reinforcer <chr>, reinforceImage <chr>,
+#> #   VisualPresentation.OnsetTime <chr>, ITI.OnsetTime <chr>, Helper <chr>,
+#> #   Date <date>
+
+# Create Wordlist
+df_nwr_wordlist <- lookup_nwr_wordlist(df_nwr_trials)
+df_nwr_wordlist
+#> # A tibble: 76 × 11
+#>    TrialNumber       TrialType Orthography WorldBet Frame1 Target1 Target2
+#>          <chr>           <chr>       <chr>    <chr>  <chr>   <chr>   <chr>
+#> 1         Fam1 Familiarization      dablor   dablor   <NA>       d       a
+#> 2         Fam2 Familiarization      dqkram  daekram   <NA>       d      ae
+#> 3         Fam3 Familiarization       sqnut   Saenut   <NA>       S      ae
+#> 4         Fam4 Familiarization    kh3rpoyn kh3rpoin   <NA>       k      3r
+#> 5         Fam5 Familiarization      khizel   khIzEl   <NA>       k       I
+#> 6         Fam6 Familiarization     thaumag  thaUmag   <NA>       t      aU
+#> 7        Test1            Test     twefrap  twEfrap   <NA>       t       w
+#> 8        Test2            Test   vookuhtem  vuk6tEm   <NA>       v       u
+#> 9        Test3            Test  gufftuhdye gVft6daI     gV       f       t
+#> 10       Test4            Test      baydag   bedaeg    bed      ae       g
+#> # ... with 66 more rows, and 4 more variables: Frame2 <chr>,
+#> #   TargetStructure <chr>, Frequency <chr>, ComparisonPair <chr>
+```
+
 Save a read-only copy of a WordList table:
 
 ``` r
-# Save wordlist to a temporary file
+# Save wordlist to a temporary file (for illustration purposes)
 outpath <- tempfile("my-wordlist", fileext = ".txt")
-write_protected_tsv(df_wordlist, outpath)
+write_protected_tsv(df_rwr_wordlist, outpath)
 
 # mode is `444` when a file is read-only
 file.info(outpath)[["mode"]]
@@ -92,7 +141,7 @@ unname(file.access(outpath, 2))
 
 ### Create a WordList from a Participant ID
 
-The function `create_rwr_wordlist_file()` is a shortcut that will create a WordList for a particular participant. This function replicates the main functionality of our older R scripts. All the user needs to provide is a participant ID, a study name, and a task directory.
+The functions `create_rwr_wordlist_file()` and `create_nwr_wordlist_file()` are shortcuts that will create a WordList for a particular participant. These functions replicate the main functionality of our older R scripts. All the user needs to provide is a participant ID, a study name, and a task directory.
 
 ``` r
 # Using a mock location for the package documentation...
@@ -103,6 +152,21 @@ participant_id <- "001L"
 create_rwr_wordlist_file(participant_id, study_name, task_dir)
 #> Writing file RealWordRep_001L28FS1_WordList.txt
 ```
+
+Here's an analogous example for nonword repetition.
+
+``` r
+nwr_task_dir <- "./tests/testthat/l2t/NonWordRep"
+nwr_study_name <- "TimePoint1"
+nwr_participant_id <- "124L"
+
+create_nwr_wordlist_file(nwr_participant_id, nwr_study_name, nwr_task_dir)
+#> Writing file NonWordRep_124L28MS1_WordList.txt
+```
+
+#### WordList creation options
+
+The following examples show the options available to both functions, but use only the real-word-repetition function for conciseness.
 
 By default, the function will not overwrite a WordList.
 

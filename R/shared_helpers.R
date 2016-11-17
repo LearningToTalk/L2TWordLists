@@ -93,8 +93,8 @@ get_trial_info <- function(eprime_path) {
 
   dialect <- extract_dialect(header$Experiment)
   timepoint <- extract_timepoint(header$Experiment)
-  helper <- header$Animal
   date <- header$SessionDate %>% as.Date(format = "%m-%d-%Y")
+  helper <- header$Animal
 
   # Assert that we got valid data from the header
   stopifnot(!is.na(dialect), !is.na(timepoint), !is.na(date))
@@ -152,20 +152,24 @@ create_trial_numbers <- function(trial_types) {
   trial_numbers
 }
 
+
 # Number things
 #   c("a", "b", "b")  => c("a1", "b2", "b3")
 add_sequence_numbers <- function(xs) {
   sprintf("%s%d", xs, seq_along(xs))
 }
 
+
 # Label all non-"Familiarization" trials as "Test" trials
 find_trial_types <- function(xs) {
   ifelse(xs == "Familiarization", "Familiarization", "Test")
 }
 
+
 extract_dialect <- function(xs) {
   stringr::str_extract(xs, "AAE|SAE")
 }
+
 
 extract_timepoint <- function(x) {
   parsed_timepoint <- x %>%

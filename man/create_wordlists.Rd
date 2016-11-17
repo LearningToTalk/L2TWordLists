@@ -3,7 +3,8 @@
 \name{create_nwr_wordlist_file}
 \alias{create_nwr_wordlist_file}
 \alias{create_rwr_wordlist_file}
-\title{Convenience function to create a WordList given a ResearchID, study and folder}
+\title{Convenience function to create a WordList given a ResearchID, study and
+folder}
 \usage{
 create_nwr_wordlist_file(short_id, study_name, dir_task,
   dir_eprime = "Recordings", dir_wordlist = "WordLists", read_only = TRUE,
@@ -22,18 +23,22 @@ for a wildcard search that will match all 4-character participants IDs.}
 \item{dir_task}{the fully specified filepath to the folder for a Task. The
 value for `study_name` should be a subfolder in this location.}
 
-\item{dir_eprime}{folder that contains Eprime output files. Defaults to `Recordings`.}
+\item{dir_eprime}{folder that contains Eprime output files. Defaults to
+`"Recordings"`.}
 
-\item{dir_wordlist}{folder where the WordList should be saved. Defaults to `WordLists`.}
+\item{dir_wordlist}{folder where the WordList should be saved. Defaults to
+`"WordLists"`.}
 
-\item{read_only}{whether to protect the saved WordList. Defaults to TRUE.}
+\item{read_only}{whether to protect the saved WordList. Defaults to `TRUE`.}
 
-\item{update}{whether to update the saved WordList. Defaults to FALSE.}
+\item{update}{whether to update the saved WordList. Defaults to `FALSE`.}
 }
 \value{
-the generated WordList table(s)
+a list of the file-paths of the generated WordList files and the
+  contents of the WordLists files (as data-frames).
 }
 \description{
-Convenience function to create a WordList given a ResearchID, study and folder
+Convenience function to create a WordList given a ResearchID, study and
+folder
 }
 
