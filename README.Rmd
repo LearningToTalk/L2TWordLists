@@ -70,7 +70,7 @@ unname(file.access(outpath, 2))
 
 ```{r, echo = FALSE, message = FALSE}
 # Clean up any leftovers from last time
-"./tests/testthat/mock-analysis/RealWordRep/TimePoint1/WordLists/" %>% 
+"./tests/testthat/l2t/RealWordRep/TimePoint1/WordLists/" %>% 
   list.files(full.names = TRUE) %>% 
   unlink(force = TRUE)
 ```
@@ -82,7 +82,7 @@ participant ID, a study name, and a task directory.
 
 ```{r}
 # Using a mock location for the package documentation...
-task_dir <- "./tests/testthat/mock-analysis/RealWordRep"
+task_dir <- "./tests/testthat/l2t/RealWordRep"
 study_name <- "TimePoint1"
 participant_id <- "001L"
 
@@ -122,7 +122,7 @@ str(results)
 
 ```{r, echo = FALSE, message = FALSE}
 # Clean up
-"./tests/testthat/mock-analysis/RealWordRep/TimePoint1/WordLists/" %>% 
+"./tests/testthat/l2t/RealWordRep/TimePoint1/WordLists/" %>% 
   list.files(full.names = TRUE) %>% 
   unlink(force = TRUE)
 ```
@@ -185,9 +185,7 @@ tested in this package.
 knitr::kable(df_test_info)
 ```
 
-
 The build status badge at the top of this page indicates whether the package 
 successfully passed all these tests (and also passed the standard checks for R
 packages).
-
 

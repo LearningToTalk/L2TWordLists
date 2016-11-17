@@ -31,7 +31,7 @@ test_file <- "./tests/testthat/test-files/TimePoint3/RealWordRep_008L54MS5.txt"
 # Parse Eprime file
 df_trials <- get_rwr_trial_info(test_file)
 df_trials
-#> # A tibble: 119 × 17
+#> # A tibble: 119 × 19
 #>    TimePoint Dialect                       Experiment
 #>        <dbl>   <chr>                            <chr>
 #> 1          3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
@@ -44,11 +44,12 @@ df_trials
 #> 8          3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
 #> 9          3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
 #> 10         3     SAE SAE_RealWordRep_BLOCKED_TP3.beta
-#> # ... with 109 more rows, and 14 more variables: Eprime.Basename <chr>,
+#> # ... with 109 more rows, and 16 more variables: Eprime.Basename <chr>,
 #> #   Block <chr>, TrialNumber <chr>, TrialType <chr>,
 #> #   Trial_Abbreviation <chr>, Procedure <chr>, Running <chr>,
 #> #   AudioPrompt <chr>, PicturePrompt <chr>, Cycle <chr>, Sample <chr>,
-#> #   UserOrth <chr>, Reinforcer <chr>, reinforceImage <chr>
+#> #   UserOrth <chr>, Reinforcer <chr>, reinforceImage <chr>, Helper <chr>,
+#> #   Date <date>
 ```
 
 Create a WordList table using that trial-level information:
@@ -95,7 +96,7 @@ The function `create_rwr_wordlist_file()` is a shortcut that will create a WordL
 
 ``` r
 # Using a mock location for the package documentation...
-task_dir <- "./tests/testthat/mock-analysis/RealWordRep"
+task_dir <- "./tests/testthat/l2t/RealWordRep"
 study_name <- "TimePoint1"
 participant_id <- "001L"
 
@@ -108,7 +109,7 @@ By default, the function will not overwrite a WordList.
 ``` r
 create_rwr_wordlist_file(participant_id, study_name, task_dir)
 #> Error: WordList file already exists:
-#>  ./tests/testthat/mock-analysis/RealWordRep/TimePoint1/WordLists/RealWordRep_001L28FS1_WordList.txt
+#>  ./tests/testthat/l2t/RealWordRep/TimePoint1/WordLists/RealWordRep_001L28FS1_WordList.txt
 #> Use `update = TRUE` to overwrite a WordList.
 ```
 
@@ -138,7 +139,7 @@ results <- create_rwr_wordlist_file("", study_name, task_dir, update = TRUE)
 str(results)
 #> List of 2
 #>  $ :List of 2
-#>   ..$ path: chr "./tests/testthat/mock-analysis/RealWordRep/TimePoint1/WordLists/RealWordRep_001L28FS1_WordList.txt"
+#>   ..$ path: chr "./tests/testthat/l2t/RealWordRep/TimePoint1/WordLists/RealWordRep_001L28FS1_WordList.txt"
 #>   ..$ data:Classes 'tbl_df', 'tbl' and 'data.frame': 103 obs. of  10 variables:
 #>   .. ..$ TrialNumber  : chr [1:103] "Fam1" "Fam2" "Fam3" "Fam4" ...
 #>   .. ..$ Abbreviation : chr [1:103] "SHRT" "GIRL" "COLD" "COWW" ...
@@ -151,7 +152,7 @@ str(results)
 #>   .. ..$ AudioPrompt  : chr [1:103] "SHRT_H_01" "GIRL_H_01" "COLD_H_01" "COWW_H_01" ...
 #>   .. ..$ PicturePrompt: chr [1:103] "SHRT_01" "GIRL_01" "COLD_01" "COWW_01" ...
 #>  $ :List of 2
-#>   ..$ path: chr "./tests/testthat/mock-analysis/RealWordRep/TimePoint1/WordLists/RealWordRep_003L31FS1_WordList.txt"
+#>   ..$ path: chr "./tests/testthat/l2t/RealWordRep/TimePoint1/WordLists/RealWordRep_003L31FS1_WordList.txt"
 #>   ..$ data:Classes 'tbl_df', 'tbl' and 'data.frame': 103 obs. of  10 variables:
 #>   .. ..$ TrialNumber  : chr [1:103] "Fam1" "Fam2" "Fam3" "Fam4" ...
 #>   .. ..$ Abbreviation : chr [1:103] "SHRT" "GIRL" "COLD" "COWW" ...
@@ -310,6 +311,10 @@ The testing data was selected to use all available combinations of dialect, expe
 |:------------|:-----------|:--------|:---------------------------------------|----------:|
 | NonWordRep  | TimePoint1 | AAE     | AAE\_NonWordRep                        |         50|
 | NonWordRep  | TimePoint1 | SAE     | SAE\_NonWordRep                        |         50|
+| NonWordRep  | TimePoint2 | AAE     | AAE\_NonWordRep\_TP2                   |         74|
+| NonWordRep  | TimePoint2 | SAE     | SAE\_NonWordRep\_TP2                   |         74|
+| NonWordRep  | TimePoint3 | AAE     | AAE\_NonWordRep\_TP3                   |         76|
+| NonWordRep  | TimePoint3 | SAE     | SAE\_NonWordRep\_TP3                   |         76|
 | RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_3-13-13     |        103|
 | RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_3-13-13     |         52|
 | RealWordRep | CochlearV1 | SAE     | SAE\_RealWordRep\_BLOCKED\_PartI       |         37|

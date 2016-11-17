@@ -36,8 +36,9 @@ create_wordlist_file <- function(short_id, study_name, dir_task,
     basename() %>%
     tools::file_path_sans_ext()
 
-  wordlist_name <- paste0(admin_name, "_WordList.txt") %>%
-    file.path(dir_wordlist, .)
+  wordlist_name <- file.path(
+    dir_wordlist,
+    paste0(admin_name, "_WordList.txt"))
 
   # Fail if WordLists exist already and we're not updating
   if (any(file.exists(wordlist_name)) & !update) {
@@ -54,7 +55,7 @@ create_wordlist_file <- function(short_id, study_name, dir_task,
   }
 
   parsed <- search_results %>%
-    lapply(. %>% wordlist_func)
+    lapply(wordlist_func)
 
   save_wordlist <- function(x, path) {
     verb <- if (update) "Updating file" else "Writing file"
@@ -77,13 +78,6 @@ create_wordlist_file <- function(short_id, study_name, dir_task,
 
 
 
-
-
-
-
-
-
-
 # File-reading and processing steps shared by both tasks
 get_trial_info <- function(eprime_path) {
   # Read and parse the stimulus log
@@ -99,6 +93,11 @@ get_trial_info <- function(eprime_path) {
 
   dialect <- extract_dialect(header$Experiment)
   timepoint <- extract_timepoint(header$Experiment)
+  helper <- header$Animal
+  date <- header$SessionDate %>% as.Date(format = "%m-%d-%Y")
+
+  # Assert that we got valid data from the header
+  stopifnot(!is.na(dialect), !is.na(timepoint), !is.na(date))
 
   # Trial level information
   trial_info <- eprime_frames %>%
@@ -114,6 +113,8 @@ get_trial_info <- function(eprime_path) {
       TimePoint = ~ timepoint,
       Experiment = ~ header$Experiment,
       Dialect = ~ dialect,
+      Helper = ~ helper,
+      Date = ~ date,
       TrialType = ~ find_trial_types(Running),
       TrialNumber = ~ create_trial_numbers(TrialType)) %>%
     select_(~ -Eprime.Level, ~ -Eprime.LevelName, ~ -Eprime.FrameNumber)

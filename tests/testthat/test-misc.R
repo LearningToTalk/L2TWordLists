@@ -28,7 +28,7 @@ test_that("We can save WordLists to read-only files", {
 test_that("RWR shortcut function", {
   testthat::skip_on_travis()
 
-  wl_dir <- test_path("mock-analysis/RealWordRep/TimePoint1/WordLists/")
+  wl_dir <- test_path("l2t/RealWordRep/TimePoint1/WordLists/")
 
   # Clean up any leftovers from last time
   wl_dir %>%
@@ -36,7 +36,7 @@ test_that("RWR shortcut function", {
     unlink(force = TRUE)
 
   # Using a mock location for the package documentation...
-  task_dir <- test_path("mock-analysis/RealWordRep")
+  task_dir <- test_path("l2t/RealWordRep")
   study <- "TimePoint1"
   pid <- "001L"
 
