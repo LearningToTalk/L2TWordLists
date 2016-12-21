@@ -150,11 +150,11 @@ create_trial_numbers <- function(trial_types) {
 
   # Split by type, number trials, combine
   df_trial_types <- df_trial_types %>%
-    group_by(TrialType) %>%
-    arrange(TrialType, TrialOrder) %>%
-    mutate(TrialSeq = add_sequence_numbers(TrialType)) %>%
+    group_by_("TrialType") %>%
+    arrange_(~ TrialType, ~ TrialOrder) %>%
+    mutate_(TrialSeq = ~ add_sequence_numbers(TrialType)) %>%
     ungroup() %>%
-    arrange(TrialOrder)
+    arrange_(~ TrialOrder)
 
   df_trial_types$TrialSeq
 }
