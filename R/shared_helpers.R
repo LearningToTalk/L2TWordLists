@@ -143,13 +143,20 @@ create_trial_numbers <- function(trial_types) {
   # Abbreviate familarization trials
   trial_types <- ifelse(trial_types == "Familiarization", "Fam", trial_types)
 
-  # Split into different groups and add numbers to each item in group
-  trial_numbers <- trial_types %>%
-    split(trial_types) %>%
-    lapply(add_sequence_numbers) %>%
-    unlist(use.names = FALSE)
+  # Number entries to preserve original ordering
+  df_trial_types <- data_frame(
+    TrialType = trial_types,
+    TrialOrder = seq_along(trial_types))
 
-  trial_numbers
+  # Split by type, number trials, combine
+  df_trial_types <- df_trial_types %>%
+    group_by(TrialType) %>%
+    arrange(TrialType, TrialOrder) %>%
+    mutate(TrialSeq = add_sequence_numbers(TrialType)) %>%
+    ungroup() %>%
+    arrange(TrialOrder)
+
+  df_trial_types$TrialSeq
 }
 
 
