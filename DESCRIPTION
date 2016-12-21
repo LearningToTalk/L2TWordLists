@@ -1,6 +1,6 @@
 Package: L2TWordLists
 Title: Create WordLists for L2T Word-Repetition Experiments
-Version: 0.0.2.9000
+Version: 0.0.3
 Authors@R: c(
   person("Tristan", "Mahr", email = "tristan.mahr@wisc.edu", role = c("aut", "cre")), 
   person("Pat", "Reidy", role = c("aut")), 
